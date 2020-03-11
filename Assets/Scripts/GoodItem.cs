@@ -16,6 +16,7 @@ public class GoodItem : MonoBehaviour
         GetComponent<Animator>().SetTrigger("Pick");
     }
     private void OnTriggerEnter2D(Collider2D collision) {
+        /*
         if(collision.CompareTag("Player")) PickItem();
         if((int)Type == 0) {
             //ScoreManager.instance.ChangeFood(coinValue);
@@ -25,5 +26,6 @@ public class GoodItem : MonoBehaviour
             ScoreManager.instance.ChangeDiam(coinValue);
             ScoreManager.instance.PickDiam();
         }
+        */
     }
 }

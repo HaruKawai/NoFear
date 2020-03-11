@@ -52,7 +52,7 @@ public class paredAtrac : MonoBehaviour
                         break;
 
                     case 2:
-                        controll.apegatPar = true;
+                        controll.stickOnWall = true;
                         stuckOn.left = -value;
                         rotar = true;
                         
@@ -60,7 +60,7 @@ public class paredAtrac : MonoBehaviour
                         break;
 
                     case 3:
-                        controll.apegatPar = true;
+                        controll.stickOnWall = true;
                         stuckOn.right = value;
                         rotar = true;
                         break;
@@ -82,7 +82,7 @@ public class paredAtrac : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         Debug.Log("ix");
-        if((int)Type == 2 || (int)Type == 3) collision.gameObject.GetComponent<Player2DControll>().apegatPar = false;
+        if((int)Type == 2 || (int)Type == 3) collision.gameObject.GetComponent<Player2DControll>().stickOnWall = false;
         soltar();
         
     }

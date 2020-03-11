@@ -6,36 +6,40 @@ public class Player2DControll : MonoBehaviour
 {
     [SerializeField] private float m_JumpForce = 300f;                          // Amount of force added when the player jumps.
     [SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
-    [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
+    //[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
-    [SerializeField] private CircleCollider2D bubble;
     [SerializeField] private GameObject slimePrefab;
     private paredAtrac[] scriptPared;
-    //private paredAtrac script;
 
+
+    //General
     public Animator animator;
-    public bool slime = false;
-    
-    public bool parry;
-
-    //Climb
     public float distance;
-    public LayerMask whatIsLadder;
     float verticalMove = 0f;
     private Rigidbody2D rb;
-    //
     float horizontalMove = 0f;
     public float runSpeed = 40f;
     bool jump = false;
     bool change = false;
+    
+    public bool isGrounded;
+	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+	private Vector3 m_Velocity = Vector3.zero;
+    public bool damaged;
+
+
+    //Slime
+    public bool slime = false;
+    public bool potPujar;
+    public bool stickOnWall = false;
+    public bool parry;
+    
+    private bool inflated;
+
+
+    //Controladores de Tiempo
     private bool timear;
     private bool chapat;
-    public bool damaged;
-    public bool apegatParDret = false;
-    public bool apegatParEs = false;
-    public bool apegatTecho = false;
-    public bool potPujar;
-    public bool apegatPar = false;
     private float parryFinish = 1.0f;
     private float Timer = 0f;
     private float Timer2 = 0f;
@@ -43,20 +47,15 @@ public class Player2DControll : MonoBehaviour
     private float cdInflation;
     private float cdInflationMin = 2.0f;
     private bool inflationControl;
-    private bool potUnflar = true;
-    private bool unflat;
+    private bool canInflate = true;
 
     
-    public bool isGrounded;
     
-	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-	private Vector3 m_Velocity = Vector3.zero;
     void Awake() {
         rb = GetComponent<Rigidbody2D>();
         scriptPared = FindObjectsOfType<paredAtrac>();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -64,43 +63,39 @@ public class Player2DControll : MonoBehaviour
         Debug.Log(transform.rotation);
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
-        //animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         //if(Input.GetButtonDown("Interact"))
         if (Input.GetButtonDown("Change"))
             if(!gameObject.GetComponent<Enemy>()) {
-                //if(gameObject.GetComponent<CharacterController2D>().noCambia != true) {
-                    if(slime)
+                if(slime)
+                {
+                    foreach (paredAtrac script in scriptPared)
                     {
-                        foreach (paredAtrac script in scriptPared)
-                        {
-                        script.soltar();  
-                        }
+                    script.soltar();  
                     }
-                    slime = !slime;
-                //}
+                }
+                slime = !slime;
             }
             else {
                 if(!GameObject.FindWithTag("Player")) {
                     Vector3 posicion = transform.position;
                     posicion.x = posicion.x + 1.0f;
                     posicion.y = posicion.y + 1.2f;
-                    //SetAllCollidersStatus(false);
                     GetComponent<Collider2D>().enabled = false;
                     Instantiate(slimePrefab, posicion, Quaternion.identity);
                 }
             }
 
-        //Controlador timeos
+
+        //Inflation time, parry Controller
         if(timear)
         {
             if(Timer >= inflationFinish)
             {
-                chapat = true;
                 timear = false;
                 cdInflation = Timer;
-                unflat = false;
-                potUnflar = false;
+                inflated = false;
+                canInflate = false;
                 Timer2 = 0f;
                 animator.SetTrigger("DesInflation");
             }else if(Timer >= parryFinish)
@@ -113,54 +108,54 @@ public class Player2DControll : MonoBehaviour
             }
         }
 
-        //Controlador de cooldown
-        if(!potUnflar)
+        //Inflation Cooldown Controller
+        if(!canInflate)
         {
             if(cdInflation < cdInflationMin) cdInflation = cdInflationMin;
             if(Timer2 >= cdInflation)
             {
-                potUnflar = true;
+                canInflate = true;
             }else{Timer2 += Time.deltaTime;}
         }
 
 
-
-
+   
         if (slime)
         {
-            if(potUnflar)
+            if(canInflate)  //Inflate Actions
             {
                 if (Input.GetButtonDown("Bubble"))
                 {
                     
-                        animator.SetTrigger("Inflation");
-                        parry = true;
-                        Timer = 0f;
-                        timear = true;
-                        unflat = true;
+                    animator.SetTrigger("Inflation");
+                    parry = true;
+                    Timer = 0f;
+                    timear = true;
+                    inflated = true;
 
                 }
                 
                 if (Input.GetButtonUp("Bubble"))
                 {
-                    if(!chapat && unflat)
+                    if(inflated)
                     {
                         animator.SetTrigger("DesInflation");
-                        timear = false; 
+                        timear = false;
+                        parry = false;
                         cdInflation = Timer;
-                        unflat = false; 
-                        potUnflar = false;
+                        inflated = false; 
+                        canInflate = false;
                         Timer2 = 0f;
-                    }else {chapat = false;}
+                    }
 
                 }
             }
-        }else
+        }else  //Interact Actions
         {
             //interactuar
         }
         
-
+        //Jump/Unstick
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -177,9 +172,6 @@ public class Player2DControll : MonoBehaviour
 
         //Move our character
         Move(horizontalMove * Time.fixedDeltaTime, jump, verticalMove * Time.fixedDeltaTime);
-        //
-        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position,
-Vector2.up, distance, whatIsLadder);
 
         
         jump = false;
@@ -187,20 +179,7 @@ Vector2.up, distance, whatIsLadder);
     }
 
 
-    public void OnLanding()
-    {
-        //animator.SetBool("IsJumping", false);
 
-    }
-     public void SetAllCollidersStatus (bool active) {
-     foreach(Collider c in GetComponents<Collider>()) {
-        c.enabled = active;
-     }
- }
-
-
-
-    //Jump
 
  
     void OnCollisionEnter2D(Collision2D coll)
@@ -249,7 +228,7 @@ Vector2.up, distance, whatIsLadder);
             if (isGrounded || m_AirControl)
 			{
                 Vector2 targetVelocity;
-                if(apegatPar)
+                if(stickOnWall)
                 {
                     targetVelocity = new Vector2(move * 7f, move2 * 7f);
                 }else
@@ -280,11 +259,6 @@ Vector2.up, distance, whatIsLadder);
                 {
                 script.soltar();  
                 }
-                
-				apegatTecho = false;
-                apegatParDret = false;
-                apegatParEs = false;
-                potPujar = false;
 			}
 		}
 	}

@@ -20,9 +20,11 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
     void OnCollisionEnter2D(Collision2D collision) {
+        /*
         Prota prota = collision.gameObject.GetComponent<Prota>();
         if(prota != null) {
             prota.TakeDamage(damage);
         }
+        */
     }
 }
