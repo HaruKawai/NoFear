@@ -20,8 +20,6 @@ public class Player2DControll : MonoBehaviour
     float horizontalMove = 0f;
     public float runSpeed = 40f;
     bool jump = false;
-    bool change = false;
-    
     public bool isGrounded;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
@@ -65,26 +63,7 @@ public class Player2DControll : MonoBehaviour
         verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
 
         //if(Input.GetButtonDown("Interact"))
-        if (Input.GetButtonDown("Change"))
-            if(!gameObject.GetComponent<Enemy>()) {
-                if(slime)
-                {
-                    foreach (paredAtrac script in scriptPared)
-                    {
-                    script.soltar();  
-                    }
-                }
-                slime = !slime;
-            }
-            else {
-                if(!GameObject.FindWithTag("Player")) {
-                    Vector3 posicion = transform.position;
-                    posicion.x = posicion.x + 1.0f;
-                    posicion.y = posicion.y + 1.2f;
-                    GetComponent<Collider2D>().enabled = false;
-                    Instantiate(slimePrefab, posicion, Quaternion.identity);
-                }
-            }
+        if (Input.GetButtonDown("Change")) ChangeFunction();
 
 
         //Inflation time, parry Controller
@@ -124,30 +103,11 @@ public class Player2DControll : MonoBehaviour
         {
             if(canInflate)  //Inflate Actions
             {
-                if (Input.GetButtonDown("Bubble"))
-                {
-                    
-                    animator.SetTrigger("Inflation");
-                    parry = true;
-                    Timer = 0f;
-                    timear = true;
-                    inflated = true;
+                if (Input.GetButtonDown("Bubble"))  InflationFunction();
 
-                }
-                
                 if (Input.GetButtonUp("Bubble"))
                 {
-                    if(inflated)
-                    {
-                        animator.SetTrigger("DesInflation");
-                        timear = false;
-                        parry = false;
-                        cdInflation = Timer;
-                        inflated = false; 
-                        canInflate = false;
-                        Timer2 = 0f;
-                    }
-
+                    if(inflated) DesInflationFunction();
                 }
             }
         }else  //Interact Actions
@@ -175,12 +135,52 @@ public class Player2DControll : MonoBehaviour
 
         
         jump = false;
-        change = false;
     }
 
 
+    //Cambio de forma
+    void ChangeFunction()
+    {
+        if(!gameObject.GetComponent<Enemy>())
+        {
+            if(slime) 
+            {
+                foreach (paredAtrac script in scriptPared)
+                {
+                    script.soltar();  
+                }
+            }
+            slime = !slime;
+        }else {
+            Vector3 posicion = transform.position;
+            posicion.x = posicion.x + 1.0f;
+            posicion.y = posicion.y + 1.2f;
+            GetComponent<Collider2D>().enabled = false;
+            Instantiate(slimePrefab, posicion, Quaternion.identity);
+        }
+    }
 
+    //Inflar
+    void InflationFunction()
+    {
+        animator.SetTrigger("Inflation");
+        parry = true;
+        Timer = 0f;
+        timear = true;
+        inflated = true;
+    }
 
+    //Desinflar
+    void DesInflationFunction()
+    {
+        animator.SetTrigger("DesInflation");
+        timear = false;
+        parry = false;
+        cdInflation = Timer;
+        inflated = false; 
+        canInflate = false;
+        Timer2 = 0f;
+    }
  
     void OnCollisionEnter2D(Collision2D coll)
     {
