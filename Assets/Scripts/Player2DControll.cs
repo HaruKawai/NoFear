@@ -1,124 +1,116 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class Player2DControll : MonoBehaviour
 {
-    [SerializeField] private float m_JumpForce = 300f;                          // Amount of force added when the player jumps.
-    [SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
-    //[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
-	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
+	public static Player2DControll Instance { get; private set; }
+	
+    [SerializeField] private float m_JumpForce = 300f; 
+    [SerializeField] private bool m_AirControl; 
+    [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
     [SerializeField] private GameObject slimePrefab;
     private paredAtrac[] scriptPared;
-
-
-    //General
-    public Animator animator;
-    public float distance;
-    float verticalMove = 0f;
-    private Rigidbody2D rb;
-    float horizontalMove = 0f;
-    public float runSpeed = 40f;
-    bool jump = false;
-    public bool isGrounded;
-	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
-	private Vector3 m_Velocity = Vector3.zero;
-    public bool damaged;
-
-
-    //Slime
-    public bool slime = false;
-    public bool potPujar;
-    public bool stickOnWall = false;
-    public bool parry;
     
+    //General
+    private Animator anim;
+    private float distance;
+    private float verticalMove;
+    private Rigidbody2D rb;
+    private float horizontalMove;
+    private float runSpeed = 50f;
+    private bool canJump;
+    private bool isGrounded;
+	private bool m_FacingRight = true;
+	private Vector3 m_Velocity = Vector3.zero;
+    private bool damaged;
+    [SerializeField] private LayerMask ground;
+
+    public enum PlayerMode
+    {
+	    Slime, Human
+    }
+    
+    //Slime
+    private PlayerMode playerMode;
+    public bool slime;
+    private bool potPujar;
+    public bool stickOnWall;
+    public bool stickOnCealing;
+    private bool parry;
     private bool inflated;
-
-
+    
     //Controladores de Tiempo
-    private bool timear;
     private bool chapat;
-    private float parryFinish = 1.0f;
-    private float Timer = 0f;
-    private float Timer2 = 0f;
-    private float inflationFinish = 5.0f;
-    private float cdInflation;
-    private float cdInflationMin = 2.0f;
     private bool inflationControl;
     private bool canInflate = true;
+    private static readonly int DesInflation = Animator.StringToHash("DesInflation");
+    private static readonly int Inflation = Animator.StringToHash("Inflation");
 
-    
-    
-    void Awake() {
+
+    private void Awake()
+    {
+	    Instance = this;
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         scriptPared = FindObjectsOfType<paredAtrac>();
     }
 
-    void Update()
+    private void Start()
     {
+	    playerMode = PlayerMode.Human;
+    }
+
+    private void Update()
+    {
+	    var position = transform.position;
+	    bool leftCollision = Physics2D.Raycast(position,  Vector2.left, 0.25f, ground);
+	    bool rightCollision = Physics2D.Raycast(position,  Vector2.right, 0.25f, ground);
+	    bool upCollision = Physics2D.Raycast(position, Vector2.up, 0.25f, ground);
+
+	    if (playerMode == PlayerMode.Slime && (leftCollision || rightCollision))
+	    {
+		    rb.velocity = Vector2.zero;
+		    rb.gravityScale = 0;
+		    stickOnWall = true;
+	    }
+	    else if (playerMode == PlayerMode.Slime && upCollision)
+	    {
+		    rb.gravityScale = 0;
+		    stickOnWall = false;
+		    stickOnCealing = true;
+	    }
+	    else
+	    {
+		    rb.gravityScale = 1;
+		    stickOnWall = false;
+		    stickOnCealing = false;
+	    }
 
 
-        Debug.Log(transform.rotation);
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
+	    horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+	    verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
+        
+        if (Input.GetButtonDown("Change"))
+	        ChangeFunction();
 
-        //if(Input.GetButtonDown("Interact"))
-        if (Input.GetButtonDown("Change")) ChangeFunction();
-
-
-        //Inflation time, parry Controller
-        if(timear)
+        if (playerMode == PlayerMode.Slime)
         {
-            if(Timer >= inflationFinish)
-            {
-                timear = false;
-                cdInflation = Timer;
-                inflated = false;
-                canInflate = false;
-                Timer2 = 0f;
-                animator.SetTrigger("DesInflation");
-            }else if(Timer >= parryFinish)
-            {
-                parry = false;
-                Timer += Time.deltaTime;
-            }else
-            {
-                Timer += Time.deltaTime;
-            }
+	        if (Input.GetButtonDown("Bubble") && canInflate)
+		        StartCoroutine(InflationCoroutine());
+
+	        if (Input.GetButtonUp("Bubble") && inflated) 
+		        StartCoroutine(DesInflationCoroutine());
         }
-
-        //Inflation Cooldown Controller
-        if(!canInflate)
+        else  //Interact Actions
         {
-            if(cdInflation < cdInflationMin) cdInflation = cdInflationMin;
-            if(Timer2 >= cdInflation)
-            {
-                canInflate = true;
-            }else{Timer2 += Time.deltaTime;}
-        }
-
-
-   
-        if (slime)
-        {
-            if(canInflate)  //Inflate Actions
-            {
-                if (Input.GetButtonDown("Bubble"))  InflationFunction();
-
-                if (Input.GetButtonUp("Bubble"))
-                {
-                    if(inflated) DesInflationFunction();
-                }
-            }
-        }else  //Interact Actions
-        {
-            //interactuar
+            //Interact
         }
         
         //Jump/Unstick
         if (Input.GetButtonDown("Jump"))
         {
-            jump = true;
+            canJump = true;
             //animator.SetBool("IsJumping", true);
         }
 
@@ -126,149 +118,110 @@ public class Player2DControll : MonoBehaviour
             //animator.SetBool("Damaged", true);
             damaged = false;
         }
+    }
 
-
-
-
-        //Move our character
-        Move(horizontalMove * Time.fixedDeltaTime, jump, verticalMove * Time.fixedDeltaTime);
-
-        
-        jump = false;
+    private void FixedUpdate()
+    {
+	    Move(horizontalMove * Time.fixedDeltaTime, canJump, verticalMove * Time.fixedDeltaTime);
+	    canJump = false;
     }
 
 
-    //Cambio de forma
-    void ChangeFunction()
+    //Change form
+    private void ChangeFunction()
     {
-        if(!gameObject.GetComponent<Enemy>())
+        if(gameObject.GetComponent<Enemy>() == null)
         {
-            if(slime) 
-            {
-                foreach (paredAtrac script in scriptPared)
-                {
-                    script.soltar();  
-                }
-            }
-            slime = !slime;
-        }else {
-            Vector3 posicion = transform.position;
-            posicion.x = posicion.x + 1.0f;
-            posicion.y = posicion.y + 1.2f;
+	        if(playerMode == PlayerMode.Slime)
+			   playerMode = PlayerMode.Human;
+	        else if (playerMode == PlayerMode.Human) 
+		        playerMode = PlayerMode.Slime;
+        } else {
+            var position = transform.position;
+            position.x += 1.0f;
+            position.y += 1.2f;
             GetComponent<Collider2D>().enabled = false;
-            Instantiate(slimePrefab, posicion, Quaternion.identity);
+            Instantiate(slimePrefab, position, Quaternion.identity);
         }
     }
 
-    //Inflar
-    void InflationFunction()
+    //Inflate
+    private IEnumerator InflationCoroutine()
     {
-        animator.SetTrigger("Inflation");
-        parry = true;
-        Timer = 0f;
-        timear = true;
-        inflated = true;
-    }
+	    parry = true;
+	    inflated = true;
+	    anim.SetTrigger(Inflation);
+	    
+	    yield return new WaitForSeconds(1f);
+	    
+	    parry = false;
+	    
+	    yield return new WaitForSeconds(4f);
+	    
+	    inflated = false;
+	    canInflate = false;
+	    anim.SetTrigger(DesInflation);
 
-    //Desinflar
-    void DesInflationFunction()
+	    yield return new WaitForSeconds(2f);
+
+	    canInflate = true;
+    }
+    
+    //DesInflate
+    private IEnumerator DesInflationCoroutine()
     {
-        animator.SetTrigger("DesInflation");
-        timear = false;
-        parry = false;
-        cdInflation = Timer;
-        inflated = false; 
-        canInflate = false;
-        Timer2 = 0f;
+	    StopCoroutine(InflationCoroutine());
+	    anim.SetTrigger(DesInflation);
+	    parry = false;
+	    inflated = false; 
+	    canInflate = false;
+
+	    yield return new WaitForSeconds(2f);
+	    
+	    canInflate = true;
     }
- 
-    void OnCollisionEnter2D(Collision2D coll)
+    
+
+    private void OnCollisionEnter2D(Collision2D coll)
     {
-         
-        if (coll.gameObject.tag == "ground")
-        {
-             isGrounded = true;
-        }
-    }
-
-
-     public void Move(float move, bool jump, float move2)
-	{
-		if(!slime){
-			//only control the player if grounded or airControl is turned on
-			if (isGrounded || m_AirControl)
-			{
-
-				// Move the character by finding the target velocity
-				Vector2 targetVelocity = new Vector2(move * 7f, rb.velocity.y);
-				// And then smoothing it out and applying it to the character
-				rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-				// If the input is moving the player right and the player is facing left...
-				if (move > 0 && !m_FacingRight)
-				{
-					// ... flip the player.
-					Flip();
-				}
-				// Otherwise if the input is moving the player left and the player is facing right...
-				else if (move < 0 && m_FacingRight)
-				{
-					// ... flip the player.
-					Flip();
-				}
-			}
-			// If the player should jump...
-			if (isGrounded && jump)
-			{
-				// Add a vertical force to the player.
-				isGrounded = false;
-				rb.AddForce(new Vector2(0f, m_JumpForce));
-			}
-		}
-		else {
-            if (isGrounded || m_AirControl)
-			{
-                Vector2 targetVelocity;
-                if(stickOnWall)
-                {
-                    targetVelocity = new Vector2(move * 7f, move2 * 7f);
-                }else
-                {
-                    // Move the character by finding the target velocity
-                    targetVelocity = new Vector2(move * 3f, rb.velocity.y);
-                }
-
-				// And then smoothing it out and applying it to the character
-				rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-				// If the input is moving the player right and the player is facing left...
-				if (move > 0 && !m_FacingRight)
-				{
-					// ... flip the player.
-					Flip();
-				}
-				// Otherwise if the input is moving the player left and the player is facing right...
-				else if (move < 0 && m_FacingRight)
-				{
-					// ... flip the player.
-					Flip();
-				}
-			}
-			// If the player should jump...
-			if (jump)
-			{
-                foreach (paredAtrac script in scriptPared)
-                {
-                script.soltar();  
-                }
-			}
-		}
+	    if (coll.gameObject.layer == 8)
+		    isGrounded = true;
 	}
 
-
+    private  void Move(float move, bool jump, float move2)
+    {
+	    if (isGrounded || m_AirControl)
+	    { 
+		    var velocity = rb.velocity;
+		    var targetVelocity = Vector2.zero;
+		    if(playerMode == PlayerMode.Human) 
+			    targetVelocity = new Vector2(move * 7f, velocity.y);
+		    else if (playerMode == PlayerMode.Slime)
+			    targetVelocity = stickOnWall ? new Vector2(move * 7f, move2 * 7f) : new Vector2(move * 3f, velocity.y);
+		    rb.velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+		    if (move > 0 && !m_FacingRight) 
+			    Flip();
+		    else if (move < 0 && m_FacingRight)
+			    Flip();
+	    }
+	    if (isGrounded && jump)
+	    {
+		    isGrounded = false;
+		    rb.AddForce(new Vector2(0f, m_JumpForce));
+	    }
+	    
+	    if (jump && playerMode == PlayerMode.Slime)
+	    {
+		    foreach (var script in scriptPared)
+		    {
+			    script.soltar();  
+		    }
+	    }
+    }
+    
 	private void Flip()
 	{
-		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;
-
 		transform.Rotate(0f,180f,0);
 	}
  
