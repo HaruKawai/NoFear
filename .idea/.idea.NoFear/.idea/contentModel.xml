@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\André\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\André\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_NoFear.-92283515.00" t="ExcludeRecursive" />
+    <e p="D:\Program Files (x86)\Unity Projects\NoFear" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="bullet.cs" t="Include" />
+          <e p="controladorTiempo.cs" t="Include" />
+          <e p="DestroyOnExit.cs" t="Include" />
+          <e p="Enemy.cs" t="Include" />
+          <e p="GoodItem.cs" t="Include" />
+          <e p="HealthBar.cs" t="Include" />
+          <e p="LoadScene.cs" t="Include" />
+          <e p="paredAtrac.cs" t="Include" />
+          <e p="Player2DControll.cs" t="Include" />
+          <e p="SceneController.cs" t="Include" />
+          <e p="ScoreManager.cs" t="Include" />
+        </e>
+      </e>
+      <e p="NoFear.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

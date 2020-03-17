@@ -147,7 +147,7 @@ AnimationClip:
       value: {fileID: 7816106877914167109, guid: bdd6b0468210d5f4cb28bb2b6066aa94,
         type: 3}
     attribute: m_Sprite
-    path: 
+    path: SlimeVFX
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -186,7 +186,7 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 0
+      path: 463373509
       attribute: 0
       script: {fileID: 0}
       typeID: 212
