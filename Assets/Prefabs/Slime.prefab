@@ -105,7 +105,6 @@ GameObject:
   - component: {fileID: 8901203417398359649}
   - component: {fileID: 8901203417398359655}
   - component: {fileID: 8901203417398359653}
-  - component: {fileID: 8901203417398359650}
   - component: {fileID: 251857364196670235}
   - component: {fileID: 8901203416997140823}
   - component: {fileID: 8901203416997140816}
@@ -144,7 +143,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -195,25 +193,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_JumpForce: 400
   m_AirControl: 1
-  m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
-  bubble: {fileID: 8901203416997140823}
   slimePrefab: {fileID: 8901203416485225938}
-  animator: {fileID: 8901203416997140816}
-  slime: 0
-  parry: 0
-  distance: 0
-  whatIsLadder:
+  ground:
     serializedVersion: 2
-    m_Bits: 262144
-  runSpeed: 40
-  damaged: 0
-  apegatParDret: 0
-  apegatParEs: 0
-  apegatTecho: 0
-  potPujar: 0
-  apegatPar: 0
-  isGrounded: 0
+    m_Bits: 0
+  slime: 0
+  stickOnWall: 0
+  stickOnCealing: 0
 --- !u!50 &8901203417398359653
 Rigidbody2D:
   serializedVersion: 4
@@ -235,21 +222,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &8901203417398359650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8901203417398359675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53af2f4f947374744bf2773a47e4a813, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  healthBar: {fileID: 0}
-  deathEffect: {fileID: 0}
 --- !u!58 &251857364196670235
 CircleCollider2D:
   m_ObjectHideFlags: 0

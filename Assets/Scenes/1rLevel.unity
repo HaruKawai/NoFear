@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 76842713}
   - component: {fileID: 76842712}
   - component: {fileID: 76842711}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19298,6 +19298,75 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1001 &129046751
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1255184574790110021, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_Name
+      value: Slime Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255184574790110042, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.021818
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255184574790110042, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.98560524
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255184574790110042, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255184574790110042, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255184574790110042, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255184574790110042, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255184574790110042, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255184574790110042, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255184574790110042, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255184574790110042, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255184574790110042, guid: e2530b101c470354a9d565a474186347,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e2530b101c470354a9d565a474186347, type: 3}
 --- !u!1 &1385126970
 GameObject:
   m_ObjectHideFlags: 0
@@ -19341,7 +19410,7 @@ Transform:
   - {fileID: 76842708}
   - {fileID: 1993970061}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1507330757
 GameObject:
