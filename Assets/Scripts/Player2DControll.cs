@@ -186,6 +186,17 @@ public class Player2DControll : MonoBehaviour
     {
 	    if (coll.gameObject.layer == 8)
 		    isGrounded = true;
+		else if (coll.gameObject.layer == 9)
+		{
+			isGrounded = true;
+			transform.parent = coll.gameObject.transform;
+		}
+		    
+	}
+	private void OnCollisionExit2D(Collision2D coll)
+	{
+		if (coll.gameObject.layer == 9)
+			transform.parent = null;
 	}
 
     private  void Move(float move, bool jump, float move2)
