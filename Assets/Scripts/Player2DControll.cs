@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Player2DControll : MonoBehaviour
@@ -9,9 +8,8 @@ public class Player2DControll : MonoBehaviour
     [SerializeField] private float m_JumpForce = 300f; 
     [SerializeField] private bool m_AirControl; 
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
-    [SerializeField] private GameObject slimePrefab;
-    private paredAtrac[] scriptPared;
-    
+    //[SerializeField] private GameObject slimePrefab;
+
     //General
     private Animator anim;
     private float distance;
@@ -33,10 +31,10 @@ public class Player2DControll : MonoBehaviour
 
 	//Human
 
-	private CapsuleCollider2D capsuleProta;
+	private BoxCollider2D colliderProta;
     
     //Slime
-    private PlayerMode playerMode;
+    public PlayerMode playerMode;
     public bool slime;
 	private CircleCollider2D circleSlime;
     private bool potPujar;
@@ -57,15 +55,15 @@ public class Player2DControll : MonoBehaviour
     {
 	    Instance = this;
 		circleSlime = GetComponent<CircleCollider2D>();
-		capsuleProta = GetComponent<CapsuleCollider2D>();
+		colliderProta = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        scriptPared = FindObjectsOfType<paredAtrac>();
     }
 
     private void Start()
     {
 	    playerMode = PlayerMode.Human;
+	    ChangeFunction();
     }
 
     private void Update()
@@ -117,8 +115,8 @@ public class Player2DControll : MonoBehaviour
 		if(isGrounded) anim.SetBool("IsGrounding", true);
 		else  anim.SetBool("IsGrounding", false);
         
-        //Jump/Unstick
-        if (Input.GetButtonDown("Jump"))
+        //Jump
+        if (Input.GetButtonDown("Jump") && playerMode != PlayerMode.Slime)
         {
             canJump = true;
             //animator.SetBool("IsJumping", true);
@@ -148,7 +146,7 @@ public class Player2DControll : MonoBehaviour
 			{
 				playerMode = PlayerMode.Human;
 				circleSlime.enabled = false;
-				capsuleProta.enabled = true;
+				colliderProta.enabled = true;
 			    anim.SetBool("Slime", false);
 			}
 	        else if (playerMode == PlayerMode.Human)
@@ -156,7 +154,7 @@ public class Player2DControll : MonoBehaviour
 				playerMode = PlayerMode.Slime;
 			    anim.SetBool("Slime", true);
 				circleSlime.enabled = true;
-				capsuleProta.enabled = false;
+				colliderProta.enabled = false;
 			}
 		        
         } else {
@@ -164,7 +162,7 @@ public class Player2DControll : MonoBehaviour
             //position.x += 1.0f;
             //position.y += 1.2f;
             GetComponent<Collider2D>().enabled = false;
-            Instantiate(slimePrefab, position, Quaternion.identity);
+            //Instantiate(slimePrefab, position, Quaternion.identity);
         }
     }
 
@@ -243,14 +241,6 @@ public class Player2DControll : MonoBehaviour
 	    	anim.SetTrigger("Jump");
 		    isGrounded = false;
 		    rb.AddForce(new Vector2(0f, m_JumpForce));
-	    }
-	    
-	    if (jump && playerMode == PlayerMode.Slime)
-	    {
-		    foreach (var script in scriptPared)
-		    {
-			    script.soltar();  
-		    }
 	    }
     }
     
