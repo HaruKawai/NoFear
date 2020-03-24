@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class Player2DControll : MonoBehaviour
@@ -8,7 +9,6 @@ public class Player2DControll : MonoBehaviour
     [SerializeField] private float m_JumpForce = 300f; 
     [SerializeField] private bool m_AirControl; 
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
-    //[SerializeField] private GameObject slimePrefab;
 
     //General
     private Animator anim;
@@ -19,10 +19,12 @@ public class Player2DControll : MonoBehaviour
     private float runSpeed = 50f;
     private bool canJump;
     private bool isGrounded;
+    private bool onPlatform;
 	private bool m_FacingRight = true;
 	private Vector3 m_Velocity = Vector3.zero;
     private bool damaged;
     [SerializeField] private LayerMask ground;
+    [SerializeField] private LayerMask platform;
 
     public enum PlayerMode
     {
@@ -31,7 +33,7 @@ public class Player2DControll : MonoBehaviour
 
 	//Human
 
-	private BoxCollider2D colliderProta;
+	private CapsuleCollider2D colliderProta;
     
     //Slime
     public PlayerMode playerMode;
@@ -55,7 +57,7 @@ public class Player2DControll : MonoBehaviour
     {
 	    Instance = this;
 		circleSlime = GetComponent<CircleCollider2D>();
-		colliderProta = GetComponent<BoxCollider2D>();
+		colliderProta = GetComponent<CapsuleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -68,11 +70,17 @@ public class Player2DControll : MonoBehaviour
 
     private void Update()
     {
-	    var position = transform.position;
-	    bool leftCollision = Physics2D.Raycast(position,  Vector2.left, 0.1f, ground);  //Antes en 0.25f, lo cambie porque se quedaba pegado sin tocar
+	    var position = (Vector2)transform.position;
+	    bool leftCollision = Physics2D.Raycast(position,  Vector2.left, 0.1f, ground);
 	    bool rightCollision = Physics2D.Raycast(position,  Vector2.right, 0.1f, ground);
 	    bool upCollision = Physics2D.Raycast(position, Vector2.up, 0.1f, ground);
+	    isGrounded = Physics2D.Raycast(position, Vector2.down, 0.2f, ground);
+	    onPlatform = Physics2D.Raycast(position, Vector2.down, 0.2f, platform);
+	    Debug.DrawRay(position, Vector2.down * 0.2f, Color.red);
 
+	    if(onPlatform)
+		    transform.parent = Physics2D.Raycast(position, Vector2.down, 0.2f, platform).collider.gameObject.transform;
+	    
 	    if (playerMode == PlayerMode.Slime && (leftCollision || rightCollision))
 	    {
 		    rb.velocity = Vector2.zero;
@@ -202,18 +210,6 @@ public class Player2DControll : MonoBehaviour
 	    canInflate = true;
     }
     
-
-    private void OnCollisionEnter2D(Collision2D coll)
-    {
-	    if (coll.gameObject.layer == 8)
-		    isGrounded = true;
-		else if (coll.gameObject.layer == 9)
-		{
-			isGrounded = true;
-			transform.parent = coll.gameObject.transform;
-		}
-		    
-	}
 	private void OnCollisionExit2D(Collision2D coll)
 	{
 		if (coll.gameObject.layer == 9)

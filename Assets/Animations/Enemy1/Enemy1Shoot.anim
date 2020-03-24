@@ -80,7 +80,7 @@ AnimationClip:
       value: {fileID: 3442179625517505081, guid: 86acda45b97f082488dabc3ecc34b51b,
         type: 3}
     attribute: m_Sprite
-    path: 
+    path: SlimeVFX
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -91,7 +91,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 463373509
       attribute: 0
       script: {fileID: 0}
       typeID: 212

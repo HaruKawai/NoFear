@@ -103,10 +103,14 @@
             </e>
           </e>
         </e>
+        <e p="EnemyScript.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="bullet.cs" t="Include" />
           <e p="controladorTiempo.cs" t="Include" />
           <e p="DestroyOnExit.cs" t="Include" />
+          <e p="Enemies" t="Include">
+            <e p="Basic.cs" t="Include" />
+          </e>
           <e p="Enemy.cs" t="Include" />
           <e p="GoodItem.cs" t="Include" />
           <e p="HealthBar.cs" t="Include" />

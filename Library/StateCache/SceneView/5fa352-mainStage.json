@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-1.4233615398406983,"y":0.2439873069524765,"z":-5.39197301864624},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":9.299325942993164,"orthographic":true}
-=======
-﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":2.7919559478759767,"y":0.9216479659080505,"z":-60.46044921875},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":1.931313395500183,"orthographic":true}
->>>>>>> Aitor
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-1.6762080192565919,"y":0.18765096366405488,"z":-0.060116637498140338},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":0.42658504843711855,"orthographic":true}
