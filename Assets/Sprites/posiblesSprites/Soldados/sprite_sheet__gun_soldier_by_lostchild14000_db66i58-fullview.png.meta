@@ -1,7 +1,157 @@
 fileFormatVersion: 2
 guid: b65433000b67b0d459a0f12d1a0abcd0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1909479252206368701
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_0
+  - first:
+      213: 482909981600749540
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_1
+  - first:
+      213: 67314449592489001
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_2
+  - first:
+      213: -8744082840948833586
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_3
+  - first:
+      213: -6732034673684471527
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_4
+  - first:
+      213: 5648225992493166607
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_5
+  - first:
+      213: 6636693040114904850
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_6
+  - first:
+      213: 7010390962005974468
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_7
+  - first:
+      213: 4929948981745551100
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_8
+  - first:
+      213: 431924709490280061
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_9
+  - first:
+      213: -5631754164705879070
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_10
+  - first:
+      213: 1247501240035591759
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_11
+  - first:
+      213: 6836070964607543507
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_12
+  - first:
+      213: -3930094122915507147
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_13
+  - first:
+      213: -7301243686811715389
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_14
+  - first:
+      213: -6891295026922420214
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_15
+  - first:
+      213: -2295125722012093862
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_16
+  - first:
+      213: 1433005860033528189
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_17
+  - first:
+      213: 6129587070399613156
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_18
+  - first:
+      213: 8166594936378690649
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_19
+  - first:
+      213: -3616818045853404270
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_20
+  - first:
+      213: -1832376266243101783
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_21
+  - first:
+      213: -1844686119049169841
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_22
+  - first:
+      213: 5702143439267787654
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_23
+  - first:
+      213: 4216786003098788477
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_24
+  - first:
+      213: 897833814345834355
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_25
+  - first:
+      213: -8442124180578389096
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_26
+  - first:
+      213: 1315859098299461018
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_27
+  - first:
+      213: -1890688014852234689
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_28
+  - first:
+      213: -6007010725439533643
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_29
+  - first:
+      213: 1457837900877297097
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_30
+  - first:
+      213: -5980815945963529715
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_31
+  - first:
+      213: -8092273253497336865
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_32
+  - first:
+      213: 2201207728677884827
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_33
+  - first:
+      213: -911101257927976278
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_34
+  - first:
+      213: 5032213099107705581
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_35
+  - first:
+      213: -8554565230407532715
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_36
+  - first:
+      213: -2156519372244496093
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_37
+  - first:
+      213: 9129424637073332374
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_38
+  - first:
+      213: 7761859613043224421
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_39
+  - first:
+      213: -2668023743050200372
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_40
+  - first:
+      213: -7973548834343869192
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_41
+  - first:
+      213: 9068633765208711968
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_42
+  - first:
+      213: 7923514963577886502
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_43
+  - first:
+      213: 614835943380061544
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_44
+  - first:
+      213: 3646759561093748839
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_45
+  - first:
+      213: -8588396923483099136
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_46
+  - first:
+      213: -3905420342731151696
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_47
+  - first:
+      213: 8833103217922319645
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_48
+  - first:
+      213: -5643183420000251799
+    second: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_49
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +181,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +190,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,9 +220,1107 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 350
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602d73e5eaeb66c48acce01419f194b2
+      internalID: -1909479252206368701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 350
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d088f4a903865f24ba880b35244db1bb
+      internalID: 482909981600749540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 350
+        width: 27
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 594dc6f049e28114192dc2396e98f8a1
+      internalID: 67314449592489001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_3
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 350
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f034518579f9fd41827727dd99d7745
+      internalID: -8744082840948833586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_4
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 350
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7ec80a6b38b07408b30bea6d1babf0
+      internalID: -6732034673684471527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_5
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 350
+        width: 18
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154c422a4c21aae48ab2e3e880a1df71
+      internalID: 5648225992493166607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_6
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 350
+        width: 19
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b21ddedc5e3be48ba677aa649be615
+      internalID: 6636693040114904850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_7
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 350
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aae7137e65839440adb960233db33a5
+      internalID: 7010390962005974468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 300
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2635c7108a240e64b96f8064550f9513
+      internalID: 4929948981745551100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_9
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 300
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77f9a55414c4aa4c9a47e89a0b4b580
+      internalID: 431924709490280061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_10
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 300
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78907904c88a8de43a82359fd9991bff
+      internalID: -5631754164705879070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_11
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 300
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bba9786a1380df49a5eb30a957a9ef4
+      internalID: 1247501240035591759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_12
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 300
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a986b0dca608954aa350c53b5582ffd
+      internalID: 6836070964607543507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_13
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 300
+        width: 19
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab01c88662cc104fa46d62d97b2edb5
+      internalID: -3930094122915507147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_14
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 300
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a404549c4e939146b69dd2a18ecc760
+      internalID: -7301243686811715389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_15
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 300
+        width: 19
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9c09c715aaf6c42a484d71b818cbc9
+      internalID: -6891295026922420214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_16
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 250
+        width: 27
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e0ce8f73ba17a4cb8495e2a2eda681
+      internalID: -2295125722012093862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_17
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 250
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc3db6a6b5a4404d93045b6ba161369
+      internalID: 1433005860033528189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_18
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 250
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0330c130c4136ec41a00514b09f0fef7
+      internalID: 6129587070399613156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_19
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 250
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97f825a717fff74ba46d7206e356f17
+      internalID: 8166594936378690649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_20
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 250
+        width: 29
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66996f261171dd44796bdbbe8e722293
+      internalID: -3616818045853404270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_21
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 250
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 771507b59b2e3fb4ca42b6a58447bd95
+      internalID: -1832376266243101783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_22
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 250
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd16bbb04ba48374db0dfcf5d749e721
+      internalID: -1844686119049169841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_23
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 250
+        width: 27
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c60ebd3cc657a540866981234e47431
+      internalID: 5702143439267787654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_24
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 200
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04acb14be34f8904d88e87ca78f89806
+      internalID: 4216786003098788477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_25
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 202
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62fc8cb252bcfd54ca60a1f8982f3a32
+      internalID: 897833814345834355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_26
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 200
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f10583437c1b37449fbed1497d1dbb0
+      internalID: -8442124180578389096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_27
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 200
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d597cadcc0e115c48bc84f1a4f25abba
+      internalID: 1315859098299461018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_28
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 202
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327da377bc2b0714d858e24f7890a5ce
+      internalID: -1890688014852234689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_29
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 200
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d6815f5e7578d4981c5a8c68cfddee
+      internalID: -6007010725439533643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_30
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 200
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bdac5ce4482054e876de67992eae9d
+      internalID: 1457837900877297097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_31
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 200
+        width: 43
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f3d365640db4543bd34427c4c8bd5d
+      internalID: -5980815945963529715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_32
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 150
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 211264c88ef95e94f9ec188c4e5a2f9c
+      internalID: -8092273253497336865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_33
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 152
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963269b031771f748b617ffc19a15f34
+      internalID: 2201207728677884827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_34
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 150
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f5364dfc3269f4db9aa85c079784c0
+      internalID: -911101257927976278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_35
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 150
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d9286f650a49a4a8963afeb02677b7
+      internalID: 5032213099107705581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_36
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 152
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c2906bfbb9560489ffc6053d93209d
+      internalID: -8554565230407532715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_37
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 150
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10e4a415200fd94f9a5cb425743ff66
+      internalID: -2156519372244496093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_38
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 150
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef83fff64b850e4a8ee201b2f306e43
+      internalID: 9129424637073332374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_39
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 150
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3cd29486c6f1a41a68ef62c4dd0872
+      internalID: 7761859613043224421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_40
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 100
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48fecae00d1a3e488ed6d29f6eb3469
+      internalID: -2668023743050200372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_41
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 102
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067759241404c4a429303be224014025
+      internalID: -7973548834343869192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_42
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 100
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc10b8a55e1dbef47b24519a62b7a228
+      internalID: 9068633765208711968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_43
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 100
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c53cdb247038644ad2f37b1c044446
+      internalID: 7923514963577886502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_44
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 83
+        width: 43
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0739d42ef1561eb42aac97e29978c6ab
+      internalID: 614835943380061544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_45
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 100
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 129b123f990d10743b7868c10f541f8a
+      internalID: 3646759561093748839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_46
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 100
+        width: 38
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5156b7e8839d37a4e913bb2a40596198
+      internalID: -8588396923483099136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_47
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 100
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712b4a8e0f1657a46b1f6faab2f14ef2
+      internalID: -3905420342731151696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_48
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ab3bc980e485c4580a28878476b685
+      internalID: 8833103217922319645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet__gun_soldier_by_lostchild14000_db66i58-fullview_49
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f06928bb4421c4094cd53a06b18834
+      internalID: -5643183420000251799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,0 +1,1531 @@
+fileFormatVersion: 2
+guid: ecb8ee604cfb9fd4cae14c9f6b2bb486
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5907293099710353711
+    second: bossTransparent2_0
+  - first:
+      213: -3622836723442964444
+    second: bossTransparent2_1
+  - first:
+      213: 6652970048172812509
+    second: bossTransparent2_2
+  - first:
+      213: -1634727143892634653
+    second: bossTransparent2_3
+  - first:
+      213: 6075812644321960341
+    second: bossTransparent2_4
+  - first:
+      213: -1120166212508756147
+    second: bossTransparent2_5
+  - first:
+      213: -1474992469051914083
+    second: bossTransparent2_6
+  - first:
+      213: -3622957598696303811
+    second: bossTransparent2_7
+  - first:
+      213: -8477780485106726591
+    second: bossTransparent2_8
+  - first:
+      213: 4212837285171829095
+    second: bossTransparent2_9
+  - first:
+      213: -4310146772517015908
+    second: bossTransparent2_10
+  - first:
+      213: -5799429562350852421
+    second: bossTransparent2_11
+  - first:
+      213: -6021701990977074062
+    second: bossTransparent2_12
+  - first:
+      213: 6651207800165226532
+    second: bossTransparent2_13
+  - first:
+      213: -6151134998484805497
+    second: bossTransparent2_14
+  - first:
+      213: 4202348658018259847
+    second: bossTransparent2_15
+  - first:
+      213: 8880216658188105572
+    second: bossTransparent2_16
+  - first:
+      213: -500984156942062279
+    second: bossTransparent2_17
+  - first:
+      213: -5238524060214035412
+    second: bossTransparent2_18
+  - first:
+      213: 5787247174402267479
+    second: bossTransparent2_19
+  - first:
+      213: -8709672523472438729
+    second: bossTransparent2_20
+  - first:
+      213: -7666303585930434455
+    second: bossTransparent2_21
+  - first:
+      213: 6995083368034086938
+    second: bossTransparent2_22
+  - first:
+      213: -2294475063797197418
+    second: bossTransparent2_23
+  - first:
+      213: 1919611611939099589
+    second: bossTransparent2_24
+  - first:
+      213: 3844082063355174976
+    second: bossTransparent2_25
+  - first:
+      213: -4444420032398219720
+    second: bossTransparent2_26
+  - first:
+      213: -6352647491704953268
+    second: bossTransparent2_27
+  - first:
+      213: -3090428074265383285
+    second: bossTransparent2_28
+  - first:
+      213: -3469781511093379213
+    second: bossTransparent2_29
+  - first:
+      213: -5184529265847126148
+    second: bossTransparent2_30
+  - first:
+      213: -6145210486716547302
+    second: bossTransparent2_31
+  - first:
+      213: -1012281280326383705
+    second: bossTransparent2_32
+  - first:
+      213: -3581787250570115214
+    second: bossTransparent2_33
+  - first:
+      213: 7092791931787354270
+    second: bossTransparent2_34
+  - first:
+      213: 207969298589478816
+    second: bossTransparent2_35
+  - first:
+      213: 3190544223702384614
+    second: bossTransparent2_36
+  - first:
+      213: 5175349199518651568
+    second: bossTransparent2_37
+  - first:
+      213: 2317719892229776240
+    second: bossTransparent2_38
+  - first:
+      213: -8779595421195446921
+    second: bossTransparent2_39
+  - first:
+      213: -3947182725567279281
+    second: bossTransparent2_40
+  - first:
+      213: -8668467497003269862
+    second: bossTransparent2_41
+  - first:
+      213: -9170802175816598370
+    second: bossTransparent2_42
+  - first:
+      213: -3872180190719599977
+    second: bossTransparent2_43
+  - first:
+      213: 8971093465587339932
+    second: bossTransparent2_44
+  - first:
+      213: 6574686044008151891
+    second: bossTransparent2_45
+  - first:
+      213: 1730825264469405124
+    second: bossTransparent2_46
+  - first:
+      213: 2113417727849244676
+    second: bossTransparent2_47
+  - first:
+      213: -5706046096421154480
+    second: bossTransparent2_48
+  - first:
+      213: 3536181793891883311
+    second: bossTransparent2_49
+  - first:
+      213: -2401775069259933465
+    second: bossTransparent2_50
+  - first:
+      213: 5620251833897319614
+    second: bossTransparent2_51
+  - first:
+      213: -4104990904641496665
+    second: bossTransparent2_52
+  - first:
+      213: 1435773497114068066
+    second: bossTransparent2_53
+  - first:
+      213: 7316080843173345465
+    second: bossTransparent2_54
+  - first:
+      213: 5540110354086937654
+    second: bossTransparent2_55
+  - first:
+      213: -4400450651212378315
+    second: bossTransparent2_56
+  - first:
+      213: -8787364571361373850
+    second: bossTransparent2_57
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bossTransparent2_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 263
+        width: 256
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dae6c5c64b73d4b9414e8108d3c7c8
+      internalID: 5907293099710353711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_1
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 323
+        width: 112
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e31c334411141f4ebc3eed6a9e80729
+      internalID: -3622836723442964444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_2
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 325
+        width: 108
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1624d337c11cf747b11cd81cf9055a5
+      internalID: 6652970048172812509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 271
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2016e99d0c307c74fadae58bec3f5757
+      internalID: -1634727143892634653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_4
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 271
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6775ea8eaf2e7a419da290d5d22c3eb
+      internalID: 6075812644321960341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 268
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec928473062267c4c8f2fff81a0005e0
+      internalID: -1120166212508756147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_6
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 293
+        width: 64
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23fef0895dc6da418d21a2ec4d92deb
+      internalID: -1474992469051914083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_7
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 267
+        width: 64
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1193da4e9629c4b882874a6d024193
+      internalID: -3622957598696303811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_8
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 212
+        width: 64
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c61f3b99b91b214688f4ade19874c82
+      internalID: -8477780485106726591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_9
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 241
+        width: 64
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41334c1b6787c1549aea1aa93b9d9920
+      internalID: 4212837285171829095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_10
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 150
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51e44669d6951e4a813106f313c3ef5
+      internalID: -4310146772517015908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 145
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bf066a0488fc84fbb772bd51c5d776
+      internalID: -5799429562350852421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_12
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 141
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2533d9aaab602cd4e9cb52d96ff0c485
+      internalID: -6021701990977074062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_13
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 93
+        width: 8
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9390ee71c8bb1b84a9b6b5da722c687c
+      internalID: 6651207800165226532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_14
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 93
+        width: 8
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f7b12bd0e5c154ebbdf437978eac73
+      internalID: -6151134998484805497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_15
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 93
+        width: 8
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c47f41aef9d34149ba817635fbabaed
+      internalID: 4202348658018259847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_16
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 93
+        width: 8
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa5e3de33764904c8b6ba7bc9134094
+      internalID: 8880216658188105572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_17
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 161
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f489a8c9eedaf049b3f2d5400b3a981
+      internalID: -500984156942062279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_18
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 168
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a77f2a732f44740beeff7be56cac56
+      internalID: -5238524060214035412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_19
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 177
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c79c79eb7845eb44bf224918e3cb8f4
+      internalID: 5787247174402267479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_20
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 172
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0030a4f8df4ab4449b24c970aba49049
+      internalID: -8709672523472438729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_21
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 169
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2821fd0eee15745b51704d4f250962
+      internalID: -7666303585930434455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_22
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 168
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ff894b4d41a3242b49cf48f5cf9e50
+      internalID: 6995083368034086938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_23
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 168
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3355b5c155f69ff4e8ec5a70d432e858
+      internalID: -2294475063797197418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_24
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 165
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711e8e84f83e8234dab4c38c8db31727
+      internalID: 1919611611939099589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_25
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 128
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197f01db48954af44af3d97e603da2b0
+      internalID: 3844082063355174976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_26
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 129
+        width: 120
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a629a8e9f4c09d54984d56da9882b998
+      internalID: -4444420032398219720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_27
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 8
+        width: 112
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae473d597d2b9ef4181d3a2779612b12
+      internalID: -6352647491704953268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_28
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 91
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88eccbafa45814c4b98a06b6e61074a0
+      internalID: -3090428074265383285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_29
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 66
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971c75178050c23449b12b9e5c03b075
+      internalID: -3469781511093379213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_30
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 93
+        width: 120
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9582add1b990cad489034cb821d1f5be
+      internalID: -5184529265847126148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_31
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 76
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f1dab19c248f04890ef2c164d2fb0e
+      internalID: -6145210486716547302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_32
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 78
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 913960b09a573804b84d618c27a01ffd
+      internalID: -1012281280326383705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_33
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 78
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b452263cb1013458c0fa30c8823809
+      internalID: -3581787250570115214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_34
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 52
+        width: 48
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8e38f753c449547bd9f641654c9b6b
+      internalID: 7092791931787354270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_35
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 25
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d074dd333bd2ba34d9b228c8602e135b
+      internalID: 207969298589478816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_36
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 25
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12da0cec19331d1458f4852ff39c31f3
+      internalID: 3190544223702384614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_37
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 26
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f3a8f13c0c067419a9be2af5f6d9b1
+      internalID: 5175349199518651568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_38
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 26
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd8e0618d4d2dd41985f4e0d75fdbc1
+      internalID: 2317719892229776240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_39
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 25
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad3eae6a73c3d8439f9b6695f4b900c
+      internalID: -8779595421195446921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_40
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 25
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2581a67b9ba845741b2c4493d1adc3b6
+      internalID: -3947182725567279281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_41
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 26
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38c8d7e38084ce4091364410c03d0ca
+      internalID: -8668467497003269862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_42
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 27
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad2d5982de9c6f4caae65abcf53c92e
+      internalID: -9170802175816598370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_43
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 27
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bf955b2014695449d0709ed2cf2ecb
+      internalID: -3872180190719599977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_44
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 27
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48cfbd7d9b5b9f34b9ecc2c3701e3763
+      internalID: 8971093465587339932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_45
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 27
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48996edf20ebaa643947aa94c921f62c
+      internalID: 6574686044008151891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_46
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 40
+        width: 26
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6250dd67ece9f64ba46d6530cd0ee8a
+      internalID: 1730825264469405124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_47
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 42
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6e8850ed9ddcf4bb15cc81b6064424
+      internalID: 2113417727849244676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_48
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 42
+        width: 41
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd40d5fdf4ad044f8eeb4f4e96bd237
+      internalID: -5706046096421154480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_49
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 40
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 762354c572a265c48b4ec4b154c53094
+      internalID: 3536181793891883311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_50
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 28
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3892298d3f71946bff76c03d03d6dd
+      internalID: -2401775069259933465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_51
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 28
+        width: 31
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a5a27935905b04bb4a6ed8f1c1b007
+      internalID: 5620251833897319614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_52
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 30
+        width: 29
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fce45fd41b5ac64d9e626cfa3d95ab6
+      internalID: -4104990904641496665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_53
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 16
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8886e6c94ebc3cd42b4c44a37f62d9c5
+      internalID: 1435773497114068066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_54
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 16
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335c8cdf11f3c094998c288af0e20744
+      internalID: 7316080843173345465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_55
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 6
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbe4aa55dcab6543ae2f0b92d914e0f
+      internalID: 5540110354086937654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_56
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 6
+        width: 15
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936fbfc1fb91d4a40b818d05dea9c636
+      internalID: -4400450651212378315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bossTransparent2_57
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 4
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef8ad51fc8e6b4499fb5b413133f9bb
+      internalID: -8787364571361373850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

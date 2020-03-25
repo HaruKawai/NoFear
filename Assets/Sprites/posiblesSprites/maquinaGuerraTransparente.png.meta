@@ -1,0 +1,1459 @@
+fileFormatVersion: 2
+guid: cae84a61c271f2745970790b944f6a49
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4876698827195274706
+    second: maquinaGuerraTransparente_0
+  - first:
+      213: 5401832158272961447
+    second: maquinaGuerraTransparente_1
+  - first:
+      213: 4254529372883050141
+    second: maquinaGuerraTransparente_2
+  - first:
+      213: -6186532713319482852
+    second: maquinaGuerraTransparente_3
+  - first:
+      213: -3761556593788263949
+    second: maquinaGuerraTransparente_4
+  - first:
+      213: -1226327958269042398
+    second: maquinaGuerraTransparente_5
+  - first:
+      213: 1863846898511807773
+    second: maquinaGuerraTransparente_6
+  - first:
+      213: -5581010838403158540
+    second: maquinaGuerraTransparente_7
+  - first:
+      213: 3110743916228042026
+    second: maquinaGuerraTransparente_8
+  - first:
+      213: -515530105003044874
+    second: maquinaGuerraTransparente_9
+  - first:
+      213: -3907645617387103548
+    second: maquinaGuerraTransparente_10
+  - first:
+      213: -7915338211358918613
+    second: maquinaGuerraTransparente_11
+  - first:
+      213: 7236761419857523526
+    second: maquinaGuerraTransparente_12
+  - first:
+      213: -2824295456063338378
+    second: maquinaGuerraTransparente_13
+  - first:
+      213: -1368904492397296904
+    second: maquinaGuerraTransparente_14
+  - first:
+      213: -5849648500159305410
+    second: maquinaGuerraTransparente_15
+  - first:
+      213: -1470418858610091541
+    second: maquinaGuerraTransparente_16
+  - first:
+      213: -2763405336613801212
+    second: maquinaGuerraTransparente_17
+  - first:
+      213: 4103369711320109382
+    second: maquinaGuerraTransparente_18
+  - first:
+      213: -3131475216183436637
+    second: maquinaGuerraTransparente_19
+  - first:
+      213: -8427502354163994958
+    second: maquinaGuerraTransparente_20
+  - first:
+      213: 1620868840902884682
+    second: maquinaGuerraTransparente_21
+  - first:
+      213: -8450701878439503825
+    second: maquinaGuerraTransparente_22
+  - first:
+      213: -2782301414667248741
+    second: maquinaGuerraTransparente_23
+  - first:
+      213: -4101020476135402597
+    second: maquinaGuerraTransparente_24
+  - first:
+      213: -1576476571628260184
+    second: maquinaGuerraTransparente_25
+  - first:
+      213: -4918877464077249558
+    second: maquinaGuerraTransparente_26
+  - first:
+      213: 4405122543808532741
+    second: maquinaGuerraTransparente_27
+  - first:
+      213: -4925470408790814330
+    second: maquinaGuerraTransparente_28
+  - first:
+      213: 658213876143667335
+    second: maquinaGuerraTransparente_29
+  - first:
+      213: 7910320420920572644
+    second: maquinaGuerraTransparente_30
+  - first:
+      213: 7249816172777929074
+    second: maquinaGuerraTransparente_31
+  - first:
+      213: 29350906430505722
+    second: maquinaGuerraTransparente_32
+  - first:
+      213: -2730461897637761784
+    second: maquinaGuerraTransparente_33
+  - first:
+      213: 8380222956894696438
+    second: maquinaGuerraTransparente_34
+  - first:
+      213: 2219077535860184011
+    second: maquinaGuerraTransparente_35
+  - first:
+      213: 8156588229183030333
+    second: maquinaGuerraTransparente_36
+  - first:
+      213: 8368341187979218145
+    second: maquinaGuerraTransparente_37
+  - first:
+      213: -6154892298805373603
+    second: maquinaGuerraTransparente_38
+  - first:
+      213: -3426072478624770574
+    second: maquinaGuerraTransparente_39
+  - first:
+      213: 7060802101560747442
+    second: maquinaGuerraTransparente_40
+  - first:
+      213: 8334505194910205262
+    second: maquinaGuerraTransparente_41
+  - first:
+      213: 2563422549271961296
+    second: maquinaGuerraTransparente_42
+  - first:
+      213: 6707592492447805565
+    second: maquinaGuerraTransparente_43
+  - first:
+      213: 3614891215738447285
+    second: maquinaGuerraTransparente_44
+  - first:
+      213: -2476131951870768840
+    second: maquinaGuerraTransparente_45
+  - first:
+      213: 449391192044412729
+    second: maquinaGuerraTransparente_46
+  - first:
+      213: 5358102998964236880
+    second: maquinaGuerraTransparente_47
+  - first:
+      213: 1777635379893577228
+    second: maquinaGuerraTransparente_48
+  - first:
+      213: -1923431607406304263
+    second: maquinaGuerraTransparente_49
+  - first:
+      213: 6196649418466700004
+    second: maquinaGuerraTransparente_50
+  - first:
+      213: 4634211624976281206
+    second: maquinaGuerraTransparente_51
+  - first:
+      213: 5663368491717272376
+    second: maquinaGuerraTransparente_52
+  - first:
+      213: 7428700762355293088
+    second: maquinaGuerraTransparente_53
+  - first:
+      213: 5965970920545891366
+    second: maquinaGuerraTransparente_54
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 535
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7144470f425978a4a9962a9576c22af0
+      internalID: -4876698827195274706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 535
+        width: 99
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5090a3a5097656e468373b5b725989d3
+      internalID: 5401832158272961447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 535
+        width: 103
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35d3cda268aff3429f11e09c55008c7
+      internalID: 4254529372883050141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_3
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 535
+        width: 95
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8568182271f5474582f139b1da1d329
+      internalID: -6186532713319482852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_4
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 535
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0890e1dcacd68e4eaf85780315b7524
+      internalID: -3761556593788263949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_5
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 535
+        width: 99
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6733344df4b36428abe27e67b70807
+      internalID: -1226327958269042398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_6
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 535
+        width: 103
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7e7e80924595342b44878998a7df36
+      internalID: 1863846898511807773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_7
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 535
+        width: 95
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623a973b9b8d51b478734ee5a4c99764
+      internalID: -5581010838403158540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 384
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24403e7017de034aa4163f97a64c948
+      internalID: 3110743916228042026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 92
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ad1ac616c1d2942a805f327eaa336f
+      internalID: -515530105003044874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_10
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 384
+        width: 95
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb536f73223257b45a211a3e4853c83a
+      internalID: -3907645617387103548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_11
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 384
+        width: 87
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d5306e5fbcc9854c8ea667fd6a64643
+      internalID: -7915338211358918613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_12
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 384
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ab46dd1472eaf47b19c4c23b997aac
+      internalID: 7236761419857523526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_13
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 384
+        width: 91
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736c979a1ecb1ab42a11e2945cb6257b
+      internalID: -2824295456063338378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_14
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 384
+        width: 95
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10f6a71d475c3643a1ce8772a3099db
+      internalID: -1368904492397296904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_15
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 384
+        width: 87
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb97cb34d87dd748aeff1eff3ba7274
+      internalID: -5849648500159305410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 233
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bfb60fe2375c8048be45c1eeb4da22a
+      internalID: -1470418858610091541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 233
+        width: 92
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c150bdbd8b9e04aa0f919b10895773
+      internalID: -2763405336613801212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_18
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 233
+        width: 85
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff97ce5026ab1e418b2f45d3aaba4ac
+      internalID: 4103369711320109382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_19
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 233
+        width: 83
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e498ef1b8924b00429293f71d8bb8ec0
+      internalID: -3131475216183436637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_20
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 233
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3743aae06fc7bae45bbce3b67e8dc9a9
+      internalID: -8427502354163994958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_21
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 233
+        width: 91
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8ad1bf707de264ba2ca3bf7f653ba4
+      internalID: 1620868840902884682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_22
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 233
+        width: 85
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab8aff893538094e81d596ac245a49c
+      internalID: -8450701878439503825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_23
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 233
+        width: 83
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f886bf6967ad6544cb3d46450850e335
+      internalID: -2782301414667248741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_24
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d0f4a7bc5287e40b98ca0a5f5c14a6
+      internalID: -4101020476135402597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51277f0ba7ab8d64aba0896df90a076a
+      internalID: -1576476571628260184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf3189162badfa4b90f1299d93189b9
+      internalID: -4918877464077249558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_27
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 161
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87735eb8c84655a4887fe31711c0043b
+      internalID: 4405122543808532741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_28
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 161
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef136ce7fbe90d74fb9de0d13416c312
+      internalID: -4925470408790814330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_29
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 161
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce667f88df7511448c49ea76f68721b
+      internalID: 658213876143667335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_30
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 161
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea712a4ddcf14214598450359451f00c
+      internalID: 7910320420920572644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_31
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 161
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75880b939294b1e46ac8acf86bf1d058
+      internalID: 7249816172777929074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_32
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 161
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ab586e7f4559c4b9c6983d5e6de90d
+      internalID: 29350906430505722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_33
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 161
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6efccc5d14cad40ba632cb4d843dd0
+      internalID: -2730461897637761784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_34
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 161
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc2dffc5f4f0304a86ce50185a6227c
+      internalID: 8380222956894696438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_35
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 161
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca275059fb3750409f57e1b74a47d93
+      internalID: 2219077535860184011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_36
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 161
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665216fff2b863a4b8700576be0bc575
+      internalID: 8156588229183030333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_37
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 161
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a6ae59096e19f4eb846e5c02daac36
+      internalID: 8368341187979218145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_38
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 161
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f646c5f69723d848beee81d6268be21
+      internalID: -6154892298805373603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_39
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 161
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ee773fae1650f4b89e38fdb68519c9
+      internalID: -3426072478624770574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_40
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 104
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601ae05b712f892409c442f3fa9429a5
+      internalID: 7060802101560747442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_41
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 22
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a866065a570b4c4590ed4d835009ad5
+      internalID: 8334505194910205262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_42
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 22
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d720a647599ad1d44805c98e02d5784e
+      internalID: 2563422549271961296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_43
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 22
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d415daab7fe959b4c9db237390bfe7f3
+      internalID: 6707592492447805565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_44
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 22
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54420940461ad184897dc1c9e7e7ae72
+      internalID: 3614891215738447285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_45
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 22
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42b4f1061806824d98ef7ae575b51b1
+      internalID: -2476131951870768840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_46
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 22
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24c026b04d8bab4b872200e1f1034a9
+      internalID: 449391192044412729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_47
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 22
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbae55d05af77844b623033bd0a9cff
+      internalID: 5358102998964236880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_48
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 22
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73fe82e42dccd5544b2e0ad6aba768ac
+      internalID: 1777635379893577228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_49
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 22
+        width: 37
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bae27910746cac498ba48d161828d5f
+      internalID: -1923431607406304263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_50
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 22
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfea72be4fe594247bdf4cbc8bce571c
+      internalID: 6196649418466700004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 22
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442efd8438e04cd43ad12b334d526727
+      internalID: 4634211624976281206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_52
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 22
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7949070437406a345b378720eb9bffab
+      internalID: 5663368491717272376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_53
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 22
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb7a4966d216324fa6ae53c7da8ec64
+      internalID: 7428700762355293088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: maquinaGuerraTransparente_54
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 22
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3201e3405482524aa622bf6c6ee67e8
+      internalID: 5965970920545891366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
