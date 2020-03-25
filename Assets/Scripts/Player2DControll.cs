@@ -14,6 +14,7 @@ public class Player2DControll : MonoBehaviour
 
     //General
     private Animator anim;
+    private SpriteRenderer sr;
     private float distance;
     private float verticalMove;
     private Rigidbody2D rb;
@@ -22,8 +23,7 @@ public class Player2DControll : MonoBehaviour
     private bool canJump;
     private bool isGrounded;
     private bool onPlatform;
-	private bool m_FacingRight = true;
-	private Vector3 m_Velocity = Vector3.zero;
+    private Vector3 m_Velocity = Vector3.zero;
     private bool damaged;
     [SerializeField] private LayerMask ground;
     [SerializeField] private LayerMask platform;
@@ -58,6 +58,7 @@ public class Player2DControll : MonoBehaviour
     private void Awake()
     {
 	    Instance = this;
+	    sr = GetComponentInChildren<SpriteRenderer>();
 		circleSlime = GetComponent<CircleCollider2D>();
 		colliderProta = GetComponent<CapsuleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
@@ -213,10 +214,10 @@ public class Player2DControll : MonoBehaviour
 		    else if (playerMode == PlayerMode.Slime)
 			    targetVelocity = stickOnWall ? new Vector2(move * 7f, move2 * 7f) : new Vector2(move * 3f, velocity.y);
 		    rb.velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-		    if (move > 0 && !m_FacingRight) 
-			    Flip();
-		    else if (move < 0 && m_FacingRight)
-			    Flip();
+		    if (move > 0)
+			    sr.flipX = false;
+		    else if (move < 0)
+			    sr.flipX = true;
 	    }
 	    if (isGrounded && jump)
 	    {
@@ -226,12 +227,6 @@ public class Player2DControll : MonoBehaviour
 	    }
     }
     
-	private void Flip()
-	{
-		m_FacingRight = !m_FacingRight;
-		transform.Rotate(0f,180f,0);
-	}
-
 	private void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.contacts[0].collider.gameObject.layer == 12 && playerMode == PlayerMode.Slime)
