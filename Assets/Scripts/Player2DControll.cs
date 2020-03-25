@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Linq.Expressions;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class Player2DControll : MonoBehaviour
@@ -77,34 +79,35 @@ public class Player2DControll : MonoBehaviour
 	    isGrounded = Physics2D.Raycast(position, Vector2.down, 0.2f, ground);
 	    onPlatform = Physics2D.Raycast(position, Vector2.down, 0.2f, platform);
 	    Debug.DrawRay(position, Vector2.down * 0.2f, Color.red);
-
-	    if(onPlatform)
-		    transform.parent = Physics2D.Raycast(position, Vector2.down, 0.2f, platform).collider.gameObject.transform;
 	    
-	    if (playerMode == PlayerMode.Slime && (leftCollision || rightCollision))
+	    anim.SetBool("IsGrounding", isGrounded);
+
+	    transform.parent = onPlatform ? Physics2D.Raycast(position, Vector2.down, 0.2f, platform).collider.gameObject.transform : null;
+	    
+	    switch (playerMode)
 	    {
-		    rb.velocity = Vector2.zero;
-		    rb.gravityScale = 0;
-		    stickOnWall = true;
-	    }
-	    else if (playerMode == PlayerMode.Slime && upCollision)
-	    {
-		    rb.gravityScale = 0;
-		    stickOnWall = false;
-		    stickOnCealing = true;
-	    }
-	    else
-	    {
-		    rb.gravityScale = 1;
-		    stickOnWall = false;
-		    stickOnCealing = false;
+		    case PlayerMode.Slime when (leftCollision || rightCollision):
+			    rb.velocity = Vector2.zero;
+			    rb.gravityScale = 0;
+			    stickOnWall = true;
+			    break;
+		    case PlayerMode.Slime when upCollision:
+			    rb.gravityScale = 0;
+			    stickOnWall = false;
+			    stickOnCealing = true;
+			    break;
+		    default:
+			    rb.gravityScale = 1;
+			    stickOnWall = false;
+			    stickOnCealing = false;
+			    break;
 	    }
 
 
 	    horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 	    verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
         
-        if (Input.GetButtonDown("Change"))
+        if (Input.GetButtonDown("Change") && !inflated)
 	        ChangeFunction();
 
         if (playerMode == PlayerMode.Slime)
@@ -115,21 +118,10 @@ public class Player2DControll : MonoBehaviour
 	        if (Input.GetButtonUp("Bubble") && inflated) 
 		        StartCoroutine(DesInflationCoroutine());
         }
-        else  //Interact Actions
-        {
-            //Interact
-        }
 
-		if(isGrounded) anim.SetBool("IsGrounding", true);
-		else  anim.SetBool("IsGrounding", false);
-        
-        //Jump
         if (Input.GetButtonDown("Jump") && playerMode != PlayerMode.Slime)
-        {
-            canJump = true;
-            //animator.SetBool("IsJumping", true);
-        }
-
+	        canJump = true;
+        
         if(damaged) {
             //animator.SetBool("Damaged", true);
             damaged = false;
@@ -209,12 +201,6 @@ public class Player2DControll : MonoBehaviour
 	    
 	    canInflate = true;
     }
-    
-	private void OnCollisionExit2D(Collision2D coll)
-	{
-		if (coll.gameObject.layer == 9)
-			transform.parent = null;
-	}
 
     private  void Move(float move, bool jump, float move2)
     {
@@ -245,6 +231,15 @@ public class Player2DControll : MonoBehaviour
 		m_FacingRight = !m_FacingRight;
 		transform.Rotate(0f,180f,0);
 	}
- 
-    
+
+	private void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.contacts[0].collider.gameObject.layer == 12 && playerMode == PlayerMode.Slime)
+		{
+			other.gameObject.GetComponent<Player2DControll>().enabled = true;
+			other.gameObject.GetComponent<EnemyScript>().enabled = false;
+			transform.parent = other.transform;
+			gameObject.SetActive(false);
+		}
+	}
 }

@@ -27062,7 +27062,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507330757}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.28893805, y: 0.20301549, z: -10}
+  m_LocalPosition: {x: 0.29222918, y: 0.20301549, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -29211,6 +29211,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 307438356, guid: 49db1908fa454bd42a763f7b72923c62, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.024997056
+      objectReference: {fileID: 0}
+    - target: {fileID: 307438356, guid: 49db1908fa454bd42a763f7b72923c62, type: 3}
+      propertyPath: m_Size.y
+      value: 0.33505714
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246176591151342839, guid: 49db1908fa454bd42a763f7b72923c62,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246176591151342839, guid: 49db1908fa454bd42a763f7b72923c62,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7461339851011224914, guid: 49db1908fa454bd42a763f7b72923c62,
         type: 3}
       propertyPath: m_Name
@@ -29220,6 +29238,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461339851011224914, guid: 49db1908fa454bd42a763f7b72923c62,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461339851011224914, guid: 49db1908fa454bd42a763f7b72923c62,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7461339851011224926, guid: 49db1908fa454bd42a763f7b72923c62,
         type: 3}
@@ -29280,6 +29308,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7461339852570479791, guid: 49db1908fa454bd42a763f7b72923c62,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49db1908fa454bd42a763f7b72923c62, type: 3}
