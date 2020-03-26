@@ -46,6 +46,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\EnemyScript.cs" />
+     <Compile Include="Assets\MainMenu.cs" />
+     <Compile Include="Assets\PausedMenu.cs" />
      <Compile Include="Assets\Scripts\bullet.cs" />
      <Compile Include="Assets\Scripts\controladorTiempo.cs" />
      <Compile Include="Assets\Scripts\DestroyOnExit.cs" />
