@@ -17,53 +17,21 @@ AnimationClip:
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
-  m_PPtrCurves:
-  - curve:
-    - time: 0
-      value: {fileID: 3385341972032590204, guid: 86acda45b97f082488dabc3ecc34b51b,
-        type: 3}
-    - time: 0.18333334
-      value: {fileID: -7152719845844923913, guid: 86acda45b97f082488dabc3ecc34b51b,
-        type: 3}
-    - time: 0.35
-      value: {fileID: -6450791478395107720, guid: 86acda45b97f082488dabc3ecc34b51b,
-        type: 3}
-    - time: 0.48333332
-      value: {fileID: -8806390681626240087, guid: 86acda45b97f082488dabc3ecc34b51b,
-        type: 3}
-    - time: 0.6666667
-      value: {fileID: 5562248484841851663, guid: 86acda45b97f082488dabc3ecc34b51b,
-        type: 3}
-    attribute: m_Sprite
-    path: SlimeVFX
-    classID: 212
-    script: {fileID: 0}
+  m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings:
-    - serializedVersion: 2
-      path: 463373509
-      attribute: 0
-      script: {fileID: 0}
-      typeID: 212
-      customType: 23
-      isPPtrCurve: 1
-    pptrCurveMapping:
-    - {fileID: 3385341972032590204, guid: 86acda45b97f082488dabc3ecc34b51b, type: 3}
-    - {fileID: -7152719845844923913, guid: 86acda45b97f082488dabc3ecc34b51b, type: 3}
-    - {fileID: -6450791478395107720, guid: 86acda45b97f082488dabc3ecc34b51b, type: 3}
-    - {fileID: -8806390681626240087, guid: 86acda45b97f082488dabc3ecc34b51b, type: 3}
-    - {fileID: 5562248484841851663, guid: 86acda45b97f082488dabc3ecc34b51b, type: 3}
+    genericBindings: []
+    pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.68333334
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
