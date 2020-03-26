@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Linq.Expressions;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class Player2DControll : MonoBehaviour
@@ -14,7 +12,6 @@ public class Player2DControll : MonoBehaviour
 
     //General
     private Animator anim;
-    private SpriteRenderer sr;
     private float distance;
     private float verticalMove;
     private Rigidbody2D rb;
@@ -27,6 +24,7 @@ public class Player2DControll : MonoBehaviour
     private bool damaged;
     [SerializeField] private LayerMask ground;
     [SerializeField] private LayerMask platform;
+    private bool lookingRight;
 
     public enum PlayerMode
     {
@@ -53,19 +51,19 @@ public class Player2DControll : MonoBehaviour
     private bool canInflate = true;
     private static readonly int DesInflation = Animator.StringToHash("DesInflation");
     private static readonly int Inflation = Animator.StringToHash("Inflation");
+    private IEnumerator inflationCoroutine;
 
 
     private void Awake()
     {
 	    Instance = this;
-	    sr = GetComponentInChildren<SpriteRenderer>();
-		circleSlime = GetComponent<CircleCollider2D>();
+	    circleSlime = GetComponent<CircleCollider2D>();
 		colliderProta = GetComponent<CapsuleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-
-    private void Start()
+    
+    private void OnEnable()
     {
 	    playerMode = PlayerMode.Human;
 	    ChangeFunction();
@@ -79,25 +77,33 @@ public class Player2DControll : MonoBehaviour
 	    bool upCollision = Physics2D.Raycast(position, Vector2.up, 0.1f, ground);
 	    isGrounded = Physics2D.Raycast(position, Vector2.down, 0.2f, ground);
 	    onPlatform = Physics2D.Raycast(position, Vector2.down, 0.2f, platform);
-	    Debug.DrawRay(position, Vector2.down * 0.2f, Color.red);
+	    Debug.Log(upCollision);
+	    Debug.Log(leftCollision);
 	    
 	    anim.SetBool("IsGrounding", isGrounded);
+	    anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
 	    transform.parent = onPlatform ? Physics2D.Raycast(position, Vector2.down, 0.2f, platform).collider.gameObject.transform : null;
 	    
 	    switch (playerMode)
 	    {
 		    case PlayerMode.Slime when (leftCollision || rightCollision):
+			    anim.SetBool("slimeWall", true);
+			    anim.SetBool("slimeUp", false);
 			    rb.velocity = Vector2.zero;
 			    rb.gravityScale = 0;
 			    stickOnWall = true;
 			    break;
 		    case PlayerMode.Slime when upCollision:
+			    anim.SetBool("slimeUp", true);
+			    anim.SetBool("slimeWall", false);
 			    rb.gravityScale = 0;
 			    stickOnWall = false;
 			    stickOnCealing = true;
 			    break;
 		    default:
+			    anim.SetBool("slimeUp", false);
+			    anim.SetBool("slimeWall", false);
 			    rb.gravityScale = 1;
 			    stickOnWall = false;
 			    stickOnCealing = false;
@@ -111,18 +117,26 @@ public class Player2DControll : MonoBehaviour
         if (Input.GetButtonDown("Change") && !inflated)
 	        ChangeFunction();
 
+        
         if (playerMode == PlayerMode.Slime)
         {
 	        if (Input.GetButtonDown("Bubble") && canInflate)
-		        StartCoroutine(InflationCoroutine());
+	        {
+		        inflationCoroutine = InflationCoroutine();
+		        StartCoroutine(inflationCoroutine);
+	        }
 
-	        if (Input.GetButtonUp("Bubble") && inflated) 
+	        if (Input.GetButtonUp("Bubble") && inflated)
 		        StartCoroutine(DesInflationCoroutine());
+	        
         }
 
         if (Input.GetButtonDown("Jump") && playerMode != PlayerMode.Slime)
+        {
+	        anim.SetTrigger("Jump");
 	        canJump = true;
-        
+        }
+
         if(damaged) {
             //animator.SetBool("Damaged", true);
             damaged = false;
@@ -132,8 +146,6 @@ public class Player2DControll : MonoBehaviour
     private void FixedUpdate()
     {
 	    Move(horizontalMove * Time.fixedDeltaTime, canJump, verticalMove * Time.fixedDeltaTime);
-		if(horizontalMove < 1) anim.SetFloat("Speed", -horizontalMove);
-		else anim.SetFloat("Speed", horizontalMove);
 	    canJump = false;
     }
 
@@ -192,7 +204,7 @@ public class Player2DControll : MonoBehaviour
     //DesInflate
     private IEnumerator DesInflationCoroutine()
     {
-	    StopCoroutine(InflationCoroutine());
+	    StopCoroutine(inflationCoroutine);
 	    anim.SetTrigger(DesInflation);
 	    parry = false;
 	    inflated = false; 
@@ -214,24 +226,31 @@ public class Player2DControll : MonoBehaviour
 		    else if (playerMode == PlayerMode.Slime)
 			    targetVelocity = stickOnWall ? new Vector2(move * 7f, move2 * 7f) : new Vector2(move * 3f, velocity.y);
 		    rb.velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-		    if (move > 0)
-			    sr.flipX = false;
-		    else if (move < 0)
-			    sr.flipX = true;
+		    if (move > 0 && lookingRight)
+			    Flip();
+		    else if (move < 0 && !lookingRight)
+			    Flip();
 	    }
 	    if (isGrounded && jump)
 	    {
-	    	anim.SetTrigger("Jump");
 		    isGrounded = false;
 		    rb.AddForce(new Vector2(0f, m_JumpForce));
 	    }
     }
+
+    private void Flip()
+    {
+	    lookingRight = !lookingRight;
+	    transform.Rotate(0f, 180f, 0f);
+    }
     
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.contacts[0].collider.gameObject.layer == 12 && playerMode == PlayerMode.Slime)
+		if (other.contacts[0].collider.gameObject.layer == 12 && playerMode == PlayerMode.Slime &&
+		    other.gameObject.GetComponent<EnemyScript>().canBePossesed)
 		{
-			other.gameObject.GetComponent<Player2DControll>().enabled = true;
+			other.gameObject.GetComponent<EnemyScript>().canBePossesed = false;
+			other.gameObject.GetComponent<PossessedEnemy>().enabled = true;
 			other.gameObject.GetComponent<EnemyScript>().enabled = false;
 			transform.parent = other.transform;
 			gameObject.SetActive(false);
