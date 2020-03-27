@@ -255,5 +255,6 @@ public class Player2DControll : MonoBehaviour
 			transform.parent = other.transform;
 			gameObject.SetActive(false);
 		}
+		if(other.gameObject.layer == 10) ScoreManager.instance.Damaged();
 	}
 }

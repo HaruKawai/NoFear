@@ -3,14 +3,14 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager Instance { get; set; }
+    public static ScoreManager instance;
     public TextMeshProUGUI textLife;
     private int scoreLife = 5;
     
     private void Awake() 
     {
-        if (Instance == null)
-            Instance = this;
+        if (instance == null)
+            instance = this;
     }
     
     public void Damaged()

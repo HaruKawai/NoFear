@@ -5,10 +5,12 @@ using UnityEngine;
 public class FallPlatform : MonoBehaviour
 {
     Rigidbody2D rb;
+    BoxCollider2D collider;
     private bool cantBack;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        collider = GetComponent<BoxCollider2D>();
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -26,5 +28,6 @@ public class FallPlatform : MonoBehaviour
     void DropPlatform() 
     {
         rb.isKinematic = false;
+        collider.enabled = false;
     }
 }
