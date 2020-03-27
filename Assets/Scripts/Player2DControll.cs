@@ -24,7 +24,7 @@ public class Player2DControll : MonoBehaviour
     private bool damaged;
     [SerializeField] private LayerMask ground;
     [SerializeField] private LayerMask platform;
-    private bool lookingRight;
+    public bool lookingRight;
 
     public enum PlayerMode
     {

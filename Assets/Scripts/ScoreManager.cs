@@ -1,26 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance;
+    public static ScoreManager Instance { get; set; }
     public TextMeshProUGUI textLife;
-    int scoreLife = 5;
+    private int scoreLife = 5;
     
-    void Start() 
+    private void Awake() 
     {
-        if (instance == null) 
-        {
-            instance = this;
-        }
+        if (Instance == null)
+            Instance = this;
     }
-
-
-    public void Damaged() 
+    
+    public void Damaged()
     {
-        scoreLife = scoreLife - 1;
-        textLife.text = "" + scoreLife.ToString();
+        scoreLife--;
+        textLife.text = "" + scoreLife;
     }
 }

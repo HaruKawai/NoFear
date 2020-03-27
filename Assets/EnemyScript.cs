@@ -8,10 +8,12 @@ public class EnemyScript : MonoBehaviour
     private Rigidbody2D rb;
     public bool lookingRight;
     public bool canBePossesed = true;
+    private Animator anim;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -21,6 +23,7 @@ public class EnemyScript : MonoBehaviour
         Debug.DrawRay(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down * 0.5f, Color.red);
         if (!isGrounded)
             Flip();
+        anim.SetFloat("Speed", 1f);
     }
 
     private void Flip()

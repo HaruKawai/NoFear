@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 public class PossessedEnemy : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PossessedEnemy : MonoBehaviour
     public Color possessedColor;
     public Color normalColor;
     public CinemachineVirtualCamera vCamera;
+    public Light2D light;
 
     private void Awake()
     {
@@ -35,6 +37,13 @@ public class PossessedEnemy : MonoBehaviour
         lookingRight = GetComponent<EnemyScript>().lookingRight;
         sr.color = possessedColor;
         vCamera.m_Follow = gameObject.transform;
+        light.enabled = true;
+    }
+
+    private void OnDisable()
+    {
+        Player2DControll.Instance.lookingRight = !lookingRight;
+        light.enabled = false;
     }
 
     private void Update()
