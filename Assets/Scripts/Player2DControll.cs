@@ -77,8 +77,8 @@ public class Player2DControll : MonoBehaviour
 	    bool upCollision = Physics2D.Raycast(position, Vector2.up, 0.1f, ground);
 	    isGrounded = Physics2D.Raycast(position, Vector2.down, 0.2f, ground);
 	    onPlatform = Physics2D.Raycast(position, Vector2.down, 0.2f, platform);
-	    Debug.Log(upCollision);
-	    Debug.Log(leftCollision);
+	    //Debug.Log(upCollision);
+	    //Debug.Log(leftCollision);
 	    
 	    anim.SetBool("IsGrounding", isGrounded);
 	    anim.SetFloat("Speed", Mathf.Abs(horizontalMove));

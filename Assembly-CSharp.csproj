@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\PausedMenu.cs" />
      <Compile Include="Assets\Scripts\Platforms\FallPlatform.cs" />
      <Compile Include="Assets\Scripts\Platforms\MovePlatform.cs" />
+     <Compile Include="Assets\Scripts\Platforms\Pinchos.cs" />
      <Compile Include="Assets\Scripts\Platforms\PlatformManager.cs" />
      <Compile Include="Assets\Scripts\Player2DControll.cs" />
      <Compile Include="Assets\Scripts\SceneController.cs" />
