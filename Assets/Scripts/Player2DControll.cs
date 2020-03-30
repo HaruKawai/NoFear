@@ -11,6 +11,7 @@ public class Player2DControll : MonoBehaviour
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
 
     //General
+	public bool canTakeDamage = true;
     private Animator anim;
     private float distance;
     private float verticalMove;
@@ -243,6 +244,13 @@ public class Player2DControll : MonoBehaviour
 	    lookingRight = !lookingRight;
 	    transform.Rotate(0f, 180f, 0f);
     }
+
+	public IEnumerator TakeDamageCoroutine() 
+	{
+		canTakeDamage = false;
+	    yield return new WaitForSeconds(1.5f);
+		canTakeDamage = true;
+	}
     
 	private void OnCollisionEnter2D(Collision2D other)
 	{
@@ -255,6 +263,5 @@ public class Player2DControll : MonoBehaviour
 			transform.parent = other.transform;
 			gameObject.SetActive(false);
 		}
-		if(other.gameObject.layer == 10) ScoreManager.instance.Damaged();
 	}
 }

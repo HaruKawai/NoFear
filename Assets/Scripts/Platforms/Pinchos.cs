@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Pinchos : MonoBehaviour
 {
-    private GameObject theplayer;
-    private void OnCollisionEnter2D(Collision2D other)
+    private GameObject player;
+    private void OnCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player2DControll>().canTakeDamage == true)
         {
-            theplayer = other.gameObject;
-            Vector3 direction = theplayer.transform.position - transform.position;
-            knockBack(theplayer,direction,0.3f, 0.1f);
+            player = other.gameObject;
+            ScoreManager.instance.Damaged();
+	        StartCoroutine(player.GetComponent<Player2DControll>().TakeDamageCoroutine());
+
+            Vector3 direction = player.transform.position - transform.position;
+            knockBack(player,direction,0.3f, 0.1f);
         }
     }
  
