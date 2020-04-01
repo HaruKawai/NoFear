@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EnviromentSpriteAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 256
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 2
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: dfe3e33cffd344595afc455faf1442bb, type: 3}
+    totalSpriteSurfaceArea: 33024
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 8ddb8190659c44f65b9b43319fe47383, type: 3}
+  - {fileID: 21300000, guid: c39265a0d5c374f5ba0e1d713f131a2c, type: 3}
+  - {fileID: 21300000, guid: 7f7502c0c14214d2cb5941ae3c74d539, type: 3}
+  - {fileID: 21300000, guid: 4d27f5711364145c98fb4ab91042a886, type: 3}
+  - {fileID: 21300000, guid: 45c55a71dfc314a08a74a68030c2d838, type: 3}
+  - {fileID: 21300000, guid: 1a5f0922172f142f4b1f5b5b94c4f221, type: 3}
+  - {fileID: 21300000, guid: 609996526252040e0b9e8df823f9a4dc, type: 3}
+  - {fileID: 21300000, guid: 8a57775294bdc4052935998797281f63, type: 3}
+  - {fileID: 21300000, guid: 368ab4c228cf04e65916c0290cd3fd3c, type: 3}
+  - {fileID: 21300000, guid: 1b082903cae894c8aa2dcb1e6cf1ed8c, type: 3}
+  - {fileID: 21300000, guid: 1d208a2323e094e399fc54e121ca80a6, type: 3}
+  - {fileID: 21300000, guid: ac322653ab8654345849494bf64c5fc4, type: 3}
+  - {fileID: 21300000, guid: 9170906372345485595c34d5dee2d45d, type: 3}
+  - {fileID: 21300000, guid: 53091b63415e74636b32a2c067fc9de4, type: 3}
+  - {fileID: 21300000, guid: ee6a1c633bfe540d6a79f5d6a57400fb, type: 3}
+  - {fileID: 21300000, guid: ebcb0f73835e44d5e9f70188cd1d6973, type: 3}
+  - {fileID: 21300000, guid: 67870ec34a55242b892ca567a8efd904, type: 3}
+  - {fileID: 21300000, guid: 22ee2ed3c12424226993c27f44701c31, type: 3}
+  - {fileID: 21300000, guid: 521287544ceb1460b82866ffdb999249, type: 3}
+  - {fileID: 21300000, guid: 7cf97764f6d6f42258b7e4f101bfd548, type: 3}
+  - {fileID: 21300000, guid: 644d53e403e404f2b8491d68f6d0eda4, type: 3}
+  - {fileID: 21300000, guid: 1f3915e494fe84fcda2376a8d5adec83, type: 3}
+  - {fileID: 21300000, guid: 2f46f8e4501c747bfb06755a93f2614d, type: 3}
+  - {fileID: 21300000, guid: b117ef755f63348c0975ce7d4ace22ec, type: 3}
+  - {fileID: 21300000, guid: 8c69bcb5689d74933bda81b62a951af7, type: 3}
+  - {fileID: 21300000, guid: f436b1d58f44f454683dbda6b45a71be, type: 3}
+  - {fileID: 21300000, guid: 540fd866a93b04bd480a971fc84d6c78, type: 3}
+  - {fileID: 21300000, guid: ac895b76dd2c349e6970a203fb2bc226, type: 3}
+  - {fileID: 21300000, guid: 3da81aa6ffa304f08b17342553cca094, type: 3}
+  - {fileID: 21300000, guid: 338234e67d2f84aaf8055045c7194360, type: 3}
+  - {fileID: 21300000, guid: d3d4bdf6c3a254e538a53e11090c3cba, type: 3}
+  - {fileID: 21300000, guid: 3e7cb8377b05d4d3695485984434ee87, type: 3}
+  - {fileID: 21300000, guid: 547e8c4738342416d8e8ce0f2cb4e28b, type: 3}
+  - {fileID: 21300000, guid: acbc6c67d7e9f48b5be2d68209cd9bac, type: 3}
+  - {fileID: 21300000, guid: 01887a7789b474d1b8d791033f52750e, type: 3}
+  - {fileID: 21300000, guid: e5ded6d7962a44cf1804f61d5717a4d9, type: 3}
+  - {fileID: 21300000, guid: 290163f7ebe07483bb1287fd3a442d61, type: 3}
+  - {fileID: 21300000, guid: 13fe9d182229f4b07b547d22160beb39, type: 3}
+  - {fileID: 21300000, guid: 7badef48aec5c41f4bd302ed4df6b935, type: 3}
+  - {fileID: 21300000, guid: 6b21b4589294a4912b5f9d91f1c6e461, type: 3}
+  - {fileID: 21300000, guid: 9118a1091e8a647c3b580dc41ce854fd, type: 3}
+  - {fileID: 21300000, guid: 2e8ddb293ad554e209ae89e7cda9744d, type: 3}
+  - {fileID: 21300000, guid: fb7228690c851414caafd1d8e85bbeed, type: 3}
+  - {fileID: 21300000, guid: 92b178895b98346c39674fb8b9843571, type: 3}
+  - {fileID: 21300000, guid: cda1b399aad5c4406a98f4d16b999cad, type: 3}
+  - {fileID: 21300000, guid: 9fccb6b9c141a4c7c953d2770446358e, type: 3}
+  - {fileID: 21300000, guid: 56d2f4e917f144b62955cc353b5a397e, type: 3}
+  - {fileID: 21300000, guid: 9c897c1aac02047838b8e1148533bd65, type: 3}
+  - {fileID: 21300000, guid: 097b6c6ad7e004e2998899d837ab21db, type: 3}
+  - {fileID: 21300000, guid: 2118fdba3c12d4df5ad8ce356e1ea12f, type: 3}
+  - {fileID: 21300000, guid: 0c3d134b456104232a1b0128c3c8f984, type: 3}
+  - {fileID: 21300000, guid: 00b8894b0b9dd4f45a09bce516d93129, type: 3}
+  - {fileID: 21300000, guid: 422eac9b82b0b4a71a4e67134a684e88, type: 3}
+  - {fileID: 21300000, guid: bede4edbac2d44d67bd611cca8c1abb2, type: 3}
+  - {fileID: 21300000, guid: 110db71c438084a938f7a6e107b3f938, type: 3}
+  - {fileID: 21300000, guid: 6b47b45c5b6f24449a9b497afe1233f7, type: 3}
+  - {fileID: 21300000, guid: a3d5e47c4142747ac9a612a78f0a37ea, type: 3}
+  - {fileID: 7706766155818749191, guid: 522657cc4e0e046509cca71e6138b086, type: 3}
+  - {fileID: -4903684107609223612, guid: 522657cc4e0e046509cca71e6138b086, type: 3}
+  - {fileID: -6382895181050528403, guid: 522657cc4e0e046509cca71e6138b086, type: 3}
+  - {fileID: -366986404226415889, guid: 522657cc4e0e046509cca71e6138b086, type: 3}
+  - {fileID: 21300000, guid: 56602cdcdede743d7b019f69d39bcf04, type: 3}
+  - {fileID: 21300000, guid: d573323def176469c8c39c9078883a2f, type: 3}
+  - {fileID: 21300000, guid: 748105dd9563e499fa0918cdc058c859, type: 3}
+  - {fileID: 21300000, guid: 60f84a1ef482b43fca969fcaa6db1ee3, type: 3}
+  - {fileID: 21300000, guid: 93305f1e7afda4762b1ea1a1c55195f0, type: 3}
+  - {fileID: 21300000, guid: 435cb03ecae504b169aa3a7cfdfb4d52, type: 3}
+  - {fileID: 21300000, guid: 72af646ee3971462080ad4dccff75ece, type: 3}
+  - {fileID: 21300000, guid: ca54d67e3cd8a4daa8b39c4c2614edf0, type: 3}
+  - {fileID: 21300000, guid: 8dbe2e7e770284bb3bb25b2d310f291a, type: 3}
+  - {fileID: 21300000, guid: df37effeb031149fba46c625c75c2767, type: 3}
+  - {fileID: 21300000, guid: 56b0b71fd93f540f2930f74fe6b0b3f1, type: 3}
+  - {fileID: 21300000, guid: fb319e1f23c644278ab462b6858a728f, type: 3}
+  - {fileID: 21300000, guid: 11586d7f3652f478187beffbb8f7f18f, type: 3}
+  - {fileID: 21300000, guid: 6e6fe28f400ac414a9aa16fc2311d08b, type: 3}
+  - {fileID: 21300000, guid: 7508a59f335364f6eb33805795480491, type: 3}
+  - {fileID: 21300000, guid: 349ea8bf5fe13456b84cb46d5acf179d, type: 3}
+  - {fileID: 21300000, guid: 9bcca9bfd217e4589b6ae957492178fd, type: 3}
+  - {fileID: 21300000, guid: 9afa48cf458654f758dd526410867ece, type: 3}
+  - {fileID: 21300000, guid: 951e41ff5a8a541c59b983e4291be766, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - floor-plants
+  - ground-bottom-1
+  - ground-top-left
+  - dirt-top-left
+  - rockblock-1-lava
+  - rockblock-1
+  - snake-body-long
+  - rockblock-2-lava
+  - dirt-top-1-67
+  - snake-body-vertical
+  - solid-block-small
+  - ground-top-right
+  - spikes-top
+  - solid-block-corner
+  - rockblock-2-big-lava
+  - ground-left-1
+  - rockblock-2
+  - ground-bottom-plants-short
+  - dirt-bottom-right
+  - dirt-right
+  - tree-leaves-liana
+  - ground-bottom-left
+  - ground-top-2
+  - rockblock-big-2-plants
+  - ladder
+  - rockblock-big-lava
+  - dirt-tile-1
+  - rockblock-2-big
+  - dirt-top-1
+  - rockblock-4-plant-10
+  - plant-1
+  - tree-leaves-end
+  - solid-water
+  - plant-2
+  - rockblock-bridge-lava
+  - rockblock-2-plant
+  - dirt-bottom-2
+  - dirt-tile-2
+  - totem
+  - small-plant
+  - dirt-left
+  - lava-solid
+  - spikes 1
+  - rockblock-4
+  - ground-right-1
+  - rockblock-bridge
+  - spider-web
+  - solid-block-big
+  - snake-head
+  - plant-3
+  - ground-bottom-plants-long
+  - ground-top-1
+  - solid-ground
+  - small-grass
+  - rockblock-slim
+  - dirt-top-right
+  - solid-block-slim
+  - column_0
+  - column_1
+  - column_2
+  - column_3
+  - spikes-blood
+  - ground-bottom-right
+  - plant-4
+  - snake-body-short
+  - dirt-solid
+  - stairs-2
+  - ground-right-2
+  - rockblock-big
+  - ground-left-2
+  - dirt-bottom-left
+  - dirt-top-2
+  - rock-head
+  - rockblock-3
+  - tree-leaves-tile
+  - floor-big-plants
+  - rockblock-4-plant
+  - stairs-1
+  - spikes
+  - dirt-stalactite
+  m_Tag: EnviromentSpriteAtlas
+  m_IsVariant: 0

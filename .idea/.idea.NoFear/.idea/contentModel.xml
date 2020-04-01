@@ -122,6 +122,7 @@
           <e p="Platforms" t="Include">
             <e p="FallPlatform.cs" t="Include" />
             <e p="MovePlatform.cs" t="Include" />
+            <e p="Pinchos.cs" t="Include" />
             <e p="PlatformManager.cs" t="Include" />
           </e>
           <e p="Player2DControll.cs" t="Include" />

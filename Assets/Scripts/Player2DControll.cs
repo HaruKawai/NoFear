@@ -17,7 +17,7 @@ public class Player2DControll : MonoBehaviour
     private float verticalMove;
     private Rigidbody2D rb;
     private float horizontalMove;
-    private float runSpeed = 50f;
+    [SerializeField] private float runSpeed = 300f;
     private bool canJump;
     private bool isGrounded;
     private bool onPlatform;
