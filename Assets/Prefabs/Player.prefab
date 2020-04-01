@@ -62,8 +62,8 @@ MonoBehaviour:
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 48
   m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 0
-  m_ShapeLightFalloffSize: 1.21
+  m_ShapeLightParametricRadius: 0.13
+  m_ShapeLightFalloffSize: 9.9
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -199,15 +199,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3368944af34b13418ccc03f4c4d5ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 200
+  m_JumpForce: 1500
   m_AirControl: 1
   m_MovementSmoothing: 0.05
+  canTakeDamage: 1
+  runSpeed: 300
   ground:
     serializedVersion: 2
     m_Bits: 768
   platform:
     serializedVersion: 2
     m_Bits: 512
+  lookingRight: 0
   playerMode: 0
   slime: 0
   stickOnWall: 0
@@ -242,11 +245,11 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 1.2291871
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -267,7 +270,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.00087203085, y: 0.002061397}
   serializedVersion: 2
-  m_Radius: 0.06291331
+  m_Radius: 0.38137805
 --- !u!70 &308025875
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -281,6 +284,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0010863543, y: -0.029327303}
-  m_Size: {x: 0.123664945, y: 0.29442358}
+  m_Offset: {x: -0.0010863543, y: -0.19087291}
+  m_Size: {x: 0.7306858, y: 1.8390441}
   m_Direction: 0

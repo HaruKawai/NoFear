@@ -17,7 +17,7 @@ public class Player2DControll : MonoBehaviour
     private float verticalMove;
     private Rigidbody2D rb;
     private float horizontalMove;
-    private float runSpeed = 50f;
+    [SerializeField] private float runSpeed = 300f;
     private bool canJump;
     private bool isGrounded;
     private bool onPlatform;
@@ -73,11 +73,12 @@ public class Player2DControll : MonoBehaviour
     private void Update()
     {
 	    var position = (Vector2)transform.position;
-	    bool leftCollision = Physics2D.Raycast(position,  Vector2.left, 0.1f, ground);
-	    bool rightCollision = Physics2D.Raycast(position,  Vector2.right, 0.1f, ground);
-	    bool upCollision = Physics2D.Raycast(position, Vector2.up, 0.1f, ground);
-	    isGrounded = Physics2D.Raycast(position, Vector2.down, 0.2f, ground);
-	    onPlatform = Physics2D.Raycast(position, Vector2.down, 0.2f, platform);
+	    bool leftCollision = Physics2D.Raycast(position,  Vector2.left, 1f, ground);
+	    bool rightCollision = Physics2D.Raycast(position,  Vector2.right, 1f, ground);
+	    bool upCollision = Physics2D.Raycast(position, Vector2.up, 2f, ground);
+	    isGrounded = Physics2D.Raycast(position, Vector2.down, 2f, ground);
+	    onPlatform = Physics2D.Raycast(position, Vector2.down, 2f, platform);
+	    Debug.DrawRay(position, Vector2.down * 2f);
 	    //Debug.Log(upCollision);
 	    //Debug.Log(leftCollision);
 	    
@@ -105,7 +106,7 @@ public class Player2DControll : MonoBehaviour
 		    default:
 			    anim.SetBool("slimeUp", false);
 			    anim.SetBool("slimeWall", false);
-			    rb.gravityScale = 1;
+			    rb.gravityScale = 5;
 			    stickOnWall = false;
 			    stickOnCealing = false;
 			    break;
