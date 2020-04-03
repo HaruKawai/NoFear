@@ -9,6 +9,7 @@ public class Player2DControll : MonoBehaviour
     [SerializeField] private float m_JumpForce = 300f; 
     [SerializeField] private bool m_AirControl; 
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
+    private Vector2 targetVelocity;
 
     //General
 	public bool canTakeDamage = true;
@@ -145,7 +146,7 @@ public class Player2DControll : MonoBehaviour
 
     private void FixedUpdate()
     {
-	    Move(horizontalMove * Time.fixedDeltaTime, canJump, verticalMove * Time.fixedDeltaTime);
+	    Move(horizontalMove, canJump, verticalMove);
 	    canJump = false;
     }
 
@@ -172,10 +173,7 @@ public class Player2DControll : MonoBehaviour
 		        
         } else {
             var position = transform.position;
-            //position.x += 1.0f;
-            //position.y += 1.2f;
             GetComponent<Collider2D>().enabled = false;
-            //Instantiate(slimePrefab, position, Quaternion.identity);
         }
     }
 
@@ -220,11 +218,19 @@ public class Player2DControll : MonoBehaviour
 	    if (isGrounded || m_AirControl)
 	    { 
 		    var velocity = rb.velocity;
-		    var targetVelocity = Vector2.zero;
-		    if(playerMode == PlayerMode.Human) 
-			    targetVelocity = new Vector2(move * 7f, velocity.y);
+		    targetVelocity = Vector2.zero;
+		    if (playerMode == PlayerMode.Human)
+			    targetVelocity = new Vector2(move * 7f * Time.fixedDeltaTime, velocity.y);
 		    else if (playerMode == PlayerMode.Slime)
-			    targetVelocity = stickOnWall ? new Vector2(move * 7f, move2 * 7f) : new Vector2(move * 3f, velocity.y);
+			    if (stickOnWall)
+				    targetVelocity = new Vector2(move * 7f, move2 * 7f) * Time.fixedDeltaTime;
+			    else
+			    {
+				    targetVelocity = Vector2.zero;
+				    targetVelocity = isGrounded ? new Vector2(move * 3f * Time.fixedDeltaTime, velocity.y) : new Vector2(move * 7f * Time.fixedDeltaTime, velocity.y);
+			    }
+
+
 		    rb.velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 		    if (move > 0 && lookingRight)
 			    Flip();
@@ -261,20 +267,5 @@ public class Player2DControll : MonoBehaviour
 			other.gameObject.GetComponent<EnemyScript>().enabled = false;
 			gameObject.SetActive(false);
 		}
-		/*
-		if (other.gameObject.layer == 9) 
-		{
-			transform.parent = other.transform;
-		}
-		*/
 	}
-	/*
-	private void OnCollisionExit2D(Collision2D other) 
-	{
-		if (other.gameObject.layer == 9) 
-		{
-			transform.parent = null;
-		}
-	}
-	*/
 }
