@@ -76,16 +76,14 @@ public class Player2DControll : MonoBehaviour
 	    bool leftCollision = Physics2D.Raycast(position,  Vector2.left, 1f, ground);
 	    bool rightCollision = Physics2D.Raycast(position,  Vector2.right, 1f, ground);
 	    bool upCollision = Physics2D.Raycast(position, Vector2.up, 2f, ground);
-	    isGrounded = Physics2D.Raycast(position, Vector2.down, 2f, ground);
-	    onPlatform = Physics2D.Raycast(position, Vector2.down, 2f, platform);
-	    Debug.DrawRay(position, Vector2.down * 2f);
-	    //Debug.Log(upCollision);
-	    //Debug.Log(leftCollision);
-	    
+	    isGrounded = Physics2D.Raycast(position + new Vector2(-0.3f, 0) * transform.right, Vector2.down, 2f, ground);
+	    onPlatform = Physics2D.Raycast(position + new Vector2(-0.3f, 0) * transform.right, Vector2.down, 2f, platform);
+	    Debug.DrawRay(position + new Vector2(-0.3f, 0) * transform.right, Vector2.down * 2f);
+
 	    anim.SetBool("IsGrounding", isGrounded);
 	    anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-	    transform.parent = onPlatform ? Physics2D.Raycast(position, Vector2.down, 0.2f, platform).collider.gameObject.transform : null;
+	    transform.parent = onPlatform ? Physics2D.Raycast(position + new Vector2(-0.3f, 0) * transform.right, Vector2.down, 2f, platform).collider.gameObject.transform : null;
 	    
 	    switch (playerMode)
 	    {
