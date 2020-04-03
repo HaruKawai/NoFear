@@ -34,7 +34,7 @@ public class Player2DControll : MonoBehaviour
 
 	//Human
 
-	private CapsuleCollider2D colliderProta;
+	private BoxCollider2D colliderProta;
     
     //Slime
     public PlayerMode playerMode;
@@ -59,7 +59,7 @@ public class Player2DControll : MonoBehaviour
     {
 	    Instance = this;
 	    circleSlime = GetComponent<CircleCollider2D>();
-		colliderProta = GetComponent<CapsuleCollider2D>();
+		colliderProta = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
