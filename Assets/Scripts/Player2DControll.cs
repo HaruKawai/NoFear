@@ -261,8 +261,22 @@ public class Player2DControll : MonoBehaviour
 			other.gameObject.GetComponent<EnemyScript>().canBePossesed = false;
 			other.gameObject.GetComponent<PossessedEnemy>().enabled = true;
 			other.gameObject.GetComponent<EnemyScript>().enabled = false;
-			transform.parent = other.transform;
 			gameObject.SetActive(false);
 		}
+		/*
+		if (other.gameObject.layer == 9) 
+		{
+			transform.parent = other.transform;
+		}
+		*/
 	}
+	/*
+	private void OnCollisionExit2D(Collision2D other) 
+	{
+		if (other.gameObject.layer == 9) 
+		{
+			transform.parent = null;
+		}
+	}
+	*/
 }
