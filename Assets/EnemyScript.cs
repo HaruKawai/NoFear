@@ -19,9 +19,12 @@ public class EnemyScript : MonoBehaviour
     private void Update()
     {
         var position = (Vector2)transform.position;
+
         bool isGrounded = Physics2D.Raycast(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down, 2f, ground);
         Debug.DrawRay(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down * 2f, Color.red);
-        if (!isGrounded)
+        bool hasFreePath = Physics2D.Raycast(position, transform.right, 1.5f, ground);
+        Debug.DrawRay(position, transform.right);
+        if (!isGrounded || hasFreePath)
             Flip();
         anim.SetFloat("Speed", 1f);
     }
