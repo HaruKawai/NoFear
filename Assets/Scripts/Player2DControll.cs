@@ -35,12 +35,12 @@ public class Player2DControll : MonoBehaviour
 
 	//Human
 
-	private BoxCollider2D colliderProta;
+	public BoxCollider2D colliderProta;
+	public BoxCollider2D colliderSlime;
     
     //Slime
     public PlayerMode playerMode;
     public bool slime;
-	private CircleCollider2D circleSlime;
     private bool potPujar;
     public bool stickOnWall;
     public bool stickOnCealing;
@@ -59,9 +59,7 @@ public class Player2DControll : MonoBehaviour
     private void Awake()
     {
 	    Instance = this;
-	    circleSlime = GetComponent<CircleCollider2D>();
-		colliderProta = GetComponent<BoxCollider2D>();
-        rb = GetComponent<Rigidbody2D>();
+	    rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
     
@@ -76,10 +74,13 @@ public class Player2DControll : MonoBehaviour
 	    var position = (Vector2)transform.position;
 	    bool leftCollision = Physics2D.Raycast(position,  Vector2.left, 1f, ground);
 	    bool rightCollision = Physics2D.Raycast(position,  Vector2.right, 1f, ground);
-	    bool upCollision = Physics2D.Raycast(position, Vector2.up, 2f, ground);
+	    bool upCollision = Physics2D.Raycast(position, Vector2.up, 1.15f, ground);
 	    isGrounded = Physics2D.Raycast(position + new Vector2(-0.3f, 0) * transform.right, Vector2.down, 2f, ground);
 	    onPlatform = Physics2D.Raycast(position + new Vector2(-0.3f, 0) * transform.right, Vector2.down, 2f, platform);
 	    Debug.DrawRay(position + new Vector2(-0.3f, 0) * transform.right, Vector2.down * 2f);
+	    Debug.DrawRay(position, Vector2.up * 1.15f, Color.red);
+	    Debug.DrawRay(position, Vector2.right * 1f, Color.blue);
+	    Debug.DrawRay(position, Vector2.left * 1f, Color.blue);
 
 	    anim.SetBool("IsGrounding", isGrounded);
 	    anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
@@ -159,7 +160,7 @@ public class Player2DControll : MonoBehaviour
 	        if(playerMode == PlayerMode.Slime)
 			{
 				playerMode = PlayerMode.Human;
-				circleSlime.enabled = false;
+				colliderSlime.enabled = false;
 				colliderProta.enabled = true;
 			    anim.SetBool("Slime", false);
 			}
@@ -167,14 +168,13 @@ public class Player2DControll : MonoBehaviour
 			{
 				playerMode = PlayerMode.Slime;
 			    anim.SetBool("Slime", true);
-				circleSlime.enabled = true;
+				colliderSlime.enabled = true;
 				colliderProta.enabled = false;
 			}
-		        
-        } else {
-            var position = transform.position;
-            GetComponent<Collider2D>().enabled = false;
         }
+        else
+	        GetComponent<Collider2D>().enabled = false;
+      
     }
 
     //Inflate
