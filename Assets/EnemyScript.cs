@@ -39,4 +39,34 @@ public class EnemyScript : MonoBehaviour
     {
         rb.velocity = speed * Time.fixedDeltaTime * transform.right;
     }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Entering collision");
+            anim.SetTrigger("attack");
+        }
+        /*
+        else if (collider.gameObject.CompareTag("Player"))
+        {
+            anim.SetBool("Shoot", true);
+        }*/
+    }
+
+    private void OnTriggerExit2D(Collider2D collider)
+    {
+
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Exiting collision");
+            anim.SetTrigger("Attack");
+        }
+        /*
+        else if (collider.gameObject.CompareTag("Player"))
+        {
+            anim.SetBool("Shoot", false);
+        }*/
+    }
 }
