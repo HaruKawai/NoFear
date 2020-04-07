@@ -3,19 +3,17 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance;
+    public static ScoreManager Instance { get; private set; }
     public TextMeshProUGUI textLife;
-    private int scoreLife = 5;
-    
+
     private void Awake() 
     {
-        if (instance == null)
-            instance = this;
+        if (Instance == null)
+            Instance = this;
     }
-    
-    public void Damaged()
+
+    public void ChangeUiHealth()
     {
-        scoreLife--;
-        textLife.text = "" + scoreLife;
+        textLife.text = "" + PlayerStats.Instance.CurrentHealth;
     }
 }

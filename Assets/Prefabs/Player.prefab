@@ -139,7 +139,7 @@ SpriteRenderer:
   m_SortingLayerID: -1364223823
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5d1aec6d40bb69342ab71bacb2a22589, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa4f03e5e93b59c4fab26f324e0bc80f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -160,6 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1668160232177333856}
   - component: {fileID: 1668160233187908619}
+  - component: {fileID: 9196565544805554797}
   - component: {fileID: 1668160233187908616}
   - component: {fileID: 1668160233187908618}
   - component: {fileID: 1675623290659804801}
@@ -217,6 +218,18 @@ MonoBehaviour:
   slime: 0
   stickOnWall: 0
   stickOnCealing: 0
+--- !u!114 &9196565544805554797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668160233187908615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e35f6923f9a014dab8a793d7f3f702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &1668160233187908616
 Animator:
   serializedVersion: 3
@@ -296,7 +309,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.004880905}
+  m_Offset: {x: 0.021476746, y: 0.12772238}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -307,5 +320,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4382629, y: 1.1708107}
+  m_Size: {x: 1.4700317, y: 1.2146785}
   m_EdgeRadius: 0

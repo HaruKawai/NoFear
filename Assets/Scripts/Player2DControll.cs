@@ -250,7 +250,12 @@ public class Player2DControll : MonoBehaviour
 	    transform.Rotate(0f, 180f, 0f);
     }
 
-	public IEnumerator TakeDamageCoroutine() 
+    public void TakeDamage()
+    {
+	    StartCoroutine(TakeDamageCoroutine());
+    }
+
+	private IEnumerator TakeDamageCoroutine() 
 	{
 		canTakeDamage = false;
 	    yield return new WaitForSeconds(1.5f);

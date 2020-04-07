@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 
 public class EnemyScript : MonoBehaviour
@@ -9,13 +11,16 @@ public class EnemyScript : MonoBehaviour
     public bool lookingRight;
     public bool canBePossesed = true;
     private Animator anim;
+    private bool moving = true;
+    private Coroutine attackCoroutine;
+    private bool attacking;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-
+    
     private void Update()
     {
         var position = (Vector2)transform.position;
@@ -26,7 +31,7 @@ public class EnemyScript : MonoBehaviour
         Debug.DrawRay(position, transform.right);
         if (!isGrounded || hasFreePath)
             Flip();
-        anim.SetFloat("Speed", 1f);
+        anim.SetBool("moving", moving);
     }
 
     private void Flip()
@@ -37,36 +42,38 @@ public class EnemyScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = speed * Time.fixedDeltaTime * transform.right;
+        if(moving)
+           rb.velocity = speed * Time.fixedDeltaTime * transform.right;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-
         if (collider.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Entering collision");
-            anim.SetTrigger("attack");
-        }
-        /*
-        else if (collider.gameObject.CompareTag("Player"))
-        {
-            anim.SetBool("Shoot", true);
-        }*/
+            if(!attacking) 
+                EnemyAttack();
+            else
+                Player2DControll.Instance.TakeDamage();
     }
 
-    private void OnTriggerExit2D(Collider2D collider)
+    private void EnemyAttack()
     {
+        moving = false;
+        attacking = true;
+        rb.velocity = Vector2.zero;
+        rb.isKinematic = true;
+        anim.SetTrigger("attack");
+    }
 
-        if (collider.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Exiting collision");
-            anim.SetTrigger("Attack");
-        }
-        /*
-        else if (collider.gameObject.CompareTag("Player"))
-        {
-            anim.SetBool("Shoot", false);
-        }*/
+    public void DamageAttackFrame()
+    {
+        attacking = true;
+    }
+
+    //Animation event so it can move once the attack animation is over
+    public void EndAttackEvent()
+    {
+        attacking = false;
+        moving = true;
+        rb.isKinematic = false;
     }
 }
