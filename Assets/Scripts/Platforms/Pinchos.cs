@@ -5,6 +5,8 @@ using UnityEngine;
 public class Pinchos : MonoBehaviour
 {
     private GameObject player;
+    public float distancia;
+    public float tiempo;
     private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player2DControll>().canTakeDamage == true)
@@ -14,7 +16,7 @@ public class Pinchos : MonoBehaviour
 	        StartCoroutine(player.GetComponent<Player2DControll>().TakeDamageCoroutine());
 
             Vector3 direction = player.transform.position - transform.position;
-            knockBack(player,direction,0.3f, 0.1f);
+            knockBack(player,direction,distancia, tiempo);
         }
     }
  
