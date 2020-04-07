@@ -104,8 +104,10 @@
           </e>
         </e>
         <e p="EnemyScript.cs" t="Include" />
+        <e p="PlayerStats.cs" t="Include" />
         <e p="PossessedEnemy.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="BloodScreenController.cs" t="Include" />
           <e p="bullet.cs" t="Include" />
           <e p="controladorTiempo.cs" t="Include" />
           <e p="DestroyOnExit.cs" t="Include" />

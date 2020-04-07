@@ -9,35 +9,33 @@ public class Pinchos : MonoBehaviour
     public float tiempo;
     private void OnCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player" && other.gameObject.GetComponent<Player2DControll>().canTakeDamage == true)
+        if (other.gameObject.CompareTag("Player") && Player2DControll.Instance.canTakeDamage)
         {
-            player = other.gameObject;
-            ScoreManager.instance.Damaged();
-	        StartCoroutine(player.GetComponent<Player2DControll>().TakeDamageCoroutine());
-
-            Vector3 direction = player.transform.position - transform.position;
-            knockBack(player,direction,distancia, tiempo);
+            PlayerStats.Instance.Damage();
+            Player2DControll.Instance.TakeDamage();
+            var direction = Player2DControll.Instance.transform.position - transform.position;
+            KnockBack(Player2DControll.Instance.gameObject, direction, distancia,  tiempo);
         }
     }
  
  
-    private void  knockBack(GameObject target, Vector3 direction, float length, float overTime)
+    private void  KnockBack(GameObject target, Vector3 direction, float length, float overTime)
     {
         direction = direction.normalized;
-        StartCoroutine(knockBackCoroutine(target, direction, length, overTime));
+        StartCoroutine(KnockBackCoroutine(target, direction, length, overTime));
     }
  
-    IEnumerator knockBackCoroutine(GameObject target, Vector3 direction, float length, float overTime)
+    private IEnumerator KnockBackCoroutine(GameObject target, Vector3 direction, float length, float overTime)
     {
-        float timeleft = overTime;
-        while (timeleft>0)
+        float timeLeft = overTime;
+        while (timeLeft>0)
         {
  
-           if(timeleft>Time.deltaTime)
-            target.transform.Translate(direction*Time.deltaTime/overTime*length);
-           else
-                target.transform.Translate(direction * timeleft / overTime * length);
-            timeleft -= Time.deltaTime;
+            if(timeLeft>Time.deltaTime)
+                target.transform.Translate(direction*Time.deltaTime/overTime*length);
+            else
+                target.transform.Translate(direction * timeLeft / overTime * length);
+            timeLeft -= Time.deltaTime;
  
             yield return null;
         }
