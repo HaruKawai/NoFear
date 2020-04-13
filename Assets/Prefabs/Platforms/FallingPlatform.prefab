@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7649079777614698539}
   - component: {fileID: -4318589378439783832}
   - component: {fileID: 1517279727843331197}
+  - component: {fileID: 2899286713334349274}
   m_Layer: 8
   m_Name: FallingPlatform
   m_TagString: Untagged
@@ -115,6 +116,25 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!95 &2899286713334349274
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322708521513334171}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9da8a6a634507e34d9fac048943a6c2f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4503035464651207516
 GameObject:
   m_ObjectHideFlags: 0

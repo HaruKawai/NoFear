@@ -21,6 +21,8 @@ public class FallPlatform : MonoBehaviour
             PlatformManager.Instance.StartCoroutine("SpawnPlatform",
                     new Vector2 (transform.position.x, transform.position.y));
             Invoke("DropPlatform", 1f);
+            //GetComponent<Animator>().SetTrigger("Fall");
+            GetComponent<Animator>().SetBool("Falling", true);
             Destroy(gameObject, 3f);
         }
     }
