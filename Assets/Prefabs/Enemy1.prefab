@@ -245,6 +245,9 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
+  player:
+    serializedVersion: 2
+    m_Bits: 8192
   lookingRight: 0
   canBePossesed: 1
 --- !u!50 &6478211536328854130
@@ -300,7 +303,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.7250361, y: 0}
+  m_Offset: {x: 4.7258067, y: 0.52423143}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -311,7 +314,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0794945, y: 1}
+  m_Size: {x: 7.0810347, y: 2.6269255}
   m_EdgeRadius: 0
 --- !u!61 &4497752431766428729
 BoxCollider2D:
