@@ -245,9 +245,12 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
-  player:
+  playerMask:
     serializedVersion: 2
     m_Bits: 8192
+  agro:
+    serializedVersion: 2
+    m_Bits: 8448
   lookingRight: 0
   canBePossesed: 1
 --- !u!50 &6478211536328854130

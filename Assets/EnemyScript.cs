@@ -7,7 +7,9 @@ public class EnemyScript : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private LayerMask ground;
-    [SerializeField] private LayerMask player;
+    [SerializeField] private LayerMask playerMask;
+    [SerializeField] private LayerMask agro;
+    private SpriteRenderer sprite;
     private Rigidbody2D rb;
     public bool lookingRight;
     public bool canBePossesed = true;
@@ -16,11 +18,16 @@ public class EnemyScript : MonoBehaviour
     private Coroutine attackCoroutine;
     private bool attacking;
     private bool shooting;
+    private bool trackingPLayer;
+    GameObject player;
+
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
@@ -29,8 +36,36 @@ public class EnemyScript : MonoBehaviour
 
         bool isGrounded = Physics2D.Raycast(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down, 2f, ground);
         Debug.DrawRay(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down * 2f, Color.red);
+
         bool hasFreePath = Physics2D.Raycast(position, transform.right, 1.5f, ground);
         Debug.DrawRay(position, transform.right);
+
+        bool playerAgro = Physics2D.Raycast(position, (Vector2)player.transform.position - position, 15f, agro);
+        Debug.DrawRay(position, (Vector2)player.transform.position - position,Color.yellow);
+        if (playerAgro) {
+            if (Physics2D.Raycast(position, (Vector2)player.transform.position - position, 15f, agro).collider.gameObject.CompareTag("Player"))
+                TrackPlayer();
+            /*
+            else
+            {
+                if (trackingPLayer && (!shooting || !attacking))
+                {
+                    moving = false;
+                    rb.velocity = Vector2.zero;
+                }
+                else
+                {
+                    moving = true;
+                }
+            }*/
+            
+
+        }
+        else
+        {
+            trackingPLayer = false;
+            sprite.color = Color.white;
+        }
 
         if (!isGrounded || hasFreePath)
             Flip();
@@ -52,23 +87,17 @@ public class EnemyScript : MonoBehaviour
             rb.velocity = speed * Time.fixedDeltaTime * transform.right;
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        
-    }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
         bool isPLayer = collision.gameObject.CompareTag("Player");
         if (isPLayer && speed < 450 && !shooting)
             speed += 2;
 
-        bool melee = Physics2D.Raycast((Vector2)transform.position, transform.right, 2f, player);
+        bool melee = Physics2D.Raycast((Vector2)transform.position, transform.right, 2f, playerMask);
         if (melee)
         {
             if (!attacking && !shooting)
             {
-                shooting = false;
                 EnemyAttack();
             }
             else
@@ -80,7 +109,6 @@ public class EnemyScript : MonoBehaviour
             {
                 if (!shooting && !attacking)
                 {
-                    attacking = false;
                     EnemyShoot();
                 }
                 else
@@ -137,5 +165,19 @@ public class EnemyScript : MonoBehaviour
         attacking = false;
         moving = true;
         rb.isKinematic = false;
+    }
+
+    private void TrackPlayer()
+    {
+        trackingPLayer = true;
+        sprite.color = Color.red;
+        if (moving)
+        {
+            if(Mathf.Sign(((Vector2)(transform.position - player.transform.position)).x) == (Mathf.Sign(transform.right.x)))
+            {
+                Flip();
+            }
+        }
+
     }
 }
