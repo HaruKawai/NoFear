@@ -4,5 +4,5 @@
 .vs/NoFear/v15/Server/sqlite3/storage.ide-shm
 .vs/NoFear/v15/Server/sqlite3/storage.ide-wal
 .vs/NoFear/v15/Server/sqlite3/storage.ide
-Temp/UnityLockfile
+Temp/*
 *.log

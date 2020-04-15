@@ -54,29 +54,55 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.CompareTag("Player"))
-            if (!shooting && !attacking)
-                EnemyShoot();
-            else
-                Player2DControll.Instance.TakeDamage();
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        bool isPLayer = collision.gameObject.CompareTag("Player");
+        if (isPLayer && speed < 450 && !shooting)
+            speed += 2;
 
-        bool hit = Physics2D.Raycast((Vector2)transform.position, transform.right, 2f, player);
-        if (hit)
+        bool melee = Physics2D.Raycast((Vector2)transform.position, transform.right, 2f, player);
+        if (melee)
         {
-            if (!attacking)
+            if (!attacking && !shooting)
+            {
+                shooting = false;
                 EnemyAttack();
+            }
             else
                 Player2DControll.Instance.TakeDamage();
+        }
+        else
+        {
+            if (isPLayer)
+            {
+                if (!shooting && !attacking)
+                {
+                    attacking = false;
+                    EnemyShoot();
+                }
+                else
+                    Player2DControll.Instance.TakeDamage();
+            }
+        }
+
+       
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            speed = 300;
         }
     }
 
     private void EnemyAttack()
     {
         moving = false;
+        shooting = false;
         attacking = true;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
@@ -87,6 +113,7 @@ public class EnemyScript : MonoBehaviour
     {
         moving = false;
         shooting = true;
+        attacking = false;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
         anim.SetTrigger("Shoot");
