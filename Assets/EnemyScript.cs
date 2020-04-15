@@ -18,7 +18,7 @@ public class EnemyScript : MonoBehaviour
     private Coroutine attackCoroutine;
     private bool attacking;
     private bool shooting;
-    private bool trackingPLayer;
+    private bool tracking;
     GameObject player;
 
 
@@ -32,43 +32,13 @@ public class EnemyScript : MonoBehaviour
 
     private void Update()
     {
-        var position = (Vector2)transform.position;
 
-        bool isGrounded = Physics2D.Raycast(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down, 2f, ground);
-        Debug.DrawRay(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down * 2f, Color.red);
-
-        bool hasFreePath = Physics2D.Raycast(position, transform.right, 1.5f, ground);
-        Debug.DrawRay(position, transform.right);
-
-        bool playerAgro = Physics2D.Raycast(position, (Vector2)player.transform.position - position, 15f, agro);
-        Debug.DrawRay(position, (Vector2)player.transform.position - position,Color.yellow);
-        if (playerAgro) {
-            if (Physics2D.Raycast(position, (Vector2)player.transform.position - position, 15f, agro).collider.gameObject.CompareTag("Player"))
-                TrackPlayer();
-            /*
-            else
-            {
-                if (trackingPLayer && (!shooting || !attacking))
-                {
-                    moving = false;
-                    rb.velocity = Vector2.zero;
-                }
-                else
-                {
-                    moving = true;
-                }
-            }*/
-            
-
-        }
+        Debug.DrawRay((Vector2)transform.position + new Vector2(1f, 0f) * transform.right, Vector2.down);
+        if (tracking)
+            Chase();
         else
-        {
-            trackingPLayer = false;
-            sprite.color = Color.white;
-        }
+            Patroll();
 
-        if (!isGrounded || hasFreePath)
-            Flip();
         if (moving)
             anim.SetFloat("Speed", 1f);
         else
@@ -81,50 +51,116 @@ public class EnemyScript : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
     }
 
+    private void Patroll()
+    {
+        var position = (Vector2)transform.position;
+        bool isGrounded = Physics2D.Raycast(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down, 2f, ground);
+        bool hasFreePath = Physics2D.Raycast(position, transform.right, 1.5f, ground);
+
+        if (!isGrounded || hasFreePath)
+            Flip();
+    }
+
+    private void Chase()
+    {
+        Vector2 position = (Vector2)transform.position;
+        Vector2 playerPosition = (Vector2)player.transform.position;
+        bool playerAgro = Physics2D.Raycast(position, playerPosition - position, agro);
+        bool playerAgroRange = Physics2D.Raycast(position, playerPosition - position, 15f, agro);
+        bool isGrounded = Physics2D.Raycast(position + new Vector2(1f, 0f) * transform.right, Vector2.down, 2f, ground);
+
+
+        if (playerAgro)
+        {
+            //esta dentro del area de agro
+            if (playerAgroRange)
+            {
+                //veo al player
+                if (Physics2D.Raycast(position, playerPosition - position, Mathf.Infinity, agro).collider.gameObject.CompareTag("Player"))
+                {
+                    if (Mathf.Sign((playerPosition - position).x) != Mathf.Sign(transform.right.x))
+                        Flip();
+                }
+                else
+                {
+                    moving = false;
+                    rb.velocity = Vector2.zero;
+                }
+
+            }
+            else
+            {
+                if (!shooting && !attacking)
+                {
+                    tracking = false;
+                    moving = true;
+                    sprite.color = Color.white;
+                    rb.velocity = speed * Time.fixedDeltaTime * transform.right;
+                }
+
+            }
+            /*
+            if (!isGrounded)
+            {
+                Flip();
+                moving = false;
+                rb.velocity = Vector2.zero;
+            }*/
+        }
+    }
+
     private void FixedUpdate()
     {
         if (moving)
             rb.velocity = speed * Time.fixedDeltaTime * transform.right;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Vector2 position = (Vector2)transform.position;
+        Vector2 playerPosition = (Vector2)player.transform.position;
+        bool playerAgro = Physics2D.Raycast(position, playerPosition - position, agro);
+        Debug.DrawRay(position, playerPosition - position);
+
+        if (!tracking && playerAgro && collision.gameObject.CompareTag("Player"))
+            if (Physics2D.Raycast(position, playerPosition - position, 15f, agro).collider.gameObject.CompareTag("Player"))
+                TrackPlayer();
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         bool isPLayer = collision.gameObject.CompareTag("Player");
-        if (isPLayer && speed < 450 && !shooting)
-            speed += 2;
+        Vector2 position = (Vector2)transform.position;
+        Vector2 playerPosition = (Vector2)player.transform.position;
+        bool shootingRange = Physics2D.Raycast(position, playerPosition - position, 10f, agro);
+        bool isGrounded = Physics2D.Raycast(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down, 2f, ground);
+
 
         bool melee = Physics2D.Raycast((Vector2)transform.position, transform.right, 2f, playerMask);
-        if (melee)
-        {
-            if (!attacking && !shooting)
+        if (isPLayer && isGrounded)
+            if (melee)
             {
-                EnemyAttack();
-            }
-            else
-                Player2DControll.Instance.TakeDamage();
-        }
-        else
-        {
-            if (isPLayer)
-            {
-                if (!shooting && !attacking)
+                if (!attacking && !shooting)
                 {
-                    EnemyShoot();
+                    EnemyAttack();
                 }
                 else
                     Player2DControll.Instance.TakeDamage();
             }
-        }
+            else
+            {
+                if (shootingRange)
+                {
+                    if (!shooting && !attacking && Physics2D.Raycast(position, playerPosition - position, 10f, agro).collider.gameObject.CompareTag("Player"))
+                    {
+                        EnemyShoot();
+                    }
+                    else
+                        Player2DControll.Instance.TakeDamage();
+                }
+            }
 
        
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            speed = 300;
-        }
     }
 
     private void EnemyAttack()
@@ -169,15 +205,8 @@ public class EnemyScript : MonoBehaviour
 
     private void TrackPlayer()
     {
-        trackingPLayer = true;
+        tracking = true;
         sprite.color = Color.red;
-        if (moving)
-        {
-            if(Mathf.Sign(((Vector2)(transform.position - player.transform.position)).x) == (Mathf.Sign(transform.right.x)))
-            {
-                Flip();
-            }
-        }
 
     }
 }
