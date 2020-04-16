@@ -251,6 +251,9 @@ MonoBehaviour:
   agro:
     serializedVersion: 2
     m_Bits: 8448
+  meleeDistance: 2
+  shootingDistance: 10
+  trackingDistance: 15
   lookingRight: 0
   canBePossesed: 1
 --- !u!50 &6478211536328854130

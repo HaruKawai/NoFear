@@ -9,6 +9,9 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private LayerMask ground;
     [SerializeField] private LayerMask playerMask;
     [SerializeField] private LayerMask agro;
+    [SerializeField] private float meleeDistance;
+    [SerializeField] private float shootingDistance;
+    [SerializeField] private float trackingDistance;
     private SpriteRenderer sprite;
     private Rigidbody2D rb;
     public bool lookingRight;
@@ -65,47 +68,42 @@ public class EnemyScript : MonoBehaviour
     {
         Vector2 position = (Vector2)transform.position;
         Vector2 playerPosition = (Vector2)player.transform.position;
-        bool playerAgro = Physics2D.Raycast(position, playerPosition - position, agro);
-        bool playerAgroRange = Physics2D.Raycast(position, playerPosition - position, 15f, agro);
+        bool playerAgroRange = Physics2D.Raycast(position, playerPosition - position, trackingDistance, agro);
         bool isGrounded = Physics2D.Raycast(position + new Vector2(1f, 0f) * transform.right, Vector2.down, 2f, ground);
 
 
-        if (playerAgro)
+        //esta dentro del area de agro
+        if (playerAgroRange)
         {
-            //esta dentro del area de agro
-            if (playerAgroRange)
+            //veo al player
+            if (Physics2D.Raycast(position, playerPosition - position, Mathf.Infinity, agro).collider.gameObject.CompareTag("Player"))
             {
-                //veo al player
-                if (Physics2D.Raycast(position, playerPosition - position, Mathf.Infinity, agro).collider.gameObject.CompareTag("Player"))
-                {
-                    if (Mathf.Sign((playerPosition - position).x) != Mathf.Sign(transform.right.x))
-                        Flip();
-                }
-                else
-                {
-                    moving = false;
-                    rb.velocity = Vector2.zero;
-                }
-
+                if (Mathf.Sign((playerPosition - position).x) != Mathf.Sign(transform.right.x))
+                    Flip();
             }
             else
             {
-                if (!shooting && !attacking)
-                {
-                    tracking = false;
-                    moving = true;
-                    sprite.color = Color.white;
-                    rb.velocity = speed * Time.fixedDeltaTime * transform.right;
-                }
-
-            }
-            /*
-            if (!isGrounded)
-            {
-                Flip();
                 moving = false;
                 rb.velocity = Vector2.zero;
-            }*/
+            }
+            //si nos vamos a caer paramos
+            if (!isGrounded)
+            {
+                moving = false;
+                rb.velocity = Vector2.zero;
+            }
+        }
+        else
+        {
+            if (!shooting && !attacking)
+            {
+                tracking = false;
+                moving = true;
+                sprite.color = Color.white;
+                rb.velocity = speed * Time.fixedDeltaTime * transform.right;
+            }
+
+
         }
     }
 
@@ -123,7 +121,7 @@ public class EnemyScript : MonoBehaviour
         Debug.DrawRay(position, playerPosition - position);
 
         if (!tracking && playerAgro && collision.gameObject.CompareTag("Player"))
-            if (Physics2D.Raycast(position, playerPosition - position, 15f, agro).collider.gameObject.CompareTag("Player"))
+            if (Physics2D.Raycast(position, playerPosition - position, trackingDistance, agro).collider.gameObject.CompareTag("Player"))
                 TrackPlayer();
     }
 
@@ -132,11 +130,11 @@ public class EnemyScript : MonoBehaviour
         bool isPLayer = collision.gameObject.CompareTag("Player");
         Vector2 position = (Vector2)transform.position;
         Vector2 playerPosition = (Vector2)player.transform.position;
-        bool shootingRange = Physics2D.Raycast(position, playerPosition - position, 10f, agro);
+        bool shootingRange = Physics2D.Raycast(position, playerPosition - position, shootingDistance, agro);
         bool isGrounded = Physics2D.Raycast(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down, 2f, ground);
 
 
-        bool melee = Physics2D.Raycast((Vector2)transform.position, transform.right, 2f, playerMask);
+        bool melee = Physics2D.Raycast((Vector2)transform.position, transform.right, meleeDistance, playerMask);
         if (isPLayer && isGrounded)
             if (melee)
             {
@@ -151,7 +149,7 @@ public class EnemyScript : MonoBehaviour
             {
                 if (shootingRange)
                 {
-                    if (!shooting && !attacking && Physics2D.Raycast(position, playerPosition - position, 10f, agro).collider.gameObject.CompareTag("Player"))
+                    if (!shooting && !attacking && Physics2D.Raycast(position, playerPosition - position, shootingDistance, agro).collider.gameObject.CompareTag("Player"))
                     {
                         EnemyShoot();
                     }
