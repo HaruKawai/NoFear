@@ -21,8 +21,10 @@ public class EnemyScript : MonoBehaviour
     private Coroutine attackCoroutine;
     private bool attacking;
     private bool shooting;
-    private bool tracking;
+    public  bool tracking;
     GameObject player;
+
+    public EnemyBullet bullet;
 
 
     private void Awake()
@@ -117,12 +119,17 @@ public class EnemyScript : MonoBehaviour
     {
         Vector2 position = (Vector2)transform.position;
         Vector2 playerPosition = (Vector2)player.transform.position;
-        bool playerAgro = Physics2D.Raycast(position, playerPosition - position, agro);
+        bool playerAgro = Physics2D.Raycast(position, playerPosition - position, Mathf.Infinity, agro);
         Debug.DrawRay(position, playerPosition - position);
-
-        if (!tracking && playerAgro && collision.gameObject.CompareTag("Player"))
-            if (Physics2D.Raycast(position, playerPosition - position, trackingDistance, agro).collider.gameObject.CompareTag("Player"))
-                TrackPlayer();
+        
+        if (!tracking && playerAgro)
+            if (Physics2D.Raycast(position, playerPosition - position, Mathf.Infinity, agro).collider.gameObject.CompareTag("Player"))
+            {
+                if (collision.gameObject.CompareTag("Player"))
+                {
+                    TrackPlayer();
+                }
+            }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -205,6 +212,15 @@ public class EnemyScript : MonoBehaviour
     {
         tracking = true;
         sprite.color = Color.red;
+
+    }
+
+    public void FireEvent()
+    {
+        EnemyBullet ammo = Instantiate<EnemyBullet>(bullet);
+        ammo.gameObject.SetActive(true);
+        ammo.transform.position = transform.position + transform.right * 2.6f + transform.up*0.9f;
+        ammo.direction = (player.transform.position + transform.up*0.7f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
 
     }
 }

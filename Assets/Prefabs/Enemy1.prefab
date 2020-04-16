@@ -218,7 +218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6478211536328854143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.17, y: 9.34, z: 393.5541}
+  m_LocalPosition: {x: 2.17, y: 9.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6478211536847942529}
@@ -256,6 +256,8 @@ MonoBehaviour:
   trackingDistance: 15
   lookingRight: 0
   canBePossesed: 1
+  tracking: 0
+  bullet: {fileID: 5127622667476519648, guid: 2da65e58e278f0b499a3511dc7a40b9e, type: 3}
 --- !u!50 &6478211536328854130
 Rigidbody2D:
   serializedVersion: 4
@@ -325,7 +327,7 @@ PolygonCollider2D:
       - {x: -0.95105654, y: 0.30901697}
       - {x: -0.5877852, y: -0.80901706}
       - {x: 11.889, y: -7.7495985}
-      - {x: 11.972261, y: 10.296984}
+      - {x: 11.713474, y: 8.55942}
 --- !u!61 &4497752431766428729
 BoxCollider2D:
   m_ObjectHideFlags: 0
