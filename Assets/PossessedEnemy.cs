@@ -76,7 +76,7 @@ public class PossessedEnemy : MonoBehaviour
             
         }
 
-        if (Input.GetButtonDown("Fire1") && isGrounded)
+        if (Input.GetButtonDown("Fire1") && isGrounded && canMove)
         {
             canMove = false;
             anim.SetTrigger("Shoot");
@@ -133,8 +133,6 @@ public class PossessedEnemy : MonoBehaviour
             ammo.gameObject.SetActive(true);
             ammo.transform.position = transform.position + transform.right * 2.6f + transform.up * 0.9f;
             ammo.direction = (transform.position + transform.right * 3f + transform.up * 0.9f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
-        }
-        
-
+        }        
     }
 }
