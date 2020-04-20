@@ -217,10 +217,14 @@ public class EnemyScript : MonoBehaviour
 
     public void FireEvent()
     {
-        EnemyBullet ammo = Instantiate<EnemyBullet>(bullet);
-        ammo.gameObject.SetActive(true);
-        ammo.transform.position = transform.position + transform.right * 2.6f + transform.up*0.9f;
-        ammo.direction = (player.transform.position + transform.up*0.7f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
+        if (isActiveAndEnabled)
+        {
+            EnemyBullet ammo = Instantiate<EnemyBullet>(bullet);
+            ammo.gameObject.SetActive(true);
+            ammo.transform.position = transform.position + transform.right * 2.6f + transform.up * 0.9f;
+            ammo.direction = (player.transform.position + transform.up * 0.7f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
+
+        }
 
     }
 }
