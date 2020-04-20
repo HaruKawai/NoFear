@@ -49,8 +49,8 @@ public class PossessedEnemy : MonoBehaviour
     private void Update()
     {
         var position = transform.position;
-        isGrounded = Physics2D.Raycast(position, Vector2.down, 0.2f, ground);
-        onPlatform = Physics2D.Raycast(position, Vector2.down, 0.2f, platform);
+        isGrounded = Physics2D.Raycast(position, Vector2.down, 2f, ground);
+        onPlatform = Physics2D.Raycast(position, Vector2.down, 2f, platform);
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         
