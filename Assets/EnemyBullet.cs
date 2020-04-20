@@ -23,15 +23,11 @@ public class EnemyBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Player2DControll.Instance.TakeDamage();
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
-        else
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Ground") || collision.gameObject.layer == LayerMask.NameToLayer("Platform"))
         {
-            if(collision.gameObject.layer == LayerMask.NameToLayer("Ground") || collision.gameObject.layer == LayerMask.NameToLayer("Platform"))
-            {
-                gameObject.SetActive(false);
-                Destroy(gameObject);
-            }
+            Destroy(gameObject);
         }
     }
 }

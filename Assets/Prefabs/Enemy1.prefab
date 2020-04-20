@@ -251,7 +251,7 @@ MonoBehaviour:
   agro:
     serializedVersion: 2
     m_Bits: 8448
-  meleeDistance: 2
+  meleeDistance: 3
   shootingDistance: 10
   trackingDistance: 15
   lookingRight: 0
@@ -273,7 +273,7 @@ Rigidbody2D:
   m_Mass: 1.2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 40
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -323,11 +323,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.40181494, y: 3.1812801}
+    - - {x: 2.169119, y: 2.534706}
       - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 11.638231, y: -4.113445}
-      - {x: 11.713474, y: 7.6817284}
+      - {x: 0.23120975, y: -0.5503864}
+      - {x: 11.889, y: -7.7495985}
+      - {x: 11.713474, y: 8.55942}
 --- !u!61 &4497752431766428729
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -373,6 +373,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   canJump: 0
+  canMove: 0
   runSpeed: 100
   m_MovementSmoothing: 0.05
   m_JumpForce: 1000
@@ -380,6 +381,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   vCamera: {fileID: 0}
   light: {fileID: 5674893925549249974}
+  bullet: {fileID: 5127622667476519648, guid: 2da65e58e278f0b499a3511dc7a40b9e, type: 3}
 --- !u!1 &6478211536847942528
 GameObject:
   m_ObjectHideFlags: 0
