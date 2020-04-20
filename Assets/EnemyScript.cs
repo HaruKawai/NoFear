@@ -25,6 +25,7 @@ public class EnemyScript : MonoBehaviour
     GameObject player;
 
     public EnemyBullet bullet;
+    private Vector3 bulletDirection;
 
 
     private void Awake()
@@ -141,7 +142,7 @@ public class EnemyScript : MonoBehaviour
         bool isGrounded = Physics2D.Raycast(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down, 2f, ground);
 
 
-        bool melee = Physics2D.Raycast((Vector2)transform.position, transform.right, meleeDistance, playerMask);
+        bool melee = Physics2D.Raycast((Vector2)transform.position, playerPosition - position, meleeDistance, playerMask);
         if (isPLayer && isGrounded)
             if (melee)
             {
@@ -186,6 +187,8 @@ public class EnemyScript : MonoBehaviour
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
         anim.SetTrigger("Shoot");
+        //para coger la posición del jugador cuando se inicia la animación de disparo y no se salga del area de agro
+        bulletDirection = (player.transform.position + transform.up * 0.7f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
     }
 
     public void DamageAttackFrame()
@@ -221,8 +224,8 @@ public class EnemyScript : MonoBehaviour
         {
             EnemyBullet ammo = Instantiate<EnemyBullet>(bullet);
             ammo.gameObject.SetActive(true);
-            ammo.transform.position = transform.position + transform.right * 2.6f + transform.up * 0.9f;
-            ammo.direction = (player.transform.position + transform.up * 0.7f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
+            ammo.transform.position = transform.position + transform.right * 2.1f + transform.up * 0.9f;
+            ammo.direction = bulletDirection;
 
         }
 

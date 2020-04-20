@@ -251,7 +251,7 @@ MonoBehaviour:
   agro:
     serializedVersion: 2
     m_Bits: 8448
-  meleeDistance: 2
+  meleeDistance: 3
   shootingDistance: 10
   trackingDistance: 15
   lookingRight: 0
@@ -323,9 +323,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.40181494, y: 3.1812801}
+    - - {x: 2.169119, y: 2.534706}
       - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
+      - {x: 0.23120975, y: -0.5503864}
       - {x: 11.889, y: -7.7495985}
       - {x: 11.713474, y: 8.55942}
 --- !u!61 &4497752431766428729
