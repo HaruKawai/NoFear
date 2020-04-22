@@ -62,16 +62,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Bullet.cs" />
-    <Compile Include="Assets\EnemyBullet.cs" />
-    <Compile Include="Assets\EnemyScript.cs" />
     <Compile Include="Assets\PlayerStats.cs" />
-    <Compile Include="Assets\PossessedEnemy.cs" />
     <Compile Include="Assets\Scripts\BloodScreenController.cs" />
     <Compile Include="Assets\Scripts\bullet.cs" />
     <Compile Include="Assets\Scripts\controladorTiempo.cs" />
     <Compile Include="Assets\Scripts\DestroyOnExit.cs" />
-    <Compile Include="Assets\Scripts\Enemies\Basic.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy2Script.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyBullet.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyScript.cs" />
+    <Compile Include="Assets\Scripts\Enemies\PossesedEnemy2.cs" />
+    <Compile Include="Assets\Scripts\Enemies\PossessedEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GoodItem.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
