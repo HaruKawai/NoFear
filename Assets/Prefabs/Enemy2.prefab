@@ -259,6 +259,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f005409a87fd91449809033446c8b80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 350
+  ground:
+    serializedVersion: 2
+    m_Bits: 256
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  agro:
+    serializedVersion: 2
+    m_Bits: 8448
+  meleeDistance: 3
+  shootingDistance: 15
+  trackingDistance: 16
+  lookingRight: 0
+  canBePossesed: 1
+  tracking: 0
+  bullet: {fileID: 0}
 --- !u!50 &8713501240031301931
 Rigidbody2D:
   serializedVersion: 4
@@ -367,3 +384,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51241a2257d23d74c80c941fc814c65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ground:
+    serializedVersion: 2
+    m_Bits: 0
+  platform:
+    serializedVersion: 2
+    m_Bits: 0
+  canJump: 0
+  canMove: 0
+  runSpeed: 0
+  m_MovementSmoothing: 0.05
+  m_JumpForce: 300
+  possessedColor: {r: 0, g: 0, b: 0, a: 0}
+  normalColor: {r: 0, g: 0, b: 0, a: 0}
+  vCamera: {fileID: 0}
+  light: {fileID: 0}
+  bullet: {fileID: 0}
