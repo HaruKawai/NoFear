@@ -55,20 +55,8 @@ AnimationClip:
     - time: 0.9166667
       value: {fileID: -7266845314124737194, guid: 27b6ef20be6f2a440a704308c1bd5179,
         type: 3}
-    - time: 1
-      value: {fileID: -5168576596277122810, guid: 27b6ef20be6f2a440a704308c1bd5179,
-        type: 3}
-    - time: 1.0833334
-      value: {fileID: -7303085922518154401, guid: 27b6ef20be6f2a440a704308c1bd5179,
-        type: 3}
-    - time: 1.1666666
-      value: {fileID: -3387832490922303652, guid: 27b6ef20be6f2a440a704308c1bd5179,
-        type: 3}
-    - time: 1.25
-      value: {fileID: 2196459547150753776, guid: 27b6ef20be6f2a440a704308c1bd5179,
-        type: 3}
     attribute: m_Sprite
-    path: 
+    path: EnemyVFX
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
@@ -79,7 +67,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 1540916508
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -98,16 +86,12 @@ AnimationClip:
     - {fileID: 2158891789428380870, guid: 27b6ef20be6f2a440a704308c1bd5179, type: 3}
     - {fileID: 9151066736925549315, guid: 27b6ef20be6f2a440a704308c1bd5179, type: 3}
     - {fileID: -7266845314124737194, guid: 27b6ef20be6f2a440a704308c1bd5179, type: 3}
-    - {fileID: -5168576596277122810, guid: 27b6ef20be6f2a440a704308c1bd5179, type: 3}
-    - {fileID: -7303085922518154401, guid: 27b6ef20be6f2a440a704308c1bd5179, type: 3}
-    - {fileID: -3387832490922303652, guid: 27b6ef20be6f2a440a704308c1bd5179, type: 3}
-    - {fileID: 2196459547150753776, guid: 27b6ef20be6f2a440a704308c1bd5179, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.3333334
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

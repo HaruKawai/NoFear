@@ -103,16 +103,18 @@
             </e>
           </e>
         </e>
-        <e p="EnemyScript.cs" t="Include" />
         <e p="PlayerStats.cs" t="Include" />
-        <e p="PossessedEnemy.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="BloodScreenController.cs" t="Include" />
           <e p="bullet.cs" t="Include" />
           <e p="controladorTiempo.cs" t="Include" />
           <e p="DestroyOnExit.cs" t="Include" />
           <e p="Enemies" t="Include">
-            <e p="Basic.cs" t="Include" />
+            <e p="Enemy2Script.cs" t="Include" />
+            <e p="EnemyBullet.cs" t="Include" />
+            <e p="EnemyScript.cs" t="Include" />
+            <e p="PossesedEnemy2.cs" t="Include" />
+            <e p="PossessedEnemy.cs" t="Include" />
           </e>
           <e p="Enemy.cs" t="Include" />
           <e p="GoodItem.cs" t="Include" />

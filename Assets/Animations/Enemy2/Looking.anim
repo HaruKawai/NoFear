@@ -35,7 +35,7 @@ AnimationClip:
       value: {fileID: 698512397496201511, guid: d1af1bf2718851f4c9fe93e59e45509f,
         type: 3}
     attribute: m_Sprite
-    path: 
+    path: EnemyVFX
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
@@ -46,7 +46,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 1540916508
       attribute: 0
       script: {fileID: 0}
       typeID: 212
