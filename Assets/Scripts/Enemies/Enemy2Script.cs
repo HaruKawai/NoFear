@@ -10,7 +10,7 @@ public class Enemy2Script : MonoBehaviour
     [SerializeField] private LayerMask playerMask;
     [SerializeField] private LayerMask agro;
     [SerializeField] private float meleeDistance;
-    [SerializeField] private float shootingDistance;
+    [SerializeField] private float throwingDistance;
     [SerializeField] private float trackingDistance;
     private SpriteRenderer sprite;
     private Rigidbody2D rb;
@@ -19,8 +19,8 @@ public class Enemy2Script : MonoBehaviour
     private Animator anim;
     private bool moving = true;
     private Coroutine attackCoroutine;
-    private bool attacking;
-    private bool shooting;
+    private bool running;
+    private bool throwing;
     public bool tracking;
     GameObject player;
 
@@ -41,7 +41,10 @@ public class Enemy2Script : MonoBehaviour
 
         Debug.DrawRay((Vector2)transform.position + new Vector2(1f, 0f) * transform.right, Vector2.down);
         if (tracking)
-            Chase();
+            if (running)
+                Run();
+            else
+                Chase();
         else
             Patroll();
 
@@ -98,7 +101,7 @@ public class Enemy2Script : MonoBehaviour
         }
         else
         {
-            if (!shooting && !attacking)
+            if (!throwing && !running)
             {
                 tracking = false;
                 moving = true;
@@ -107,6 +110,26 @@ public class Enemy2Script : MonoBehaviour
             }
 
 
+        }
+    }
+
+    private void Run()
+    {
+        Vector2 position = (Vector2)transform.position;
+        Vector2 playerPosition = (Vector2)player.transform.position;
+        bool playerAgroRange = Physics2D.Raycast(position, playerPosition - position, throwingDistance, agro);
+        bool isGrounded = Physics2D.Raycast(position + new Vector2(1f, 0f) * transform.right, Vector2.down, 2f, ground);
+
+        sprite.color = new Color(1f, 0.64f, 0f);
+        if(!isGrounded || !playerAgroRange)
+        {
+            rb.velocity = Vector2.zero;
+            Flip();
+            running = false;
+            if (tracking)
+                sprite.color = Color.red;
+            else
+                sprite.color = Color.white;
         }
     }
 
@@ -138,7 +161,7 @@ public class Enemy2Script : MonoBehaviour
         bool isPLayer = collision.gameObject.CompareTag("Player");
         Vector2 position = (Vector2)transform.position;
         Vector2 playerPosition = (Vector2)player.transform.position;
-        bool shootingRange = Physics2D.Raycast(position, playerPosition - position, shootingDistance, agro);
+        bool throwingRange = Physics2D.Raycast(position, playerPosition - position, throwingDistance, agro);
         bool isGrounded = Physics2D.Raycast(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down, 2f, ground);
 
 
@@ -146,20 +169,16 @@ public class Enemy2Script : MonoBehaviour
         if (isPLayer && isGrounded)
             if (melee)
             {
-                if (!attacking && !shooting)
-                {
-                    EnemyAttack();
-                }
-                else
-                    Player2DControll.Instance.TakeDamage();
+                if (!running && !throwing)
+                    RunAway();
             }
             else
             {
-                if (shootingRange)
+                if (throwingRange)
                 {
-                    if (!shooting && !attacking && Physics2D.Raycast(position, playerPosition - position, shootingDistance, agro).collider.gameObject.CompareTag("Player"))
+                    if (!throwing && !running && Physics2D.Raycast(position, playerPosition - position, throwingDistance, agro).collider.gameObject.CompareTag("Player"))
                     {
-                        EnemyShoot();
+                        EnemyThrow();
                     }
                     else
                         Player2DControll.Instance.TakeDamage();
@@ -169,53 +188,41 @@ public class Enemy2Script : MonoBehaviour
 
     }
 
-    private void EnemyAttack()
+    private void RunAway()
     {
-        moving = false;
-        shooting = false;
-        attacking = true;
-        rb.velocity = Vector2.zero;
+        moving = true;
+        throwing = false;
+        running = true;
+        Flip();
         rb.isKinematic = true;
-        anim.SetTrigger("attack");
     }
 
-    private void EnemyShoot()
+    private void EnemyThrow()
     {
         moving = false;
-        shooting = true;
-        attacking = false;
+        throwing = true;
+        running = false;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
-        anim.SetTrigger("Shoot");
+        anim.SetTrigger("Throw");
         //para coger la posición del jugador cuando se inicia la animación de disparo y no se salga del area de agro
         bulletDirection = (player.transform.position + transform.up * 0.7f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
     }
 
-    public void DamageAttackFrame()
-    {
-        attacking = true;
-    }
 
-    public void EndShootEvent()
+    public void EndThrowEvent()
     {
-        shooting = false;
-        moving = true;
-        rb.isKinematic = false;
-    }
-
-    //Animation event so it can move once the attack animation is over
-    public void EndAttackEvent()
-    {
-        attacking = false;
-        moving = true;
+        Debug.Log("Hello");
+        throwing = false;
+        //moving = true;
         rb.isKinematic = false;
     }
 
     private void TrackPlayer()
     {
         tracking = true;
+        moving = true;
         sprite.color = Color.red;
-
     }
 
     public void FireEvent()
