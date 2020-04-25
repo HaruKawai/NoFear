@@ -5,6 +5,8 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class PossesedEnemy2 : MonoBehaviour
 {
+    [SerializeField] private float grenadeX;
+    [SerializeField] private float grenadeY;
     private bool isGrounded;
     private bool onPlatform;
     public LayerMask ground;
@@ -17,7 +19,7 @@ public class PossesedEnemy2 : MonoBehaviour
     private Rigidbody2D rb;
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
     private Vector3 m_Velocity = Vector3.zero;
-    private bool lookingRight;
+    public bool lookingRight;
     [SerializeField] private float m_JumpForce = 300f;
     private Animator anim;
     private SpriteRenderer sr;
@@ -25,18 +27,20 @@ public class PossesedEnemy2 : MonoBehaviour
     public Color normalColor;
     public CinemachineVirtualCamera vCamera;
     public Light2D light;
-    public EnemyBullet bullet;
+    GameObject player;
+    public Grenade grenade;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponentInChildren<SpriteRenderer>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void OnEnable()
     {
-        lookingRight = GetComponent<EnemyScript>().lookingRight;
+        lookingRight = GetComponent<Enemy2Script>().lookingRight;
         sr.color = possessedColor;
         vCamera.m_Follow = gameObject.transform;
         light.enabled = true;
@@ -56,7 +60,6 @@ public class PossesedEnemy2 : MonoBehaviour
         onPlatform = Physics2D.Raycast(position, Vector2.down, 1.5f, platform);
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
         anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump"))
@@ -72,14 +75,14 @@ public class PossesedEnemy2 : MonoBehaviour
             vCamera.m_Follow = Player2DControll.Instance.transform;
             sr.color = normalColor;
             enabled = false;
-            GetComponent<EnemyScript>().enabled = true;
+            GetComponent<Enemy2Script>().enabled = true;
 
         }
 
         if (Input.GetButtonDown("Fire1") && isGrounded && canMove)
         {
             canMove = false;
-            anim.SetTrigger("Shoot");
+            anim.SetTrigger("Throw");
         }
     }
 
@@ -94,6 +97,7 @@ public class PossesedEnemy2 : MonoBehaviour
 
         var velocity = rb.velocity;
         var targetVelocity = new Vector2(move * 7f, velocity.y);
+        Debug.Log(canMove);
         if (canMove)
         {
             rb.velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
@@ -120,7 +124,7 @@ public class PossesedEnemy2 : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
     }
 
-    public void EndShootEvent()
+    public void EndThrowEvent()
     {
         canMove = true;
     }
@@ -129,10 +133,13 @@ public class PossesedEnemy2 : MonoBehaviour
     {
         if (isActiveAndEnabled)
         {
-            EnemyBullet ammo = Instantiate<EnemyBullet>(bullet);
+            Grenade ammo = Instantiate<Grenade>(grenade);
             ammo.gameObject.SetActive(true);
-            ammo.transform.position = transform.position + transform.right * 2.6f + transform.up * 0.9f;
-            ammo.direction = (transform.position + transform.right * 3f + transform.up * 0.9f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
+            ammo.transform.position = transform.position + transform.right * 0.2f + transform.up * 1.2f;
+            ammo.lookingRight = lookingRight;
+            ammo.playerPos = new Vector2(5f, -5f);
+            ammo.grenadeX = 10;
+            ammo.grenadeY = 5;
         }
     }
 }

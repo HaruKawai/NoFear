@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1922037225851613024}
   - component: {fileID: 6642535192871094613}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EnemyVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 2285633095958114681}
   - component: {fileID: 3720436226572768646}
   m_Layer: 12
-  m_Name: PossessPoint
+  m_Name: PossessPointEnemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,8 +269,8 @@ MonoBehaviour:
   agro:
     serializedVersion: 2
     m_Bits: 8448
-  grenadeX: 2.73
-  grenadeY: 3.86
+  grenadeX: 10.29
+  grenadeY: 9.68
   lookingRight: 0
   canBePossesed: 1
   grenade: {fileID: 94369367564067176, guid: 0f903aaf14264c445b90a3c9e466c0b4, type: 3}
@@ -378,24 +378,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5160500951349364976}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 51241a2257d23d74c80c941fc814c65b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grenadeX: 19.38
+  grenadeY: 15.34
   ground:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 768
   platform:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   canJump: 0
   canMove: 0
-  runSpeed: 0
+  runSpeed: 75
   m_MovementSmoothing: 0.05
-  m_JumpForce: 300
-  possessedColor: {r: 0, g: 0, b: 0, a: 0}
-  normalColor: {r: 0, g: 0, b: 0, a: 0}
+  lookingRight: 0
+  m_JumpForce: 1250
+  possessedColor: {r: 0, g: 0.6698113, b: 0.10439851, a: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 0}
   vCamera: {fileID: 0}
-  light: {fileID: 0}
-  bullet: {fileID: 0}
+  light: {fileID: 9197426720661234850}
+  grenade: {fileID: 94369367564067176, guid: 0f903aaf14264c445b90a3c9e466c0b4, type: 3}

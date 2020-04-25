@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9063450268827355970}
   - component: {fileID: 2994651290812517472}
   m_Layer: 12
-  m_Name: PossessPoint
+  m_Name: PossessPointEnemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

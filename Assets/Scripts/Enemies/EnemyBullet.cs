@@ -15,7 +15,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //rb.velocity = speed * Time.fixedDeltaTime * direction.normalized;
+        rb.velocity = speed * Time.fixedDeltaTime * direction.normalized;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

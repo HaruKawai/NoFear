@@ -20,9 +20,8 @@ public class Enemy2Script : MonoBehaviour
     private Coroutine attackCoroutine;
     GameObject player;
     private bool attacking;
-
+    private Vector2 playerPos;
     public Grenade grenade;
-    private Vector3 bulletDirection;
 
 
     private void Awake()
@@ -116,7 +115,7 @@ public class Enemy2Script : MonoBehaviour
         rb.isKinematic = true;
         anim.SetTrigger("Throw");
         //para coger la posición del jugador cuando se inicia la animación de disparo y no se salga del area de agro
-        bulletDirection = player.transform.position;
+        playerPos = player.transform.position;
     }
 
     private void FixedUpdate()
@@ -189,7 +188,7 @@ public class Enemy2Script : MonoBehaviour
         rb.isKinematic = true;
         anim.SetTrigger("Throw");
         //para coger la posición del jugador cuando se inicia la animación de disparo y no se salga del area de agro
-        bulletDirection = player.transform.position;
+        playerPos = transform.InverseTransformPoint(player.transform.position);
     }
 
 
