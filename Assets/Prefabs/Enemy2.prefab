@@ -269,13 +269,11 @@ MonoBehaviour:
   agro:
     serializedVersion: 2
     m_Bits: 8448
-  meleeDistance: 3
-  throwingDistance: 10
-  trackingDistance: 15
+  grenadeX: 2.73
+  grenadeY: 3.86
   lookingRight: 0
   canBePossesed: 1
-  tracking: 0
-  bullet: {fileID: 0}
+  grenade: {fileID: 94369367564067176, guid: 0f903aaf14264c445b90a3c9e466c0b4, type: 3}
 --- !u!50 &8713501240031301931
 Rigidbody2D:
   serializedVersion: 4

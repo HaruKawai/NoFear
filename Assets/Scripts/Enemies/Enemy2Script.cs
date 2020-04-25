@@ -9,6 +9,8 @@ public class Enemy2Script : MonoBehaviour
     [SerializeField] private LayerMask ground;
     [SerializeField] private LayerMask playerMask;
     [SerializeField] private LayerMask agro;
+    [SerializeField] private float grenadeX;
+    [SerializeField] private float grenadeY;
     private SpriteRenderer sprite;
     private Rigidbody2D rb;
     public bool lookingRight;
@@ -19,7 +21,7 @@ public class Enemy2Script : MonoBehaviour
     GameObject player;
     private bool attacking;
 
-    public EnemyBullet bullet;
+    public Grenade grenade;
     private Vector3 bulletDirection;
 
 
@@ -114,7 +116,7 @@ public class Enemy2Script : MonoBehaviour
         rb.isKinematic = true;
         anim.SetTrigger("Throw");
         //para coger la posición del jugador cuando se inicia la animación de disparo y no se salga del area de agro
-        bulletDirection = (player.transform.position + transform.up * 0.7f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
+        bulletDirection = player.transform.position;
     }
 
     private void FixedUpdate()
@@ -187,7 +189,7 @@ public class Enemy2Script : MonoBehaviour
         rb.isKinematic = true;
         anim.SetTrigger("Throw");
         //para coger la posición del jugador cuando se inicia la animación de disparo y no se salga del area de agro
-        bulletDirection = (player.transform.position + transform.up * 0.7f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
+        bulletDirection = player.transform.position;
     }
 
 
@@ -204,11 +206,13 @@ public class Enemy2Script : MonoBehaviour
     {
         if (isActiveAndEnabled)
         {
-            EnemyBullet ammo = Instantiate<EnemyBullet>(bullet);
+            Grenade ammo = Instantiate<Grenade>(grenade);
             ammo.gameObject.SetActive(true);
-            ammo.transform.position = transform.position + transform.right * 2.1f + transform.up * 0.9f;
-            ammo.direction = bulletDirection;
-
+            ammo.transform.position = transform.position + transform.right * 0.2f + transform.up * 1.2f;
+            ammo.lookingRight = lookingRight;
+            ammo.playerPos = transform.InverseTransformPoint(player.transform.position);
+            ammo.grenadeX = grenadeX;
+            ammo.grenadeY = grenadeY;
         }
 
     }
