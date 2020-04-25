@@ -397,8 +397,8 @@ MonoBehaviour:
   m_MovementSmoothing: 0.05
   lookingRight: 0
   m_JumpForce: 1250
-  possessedColor: {r: 0, g: 0.6698113, b: 0.10439851, a: 0}
-  normalColor: {r: 1, g: 1, b: 1, a: 0}
+  possessedColor: {r: 0, g: 0.6698113, b: 0.10439851, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
   vCamera: {fileID: 0}
   light: {fileID: 9197426720661234850}
   grenade: {fileID: 94369367564067176, guid: 0f903aaf14264c445b90a3c9e466c0b4, type: 3}
