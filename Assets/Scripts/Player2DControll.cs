@@ -22,11 +22,13 @@ public class Player2DControll : MonoBehaviour
     private bool canJump;
     private bool isGrounded;
     private bool onPlatform;
-    private Vector3 m_Velocity = Vector3.zero;
+    private Vector2 m_Velocity = Vector2.zero;
     private bool damaged;
     [SerializeField] private LayerMask ground;
     [SerializeField] private LayerMask platform;
     public bool lookingRight;
+    public bool knockBacked;
+    public bool knockBacKStun;
 
     public enum PlayerMode
     {
@@ -81,6 +83,9 @@ public class Player2DControll : MonoBehaviour
 	    Debug.DrawRay(position, Vector2.up * 1.15f, Color.red);
 	    Debug.DrawRay(position, Vector2.right * 1f, Color.blue);
 	    Debug.DrawRay(position, Vector2.left * 1f, Color.blue);
+
+	    if (isGrounded && knockBacKStun)
+		    knockBacKStun = false;
 
 	    anim.SetBool("IsGrounding", isGrounded);
 	    anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
@@ -149,9 +154,9 @@ public class Player2DControll : MonoBehaviour
     {
 	    Move(horizontalMove, canJump, verticalMove);
 	    canJump = false;
+	    knockBacked = false;
     }
-
-
+    
     //Change form
     private void ChangeFunction()
     {
@@ -213,9 +218,9 @@ public class Player2DControll : MonoBehaviour
 	    canInflate = true;
     }
 
-    private  void Move(float move, bool jump, float move2)
+    private void Move(float move, bool jump, float move2)
     {
-	    if (isGrounded || m_AirControl)
+	    if ((isGrounded || m_AirControl) && !knockBacKStun)
 	    { 
 		    var velocity = rb.velocity;
 		    targetVelocity = Vector2.zero;
@@ -231,19 +236,26 @@ public class Player2DControll : MonoBehaviour
 			    }
 
 
-		    rb.velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+		    rb.velocity = Vector2.SmoothDamp(velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 		    if (move > 0 && lookingRight)
 			    Flip();
 		    else if (move < 0 && !lookingRight)
 			    Flip();
 	    }
+	    
 	    if (isGrounded && jump)
 	    {
 		    isGrounded = false;
-		    rb.AddForce(new Vector2(0f, m_JumpForce));
+		    rb.AddForce(Vector2.up * m_JumpForce);
+	    }
+
+	    if (knockBacked)
+	    {
+		    knockBacKStun = true;
+		    rb.AddForce(Vector2.up * 1200);
+		    rb.AddForce(Vector2.left * 1200);
 	    }
     }
-
     private void Flip()
     {
 	    lookingRight = !lookingRight;
@@ -259,9 +271,9 @@ public class Player2DControll : MonoBehaviour
 	{
 		canTakeDamage = false;
 	    yield return new WaitForSeconds(1.5f);
-		canTakeDamage = true;
+	    canTakeDamage = true;
 	}
-    
+
 	private void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.contacts[0].collider.gameObject.layer == 12 && playerMode == PlayerMode.Slime &&
