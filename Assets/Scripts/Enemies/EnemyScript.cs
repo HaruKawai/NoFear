@@ -115,7 +115,7 @@ public class EnemyScript : MonoBehaviour
         if (moving)
             rb.velocity = speed * Time.fixedDeltaTime * transform.right;
     }
-
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Vector2 position = (Vector2)transform.position;
@@ -131,19 +131,29 @@ public class EnemyScript : MonoBehaviour
                     TrackPlayer();
                 }
             }
-    }
+    }*/
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         bool isPLayer = collision.gameObject.CompareTag("Player");
         Vector2 position = (Vector2)transform.position;
         Vector2 playerPosition = (Vector2)player.transform.position;
+        bool playerAgro = Physics2D.Raycast(position, playerPosition - position, Mathf.Infinity, agro);
         bool shootingRange = Physics2D.Raycast(position, playerPosition - position, shootingDistance, agro);
         bool isGrounded = Physics2D.Raycast(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down, 2f, ground);
 
 
         bool melee = Physics2D.Raycast((Vector2)transform.position, playerPosition - position, meleeDistance, playerMask);
         if (isPLayer && isGrounded)
+        {
+            if (!tracking && playerAgro)
+                if (Physics2D.Raycast(position, playerPosition - position, Mathf.Infinity, agro).collider.gameObject.CompareTag("Player"))
+                {
+                    if (collision.gameObject.CompareTag("Player"))
+                    {
+                        TrackPlayer();
+                    }
+                }
             if (melee)
             {
                 if (!attacking && !shooting)
@@ -165,7 +175,7 @@ public class EnemyScript : MonoBehaviour
                         Player2DControll.Instance.TakeDamage();
                 }
             }
-
+        }
        
     }
 
