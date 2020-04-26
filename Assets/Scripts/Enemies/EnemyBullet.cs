@@ -29,5 +29,13 @@ public class EnemyBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.layer == 11)
+        {
+            if (collision.gameObject.name == "Enemy1")
+                collision.gameObject.GetComponent<EnemyScript>().Die();
+            if (collision.gameObject.name == "Enemy2")
+                collision.gameObject.GetComponent<Enemy2Script>().Die();
+            Destroy(gameObject);
+        }
     }
 }

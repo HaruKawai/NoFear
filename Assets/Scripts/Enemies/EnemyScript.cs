@@ -243,4 +243,14 @@ public class EnemyScript : MonoBehaviour
         }
 
     }
+
+    public void Die()
+    {
+        anim.SetTrigger("Dead");
+    }
+
+    public void DieEvent()
+    {
+        Destroy(this);
+    }
 }

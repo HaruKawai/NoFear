@@ -325,7 +325,6 @@ public class Player2DControll : MonoBehaviour
 		if (other.contacts[0].collider.gameObject.layer == 12 && playerMode == PlayerMode.Slime /*&&
 		    other.gameObject.GetComponent<EnemyScript>().canBePossesed*/)
 		{
-            Debug.Log(other.gameObject.name);
             if(other.gameObject.name == "Enemy1")
                 if (other.gameObject.GetComponent<EnemyScript>().canBePossesed)
                 {
