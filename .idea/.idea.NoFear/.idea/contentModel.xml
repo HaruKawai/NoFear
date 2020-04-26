@@ -103,6 +103,8 @@
             </e>
           </e>
         </e>
+        <e p="bullet.cs" t="Include" />
+        <e p="EnemyBullet.cs" t="Include" />
         <e p="EnemyScript.cs" t="Include" />
         <e p="PlayerStats.cs" t="Include" />
         <e p="PossessedEnemy.cs" t="Include" />
