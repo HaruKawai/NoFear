@@ -212,7 +212,11 @@ public class EnemyScript : MonoBehaviour
                 player.SetActive(false);
                 GetComponent<EnemyScript>().enabled = false;
             }
-            else Player2DControll.Instance.TakeDamage();
+            else 
+            {
+                Player2DControll.Instance.TakeDamage();
+                PlayerStats.Instance.Damage();
+            }
             
         }
     }

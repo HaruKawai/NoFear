@@ -24,7 +24,10 @@ public class EnemyBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") && !shootByPlayer)
         {
             if(Player2DControll.Instance.playerMode == Player2DControll.PlayerMode.Human)
+            {
+                PlayerStats.Instance.Damage();
                 Player2DControll.Instance.TakeDamage();
+            }
             Destroy(gameObject);
         }
         if(collision.gameObject.layer == LayerMask.NameToLayer("Ground") || collision.gameObject.layer == LayerMask.NameToLayer("Platform"))

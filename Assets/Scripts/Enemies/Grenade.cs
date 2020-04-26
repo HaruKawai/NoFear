@@ -42,6 +42,7 @@ public class Grenade : MonoBehaviour
         {
             Debug.Log("imhere");
             Player2DControll.Instance.TakeDamage();
+            PlayerStats.Instance.Damage();
             anim.SetTrigger("Explode");
             rb.velocity = new Vector2(0f, 0f);
             rb.gravityScale = 0;
