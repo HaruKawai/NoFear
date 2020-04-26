@@ -54,7 +54,7 @@ public class Enemy2Script : MonoBehaviour
     private void Patroll()
     {
         var position = (Vector2)transform.position;
-        bool isGrounded = Physics2D.Raycast(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down, 3f, ground);
+        bool isGrounded = Physics2D.Raycast(position + new Vector2(0.2f, 0f) * transform.right, Vector2.down, 2f, ground);
         bool hasFreePath = Physics2D.Raycast(position, transform.right, 1.5f, ground);
 
         if (!isGrounded || hasFreePath)
