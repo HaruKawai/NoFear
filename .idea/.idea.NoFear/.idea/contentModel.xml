@@ -132,7 +132,6 @@
           <e p="Player2DControll.cs" t="Include" />
           <e p="SceneController.cs" t="Include" />
           <e p="ScoreManager.cs" t="Include" />
-          <e p="Tutorial.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
           <e p="posiblesSprites" t="Include">
