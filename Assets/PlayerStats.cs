@@ -22,24 +22,27 @@ public class PlayerStats : MonoBehaviour
         get => currentHealth;
         set
         {
+            /*
             if (value > maxHealth)
                 currentHealth = maxHealth;
             else if (currentHealth < 0)
                 currentHealth = 0;
             else
+            */
                 currentHealth = value;
         }
     }
 
     private void Start()
     {
-        MaxHealth = 5;
+        MaxHealth = 0;
         CurrentHealth = MaxHealth;
     }
 
     public void Damage()
     {
-        CurrentHealth--;
+        Debug.Log(CurrentHealth);
+        CurrentHealth++;
         ScoreManager.Instance.ChangeUiHealth();
     }
 

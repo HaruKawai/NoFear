@@ -29,7 +29,6 @@ public class BloodScreenController : MonoBehaviour
     }
     public IEnumerator DamagedCoroutine() 
     {
-        Debug.Log("sip");
         Screen.sprite = BloodSprite4;
         yield return new WaitForSeconds(0.5f);
         Screen.sprite = BloodSprite3;

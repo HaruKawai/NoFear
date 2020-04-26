@@ -14,7 +14,7 @@ public class Player2DControll : MonoBehaviour
     private Vector2 targetVelocity;
 
     //General
-	public Canvas elCanvas;
+	private GameObject elCanvas;
 	public bool canTakeDamage = true;
     private Animator anim;
     private float distance;
@@ -70,6 +70,7 @@ public class Player2DControll : MonoBehaviour
 	    sr = GetComponentInChildren<SpriteRenderer>();
 	    rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+		elCanvas = GameObject.Find("elCanvas");
     }
 
     private void OnEnable()

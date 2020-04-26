@@ -6,22 +6,22 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public void PlayGame1() {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void PlayGame2()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 
     public void PlayGame3()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 
     public void MenuGame()
     {
-       SceneManager.LoadScene(1);
+       SceneManager.LoadScene(0);
     }
 
     public void PlaySameGame() {

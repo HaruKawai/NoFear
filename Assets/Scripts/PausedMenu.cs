@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class PausedMenu : MonoBehaviour
 {
-    private GameObject pauseMenu;
+    public GameObject pauseMenu;
     public GameObject Player;
     private Player2DControll playerControll;
     private GameObject panelControll;
@@ -23,8 +22,9 @@ public class PausedMenu : MonoBehaviour
     private void Start()
     {
         playerControll = Player.GetComponent<Player2DControll>();
-        panelControll = GameObject.Find("panelControll");
-        pauseMenu = GameObject.Find("pauseMenu");
+        //pauseMenu = GameObject.Find("pauseMenu");
+        playerControll.enabled = true;
+        ActivarMenu();
         DesactivarMenu();
     }
 
@@ -48,7 +48,6 @@ public class PausedMenu : MonoBehaviour
     {
         playerControll.enabled = false;
         Time.timeScale = 0;
-        //AudioListener.pause = true;
         if (primeraVegada){
             pauseMenu.SetActive(true);
             primeraVegada = false;
@@ -61,8 +60,6 @@ public class PausedMenu : MonoBehaviour
     {
         playerControll.enabled = true;
         Time.timeScale = 1;
-        AudioListener.pause = false;
-        panelControll.SetActive(false);
         pauseMenu.SetActive(false);
         primeraVegada = true;
         Cursor.visible = false;
@@ -72,6 +69,11 @@ public class PausedMenu : MonoBehaviour
     {
         isPaused = false;
         DesactivarMenu();
+    }
+
+    public void prueba()
+    {
+        Debug.Log("va");
     }
 
 }
