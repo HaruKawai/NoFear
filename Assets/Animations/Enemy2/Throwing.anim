@@ -49,7 +49,7 @@ AnimationClip:
     - time: 1.0833334
       value: {fileID: 109614579460600167, guid: 16eddc2fd55a54f4bb9fd2ed4cab10d5,
         type: 3}
-    - time: 1.1666666
+    - time: 1.25
       value: {fileID: 4993476577963255118, guid: 16eddc2fd55a54f4bb9fd2ed4cab10d5,
         type: 3}
     - time: 1.4166666
@@ -138,7 +138,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.8333334
+  - time: 2.0833333
     functionName: EndThrowEvent
     data: 
     objectReferenceParameter: {fileID: 0}

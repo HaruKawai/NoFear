@@ -251,6 +251,6 @@ public class EnemyScript : MonoBehaviour
 
     public void DieEvent()
     {
-        Destroy(this);
+        Destroy(gameObject);
     }
 }

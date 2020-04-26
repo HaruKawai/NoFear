@@ -45,6 +45,7 @@ public class PossesedEnemy2 : MonoBehaviour
         vCamera.m_Follow = gameObject.transform;
         light.enabled = true;
         canMove = true;
+        gameObject.layer = 13;
     }
 
     private void OnDisable()
@@ -97,7 +98,6 @@ public class PossesedEnemy2 : MonoBehaviour
 
         var velocity = rb.velocity;
         var targetVelocity = new Vector2(move * 7f, velocity.y);
-        Debug.Log(canMove);
         if (canMove)
         {
             rb.velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
@@ -131,8 +131,10 @@ public class PossesedEnemy2 : MonoBehaviour
 
     public void FireEvent()
     {
+        
         if (isActiveAndEnabled)
         {
+            
             Grenade ammo = Instantiate<Grenade>(grenade);
             ammo.gameObject.SetActive(true);
             ammo.transform.position = transform.position + transform.right * 0.2f + transform.up * 1.2f;
@@ -140,6 +142,7 @@ public class PossesedEnemy2 : MonoBehaviour
             ammo.playerPos = new Vector2(5f, -5f);
             ammo.grenadeX = 10;
             ammo.grenadeY = 5;
+            ammo.throwByPlayer = true;
         }
     }
 }

@@ -160,7 +160,7 @@ public class Enemy2Script : MonoBehaviour
                 }
                 else
                 {
-                    attacking = false;
+                    //attacking = false;
                 }
             }
             /*
@@ -194,7 +194,6 @@ public class Enemy2Script : MonoBehaviour
 
     public void EndThrowEvent()
     {
-        Debug.Log("Hello");
         attacking = false;
         moving = true;
         rb.isKinematic = false;
@@ -212,6 +211,7 @@ public class Enemy2Script : MonoBehaviour
             ammo.playerPos = transform.InverseTransformPoint(player.transform.position);
             ammo.grenadeX = grenadeX;
             ammo.grenadeY = grenadeY;
+            ammo.throwByPlayer = false;
         }
 
     }

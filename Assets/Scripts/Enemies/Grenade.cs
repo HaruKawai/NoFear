@@ -12,6 +12,7 @@ public class Grenade : MonoBehaviour
     public bool lookingRight;
     public float grenadeX;
     public float grenadeY;
+    public bool throwByPlayer;
 
     private void Awake()
     {
@@ -37,18 +38,25 @@ public class Grenade : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !throwByPlayer)
         {
+            Debug.Log("imhere");
             Player2DControll.Instance.TakeDamage();
             anim.SetTrigger("Explode");
+            rb.velocity = new Vector2(0f, 0f);
+            rb.gravityScale = 0;
         }
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground") || collision.gameObject.layer == LayerMask.NameToLayer("Platform"))
         {
             anim.SetTrigger("Explode");
+            rb.velocity = new Vector2(0f, 0f);
+            rb.gravityScale = 0;
         }
-        if(collision.gameObject.layer == 11)
+        if(collision.gameObject.layer == 11 && throwByPlayer)
         {
             anim.SetTrigger("Explode");
+            rb.velocity = new Vector2(0f, 0f);
+            rb.gravityScale = 0;
             if (collision.gameObject.name == "Enemy1")
                 collision.gameObject.GetComponent<EnemyScript>().Die();
             if (collision.gameObject.name == "Enemy2")
