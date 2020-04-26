@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Cinemachine;
 using UnityEngine;
 
 public class Player2DControll : MonoBehaviour
@@ -17,6 +18,7 @@ public class Player2DControll : MonoBehaviour
     private float distance;
     private float verticalMove;
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
     private float horizontalMove;
     [SerializeField] private float runSpeed = 300f;
     private bool canJump;
@@ -29,6 +31,7 @@ public class Player2DControll : MonoBehaviour
     public bool lookingRight;
     public bool knockBacked;
     public bool knockBacKStun;
+    private bool knockBackStun2;
 
     public enum PlayerMode
     {
@@ -61,10 +64,11 @@ public class Player2DControll : MonoBehaviour
     private void Awake()
     {
 	    Instance = this;
+	    sr = GetComponentInChildren<SpriteRenderer>();
 	    rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-    
+
     private void OnEnable()
     {
 	    playerMode = PlayerMode.Human;
@@ -73,35 +77,37 @@ public class Player2DControll : MonoBehaviour
 
     private void Update()
     {
-	    var position = (Vector2)transform.position;
+	    var position = (Vector2)transform.position + Vector2.down * 0.5f;
 	    bool leftCollision = Physics2D.Raycast(position,  Vector2.left, 1f, ground);
 	    bool rightCollision = Physics2D.Raycast(position,  Vector2.right, 1f, ground);
 	    bool upCollision = Physics2D.Raycast(position, Vector2.up, 1.15f, ground);
-	    isGrounded = Physics2D.Raycast(position + new Vector2(-0.3f, 0) * transform.right, Vector2.down, 2f, ground);
-	    onPlatform = Physics2D.Raycast(position + new Vector2(-0.3f, 0) * transform.right, Vector2.down, 2f, platform);
-	    Debug.DrawRay(position + new Vector2(-0.3f, 0) * transform.right, Vector2.down * 2f);
+	    //Problema.
+	    isGrounded = Physics2D.Raycast(position + new Vector2(-0.3f, 0f) * transform.right + Vector2.up * 0.5f, Vector2.down, 2f,
+	     ground);
+	    onPlatform = Physics2D.Raycast(position + new Vector2(-0.3f, 0f) * transform.right + Vector2.up * 0.5f, Vector2.down, 2f, platform);
+	    Debug.DrawRay(position + new Vector2(-0.3f, 0) * transform.right + Vector2.up * 0.5f, Vector2.down * 2f);
 	    Debug.DrawRay(position, Vector2.up * 1.15f, Color.red);
 	    Debug.DrawRay(position, Vector2.right * 1f, Color.blue);
 	    Debug.DrawRay(position, Vector2.left * 1f, Color.blue);
 
-	    if (isGrounded && knockBacKStun)
-		    knockBacKStun = false;
-
-	    anim.SetBool("IsGrounding", isGrounded);
-	    anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
+	    if (!knockBacked)
+	    {
+		    anim.SetBool("IsGrounding", isGrounded);
+		    anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
+	    }
 
 	    transform.parent = onPlatform ? Physics2D.Raycast(position + new Vector2(-0.3f, 0) * transform.right, Vector2.down, 2f, platform).collider.gameObject.transform : null;
 	    
 	    switch (playerMode)
 	    {
-		    case PlayerMode.Slime when (leftCollision || rightCollision):
+		    case PlayerMode.Slime when (leftCollision || rightCollision) && !knockBacked:
 			    anim.SetBool("slimeWall", true);
 			    anim.SetBool("slimeUp", false);
 			    rb.velocity = Vector2.zero;
 			    rb.gravityScale = 0;
 			    stickOnWall = true;
 			    break;
-		    case PlayerMode.Slime when upCollision:
+		    case PlayerMode.Slime when upCollision && !knockBacked:
 			    anim.SetBool("slimeUp", true);
 			    anim.SetBool("slimeWall", false);
 			    rb.gravityScale = 0;
@@ -119,7 +125,7 @@ public class Player2DControll : MonoBehaviour
 
 
 	    horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-	    verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
+	    verticalMove = Input.GetAxisRaw("Vertical") * runSpeed * 2;
         
         if (Input.GetButtonDown("Change") && !inflated)
 	        ChangeFunction();
@@ -154,7 +160,6 @@ public class Player2DControll : MonoBehaviour
     {
 	    Move(horizontalMove, canJump, verticalMove);
 	    canJump = false;
-	    knockBacked = false;
     }
     
     //Change form
@@ -220,23 +225,29 @@ public class Player2DControll : MonoBehaviour
 
     private void Move(float move, bool jump, float move2)
     {
-	    if ((isGrounded || m_AirControl) && !knockBacKStun)
-	    { 
+	    if (isGrounded || m_AirControl)
+	    {
 		    var velocity = rb.velocity;
-		    targetVelocity = Vector2.zero;
-		    if (playerMode == PlayerMode.Human)
-			    targetVelocity = new Vector2(move * 7f * Time.fixedDeltaTime, velocity.y);
-		    else if (playerMode == PlayerMode.Slime)
-			    if (stickOnWall)
-				    targetVelocity = new Vector2(move * 7f, move2 * 7f) * Time.fixedDeltaTime;
-			    else
-			    {
-				    targetVelocity = Vector2.zero;
-				    targetVelocity = isGrounded ? new Vector2(move * 3f * Time.fixedDeltaTime, velocity.y) : new Vector2(move * 7f * Time.fixedDeltaTime, velocity.y);
-			    }
-
+		    if (!knockBacked)
+		    {
+			    targetVelocity = Vector2.zero;
+			    if (playerMode == PlayerMode.Human)
+				    targetVelocity = new Vector2(move * 7f * Time.fixedDeltaTime, velocity.y);
+			    else if (playerMode == PlayerMode.Slime)
+				    if (stickOnWall)
+					    targetVelocity = new Vector2(move * 7f, move2 * 7f) * Time.fixedDeltaTime;
+				    else
+				    {
+					    targetVelocity = Vector2.zero;
+					    targetVelocity = isGrounded ? new Vector2(move * 3f * Time.fixedDeltaTime, velocity.y) : new Vector2(move * 7f * Time.fixedDeltaTime, velocity.y);
+				    }
+		    }
+		    else
+			    targetVelocity = velocity;
+		    
 
 		    rb.velocity = Vector2.SmoothDamp(velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+		    
 		    if (move > 0 && lookingRight)
 			    Flip();
 		    else if (move < 0 && !lookingRight)
@@ -248,14 +259,22 @@ public class Player2DControll : MonoBehaviour
 		    isGrounded = false;
 		    rb.AddForce(Vector2.up * m_JumpForce);
 	    }
-
-	    if (knockBacked)
-	    {
-		    knockBacKStun = true;
-		    rb.AddForce(Vector2.up * 1200);
-		    rb.AddForce(Vector2.left * 1200);
-	    }
     }
+
+    public void KnockBack()
+    {
+	    rb.AddForce(transform.up * 700f);
+	    rb.AddForce(-transform.right * 500f);
+	    knockBacked = true;
+	    StartCoroutine(KnockBackMovementDelay());
+    }
+    
+    public IEnumerator KnockBackMovementDelay()
+    {
+	    yield return new WaitForSeconds(1.5f);
+	    knockBacked = false;
+    }
+    
     private void Flip()
     {
 	    lookingRight = !lookingRight;
@@ -264,14 +283,25 @@ public class Player2DControll : MonoBehaviour
 
     public void TakeDamage()
     {
+	    if(playerMode == PlayerMode.Human)
+		  ChangeFunction();
 	    StartCoroutine(TakeDamageCoroutine());
     }
-
+    
 	private IEnumerator TakeDamageCoroutine() 
 	{
 		canTakeDamage = false;
-	    yield return new WaitForSeconds(1.5f);
-	    canTakeDamage = true;
+		anim.SetTrigger("Damaged");
+		GetComponent<CinemachineImpulseSource>().GenerateImpulse();
+		for (var i = 0; i < 5; i++)
+		{
+			sr.color = Color.Lerp(sr.color, Color.black, 1f);
+			yield return new WaitForSeconds(0.15f);
+			sr.color = Color.Lerp(sr.color, Color.white, 1f);
+			yield return new WaitForSeconds(0.15f);
+		}
+
+		canTakeDamage = true;
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)
