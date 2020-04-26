@@ -218,11 +218,12 @@ public class Enemy2Script : MonoBehaviour
 
     public void Die()
     {
-        anim.SetTrigger("Dead");        
+        anim.SetTrigger("Dead");
     }
 
     public void DieEvent()
     {
-        Destroy(gameObject);
+        if (isActiveAndEnabled)
+            Destroy(gameObject);
     }
 }

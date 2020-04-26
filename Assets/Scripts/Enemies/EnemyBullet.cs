@@ -7,6 +7,7 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField] private float speed;
     public Vector2 direction;
     private Rigidbody2D rb;
+    public bool shootByPlayer;
 
     private void Awake()
     {
@@ -20,16 +21,17 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !shootByPlayer)
         {
-            Player2DControll.Instance.TakeDamage();
+            if(Player2DControll.Instance.playerMode == Player2DControll.PlayerMode.Human)
+                Player2DControll.Instance.TakeDamage();
             Destroy(gameObject);
         }
         if(collision.gameObject.layer == LayerMask.NameToLayer("Ground") || collision.gameObject.layer == LayerMask.NameToLayer("Platform"))
         {
             Destroy(gameObject);
         }
-        if (collision.gameObject.layer == 11)
+        if (collision.gameObject.layer == 11 && shootByPlayer)
         {
             if (collision.gameObject.name == "Enemy1")
                 collision.gameObject.GetComponent<EnemyScript>().Die();

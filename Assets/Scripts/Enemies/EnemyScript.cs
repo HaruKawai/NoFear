@@ -247,6 +247,7 @@ public class EnemyScript : MonoBehaviour
             ammo.gameObject.SetActive(true);
             ammo.transform.position = transform.position + transform.right * 2.1f + transform.up * 0.9f;
             ammo.direction = bulletDirection;
+            ammo.shootByPlayer = false;
 
         }
 
@@ -259,6 +260,7 @@ public class EnemyScript : MonoBehaviour
 
     public void DieEvent()
     {
-        Destroy(gameObject);
+        if(isActiveAndEnabled)
+            Destroy(gameObject);
     }
 }

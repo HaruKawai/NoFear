@@ -74,9 +74,10 @@ public class PossesedEnemy2 : MonoBehaviour
             Player2DControll.Instance.gameObject.SetActive(true);
             Player2DControll.Instance.transform.parent = null;
             vCamera.m_Follow = Player2DControll.Instance.transform;
-            sr.color = normalColor;
+            //sr.color = normalColor;
             enabled = false;
             GetComponent<Enemy2Script>().enabled = true;
+            Die();
 
         }
 
@@ -144,5 +145,16 @@ public class PossesedEnemy2 : MonoBehaviour
             ammo.grenadeY = 5;
             ammo.throwByPlayer = true;
         }
+    }
+
+    public void Die()
+    {
+        anim.SetTrigger("Dead");
+    }
+
+    public void DieEvent()
+    {
+        if (isActiveAndEnabled)
+            Destroy(gameObject);
     }
 }

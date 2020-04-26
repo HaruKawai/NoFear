@@ -41,6 +41,7 @@ public class PossessedEnemy : MonoBehaviour
         vCamera.m_Follow = gameObject.transform;
         light.enabled = true;
         canMove = true;
+        gameObject.layer = 13;
     }
 
     private void OnDisable()
@@ -70,10 +71,10 @@ public class PossessedEnemy : MonoBehaviour
             Player2DControll.Instance.gameObject.SetActive(true);
             Player2DControll.Instance.transform.parent = null;
             vCamera.m_Follow = Player2DControll.Instance.transform;
-            sr.color = normalColor;
+            //sr.color = normalColor;
             enabled = false;
             GetComponent<EnemyScript>().enabled = true;
-            
+            Die();
         }
 
         if (Input.GetButtonDown("Fire1") && isGrounded && canMove)
@@ -133,6 +134,18 @@ public class PossessedEnemy : MonoBehaviour
             ammo.gameObject.SetActive(true);
             ammo.transform.position = transform.position + transform.right * 2.6f + transform.up * 0.9f;
             ammo.direction = (transform.position + transform.right * 3f + transform.up * 0.9f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
+            ammo.shootByPlayer = true;
         }        
+    }
+
+    public void Die()
+    {
+        anim.SetTrigger("Dead");
+    }
+
+    public void DieEvent()
+    {
+        if (isActiveAndEnabled)
+            Destroy(gameObject);
     }
 }

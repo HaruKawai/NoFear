@@ -221,6 +221,7 @@ MonoBehaviour:
   slime: 0
   stickOnWall: 0
   stickOnCealing: 0
+  parry: 0
 --- !u!95 &1668160233187908616
 Animator:
   serializedVersion: 3
