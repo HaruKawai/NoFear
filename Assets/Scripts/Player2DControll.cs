@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Runtime.CompilerServices;
 using Cinemachine;
 using UnityEngine;
 
@@ -283,6 +284,7 @@ public class Player2DControll : MonoBehaviour
 
     public void TakeDamage()
     {
+	    Debug.Log("Hit");
 	    if(playerMode == PlayerMode.Human)
 		  ChangeFunction();
 	    StartCoroutine(TakeDamageCoroutine());
