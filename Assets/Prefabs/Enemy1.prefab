@@ -238,7 +238,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6478211536328854143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6fb56385a214984d9bd1e7b761729d3, type: 3}
+  m_Script: {fileID: 11500000, guid: f584da1870f2c4643b78deb1ef3377ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 300
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6478211536328854143}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d536d05682a527440a19f7c6fab7131f, type: 3}
+  m_Script: {fileID: 11500000, guid: b8a7a1f94d352fc458a744834550a9ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ground:
@@ -377,8 +377,8 @@ MonoBehaviour:
   runSpeed: 100
   m_MovementSmoothing: 0.05
   m_JumpForce: 1000
-  possessedColor: {r: 0.35686275, g: 0.7137255, b: 0.21568629, a: 1}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  possessedColor: {r: 0, g: 0.764151, b: 0.0709636, a: 1}
+  normalColor: {r: 0, g: 0, b: 0, a: 1}
   vCamera: {fileID: 0}
   light: {fileID: 5674893925549249974}
   bullet: {fileID: 5127622667476519648, guid: 2da65e58e278f0b499a3511dc7a40b9e, type: 3}
