@@ -267,14 +267,14 @@ public class Player2DControll : MonoBehaviour
 		if (other.contacts[0].collider.gameObject.layer == 12 && playerMode == PlayerMode.Slime/* &&
 		    other.gameObject.GetComponent<EnemyScript>().canBePossesed*/)
 		{
-            /*
+            
             if (other.gameObject.GetComponent<EnemyScript>().canBePossesed)
             {
                 other.gameObject.GetComponent<EnemyScript>().canBePossesed = false;
                 other.gameObject.GetComponent<PossessedEnemy>().enabled = true;
                 other.gameObject.GetComponent<EnemyScript>().enabled = false;
                 gameObject.SetActive(false);
-            }*/
+            }
             if(other.gameObject.GetComponent<Enemy2Script>().canBePossesed)
             {
                 other.gameObject.GetComponent<Enemy2Script>().canBePossesed = false;
