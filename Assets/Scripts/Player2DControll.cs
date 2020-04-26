@@ -14,6 +14,7 @@ public class Player2DControll : MonoBehaviour
     private Vector2 targetVelocity;
 
     //General
+	public Canvas elCanvas;
 	public bool canTakeDamage = true;
     private Animator anim;
     private float distance;
@@ -21,6 +22,7 @@ public class Player2DControll : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private float horizontalMove;
+	private bool topSpeed;
     [SerializeField] private float runSpeed = 300f;
     private bool canJump;
     private bool isGrounded;
@@ -78,6 +80,9 @@ public class Player2DControll : MonoBehaviour
 
     private void Update()
     {
+		if(!topSpeed && playerMode != PlayerMode.Slime) checkSpeed();
+
+
 	    var position = (Vector2)transform.position + Vector2.down * 0.5f;
 	    bool leftCollision = Physics2D.Raycast(position,  Vector2.left, 1f, ground);
 	    bool rightCollision = Physics2D.Raycast(position,  Vector2.right, 1f, ground);
@@ -134,6 +139,8 @@ public class Player2DControll : MonoBehaviour
         
         if (playerMode == PlayerMode.Slime)
         {
+			topSpeed = false;
+
 	        if (Input.GetButtonDown("Bubble") && canInflate)
 	        {
 		        inflationCoroutine = InflationCoroutine();
@@ -156,6 +163,12 @@ public class Player2DControll : MonoBehaviour
             damaged = false;
         }
     }
+
+	//Comprobar velocidad en eje y
+	private void checkSpeed() 
+	{
+		if(rb.velocity.y < -40) topSpeed = true;
+	}
 
     private void FixedUpdate()
     {
@@ -288,6 +301,7 @@ public class Player2DControll : MonoBehaviour
 	    if(playerMode == PlayerMode.Human)
 		  ChangeFunction();
 	    StartCoroutine(TakeDamageCoroutine());
+		elCanvas.GetComponent<BloodScreenController>().TakeDamageScreen();
     }
     
 	private IEnumerator TakeDamageCoroutine() 
@@ -316,5 +330,6 @@ public class Player2DControll : MonoBehaviour
 			other.gameObject.GetComponent<EnemyScript>().enabled = false;
 			gameObject.SetActive(false);
 		}
+		if (topSpeed && other.collider.gameObject.layer == 8) TakeDamage();
 	}
 }

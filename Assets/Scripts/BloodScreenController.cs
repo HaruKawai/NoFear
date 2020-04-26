@@ -14,14 +14,19 @@ public class BloodScreenController : MonoBehaviour
     public bool prova;
 
 
-void Update()
-{
-    if(prova)
+    void Update()
+    {
+        if(prova)
+        {
+            StartCoroutine(DamagedCoroutine());
+            prova = false;
+        }
+    }
+
+    public void TakeDamageScreen() 
     {
         StartCoroutine(DamagedCoroutine());
-        prova = false;
     }
-}
     public IEnumerator DamagedCoroutine() 
     {
         Debug.Log("sip");
