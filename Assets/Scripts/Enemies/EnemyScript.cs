@@ -160,8 +160,7 @@ public class EnemyScript : MonoBehaviour
                 {
                     EnemyAttack();
                 }
-                else
-                    Player2DControll.Instance.TakeDamage();
+                    
             }
             else
             {
@@ -171,8 +170,6 @@ public class EnemyScript : MonoBehaviour
                     {
                         EnemyShoot();
                     }
-                    else
-                        Player2DControll.Instance.TakeDamage();
                 }
             }
         }
@@ -198,12 +195,18 @@ public class EnemyScript : MonoBehaviour
         rb.isKinematic = true;
         anim.SetTrigger("Shoot");
         //para coger la posición del jugador cuando se inicia la animación de disparo y no se salga del area de agro
-        bulletDirection = (player.transform.position + transform.up * 0.7f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
+        bulletDirection = (player.transform.position + transform.up * 0.3f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
     }
 
     public void DamageAttackFrame()
     {
+        Vector2 position = (Vector2)transform.position;
+        Vector2 playerPosition = (Vector2)player.transform.position;
         attacking = true;
+        if(Physics2D.Raycast((Vector2)transform.position, playerPosition - position, meleeDistance, playerMask))
+        {
+            Player2DControll.Instance.TakeDamage();
+        }
     }
 
     public void EndShootEvent()

@@ -22,7 +22,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //Player2DControll.Instance.TakeDamage();
+            Player2DControll.Instance.TakeDamage();
             Destroy(gameObject);
         }
         if(collision.gameObject.layer == LayerMask.NameToLayer("Ground") || collision.gameObject.layer == LayerMask.NameToLayer("Platform"))
