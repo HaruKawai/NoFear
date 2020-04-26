@@ -52,7 +52,7 @@ public class Player2DControll : MonoBehaviour
     private bool potPujar;
     public bool stickOnWall;
     public bool stickOnCealing;
-    private bool parry;
+    public bool parry;
     private bool inflated;
     
     //Controladores de Tiempo

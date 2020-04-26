@@ -205,7 +205,15 @@ public class EnemyScript : MonoBehaviour
         attacking = true;
         if(Physics2D.Raycast((Vector2)transform.position, playerPosition - position, meleeDistance, playerMask))
         {
-            Player2DControll.Instance.TakeDamage();
+            if(player.GetComponent<Player2DControll>().parry)
+            {
+                GetComponent<EnemyScript>().canBePossesed = false;
+                GetComponent<PossessedEnemy>().enabled = true;
+                player.SetActive(false);
+                GetComponent<EnemyScript>().enabled = false;
+            }
+            else Player2DControll.Instance.TakeDamage();
+            
         }
     }
 
