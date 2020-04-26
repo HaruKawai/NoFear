@@ -22,6 +22,7 @@ public class Enemy2Script : MonoBehaviour
     private bool attacking;
     private Vector2 playerPos;
     public Grenade grenade;
+    private bool dead;
 
 
     private void Awake()
@@ -34,7 +35,7 @@ public class Enemy2Script : MonoBehaviour
 
     private void Update()
     {
-
+        if (dead) return;
         Debug.DrawRay((Vector2)transform.position + new Vector2(1f, 0f) * transform.right, Vector2.down);
         if (!attacking)
             Patroll();
@@ -120,7 +121,7 @@ public class Enemy2Script : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (moving)
+        if (moving && !dead)
             rb.velocity = speed * Time.fixedDeltaTime * transform.right;
     }
     /*
@@ -218,7 +219,10 @@ public class Enemy2Script : MonoBehaviour
 
     public void Die()
     {
-        anim.SetTrigger("Dead");
+        rb.isKinematic = true;
+        rb.velocity = Vector2.zero;
+        anim.SetBool("Dead", true);
+        dead = true;
     }
 
     public void DieEvent()

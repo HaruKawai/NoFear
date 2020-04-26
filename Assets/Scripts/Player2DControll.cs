@@ -63,6 +63,9 @@ public class Player2DControll : MonoBehaviour
     private static readonly int Inflation = Animator.StringToHash("Inflation");
     private IEnumerator inflationCoroutine;
 
+    private bool leftCollision;
+    private bool rightCollision;
+
 
     private void Awake()
     {
@@ -81,12 +84,15 @@ public class Player2DControll : MonoBehaviour
 
     private void Update()
     {
-		if(!topSpeed && playerMode != PlayerMode.Slime) checkSpeed();
-
-
-	    var position = (Vector2)transform.position + Vector2.down * 0.5f;
-	    bool leftCollision = Physics2D.Raycast(position,  Vector2.left, 1f, ground);
-	    bool rightCollision = Physics2D.Raycast(position,  Vector2.right, 1f, ground);
+		if(!topSpeed && playerMode != PlayerMode.Slime) 
+			CheckSpeed();
+		
+		if(topSpeed && isGrounded)
+			TakeDamage();
+		
+		var position = (Vector2)transform.position + Vector2.down * 0.5f;
+	    leftCollision = Physics2D.Raycast(position,  Vector2.left, 1f, ground);
+	    rightCollision = Physics2D.Raycast(position,  Vector2.right, 1f, ground);
 	    bool upCollision = Physics2D.Raycast(position, Vector2.up, 1.15f, ground);
 	    //Problema.
 	    isGrounded = Physics2D.Raycast(position + new Vector2(-0.3f, 0f) * transform.right + Vector2.up * 0.5f, Vector2.down, 2f,
@@ -153,7 +159,7 @@ public class Player2DControll : MonoBehaviour
 	        
         }
 
-        if (Input.GetButtonDown("Jump") && playerMode != PlayerMode.Slime)
+        if (Input.GetButtonDown("Jump") && playerMode != PlayerMode.Slime && isGrounded)
         {
 	        anim.SetTrigger("Jump");
 	        canJump = true;
@@ -166,9 +172,10 @@ public class Player2DControll : MonoBehaviour
     }
 
 	//Comprobar velocidad en eje y
-	private void checkSpeed() 
+	private void CheckSpeed() 
 	{
-		if(rb.velocity.y < -40) topSpeed = true;
+		if(rb.velocity.y < -40)
+			topSpeed = true;
 	}
 
     private void FixedUpdate()
@@ -180,26 +187,28 @@ public class Player2DControll : MonoBehaviour
     //Change form
     private void ChangeFunction()
     {
-        if(gameObject.GetComponent<Enemy>() == null)
-        {
-	        if(playerMode == PlayerMode.Slime)
-			{
-				playerMode = PlayerMode.Human;
-				colliderSlime.enabled = false;
-				colliderProta.enabled = true;
-			    anim.SetBool("Slime", false);
-			}
-	        else if (playerMode == PlayerMode.Human)
-			{
-				playerMode = PlayerMode.Slime;
-			    anim.SetBool("Slime", true);
-				colliderSlime.enabled = true;
-				colliderProta.enabled = false;
-			}
-        }
-        else
-	        GetComponent<Collider2D>().enabled = false;
-      
+	    if (canTakeDamage)
+	    {
+		    if (gameObject.GetComponent<Enemy>() == null)
+		    {
+			    if (playerMode == PlayerMode.Slime)
+			    {
+				    playerMode = PlayerMode.Human;
+				    colliderSlime.enabled = false;
+				    colliderProta.enabled = true;
+				    anim.SetBool("Slime", false);
+			    }
+			    else if (playerMode == PlayerMode.Human)
+			    {
+				    playerMode = PlayerMode.Slime;
+				    anim.SetBool("Slime", true);
+				    colliderSlime.enabled = true;
+				    colliderProta.enabled = false;
+			    }
+		    }
+		    else
+			    GetComponent<Collider2D>().enabled = false;
+	    }
     }
 
     //Inflate
@@ -317,19 +326,23 @@ public class Player2DControll : MonoBehaviour
 			sr.color = Color.Lerp(sr.color, Color.white, 1f);
 			yield return new WaitForSeconds(0.15f);
 		}
-
 		canTakeDamage = true;
+	}
+
+	private void OnDisable()
+	{
+		sr.color = Color.Lerp(sr.color, Color.white, 1f);
 	}
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.contacts[0].collider.gameObject.layer == 12 && playerMode == PlayerMode.Slime /*&&
-		    other.gameObject.GetComponent<EnemyScript>().canBePossesed*/)
+		if (other.contacts[0].collider.gameObject.layer == 12 && playerMode == PlayerMode.Slime)
 		{
+			transform.parent = other.gameObject.transform;
             if(other.gameObject.name == "Enemy1")
                 if (other.gameObject.GetComponent<EnemyScript>().canBePossesed)
                 {
-                    other.gameObject.GetComponent<EnemyScript>().canBePossesed = false;
+	                other.gameObject.GetComponent<EnemyScript>().canBePossesed = false;
                     other.gameObject.GetComponent<PossessedEnemy>().enabled = true;
                     other.gameObject.GetComponent<EnemyScript>().enabled = false;
                     gameObject.SetActive(false);
@@ -343,6 +356,5 @@ public class Player2DControll : MonoBehaviour
                     gameObject.SetActive(false);
                 }
         }
-		if (topSpeed && other.collider.gameObject.layer == 8) TakeDamage();
 	}
 }

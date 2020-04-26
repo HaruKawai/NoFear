@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Cinemachine;
 using UnityEngine.Experimental.Rendering.LWRP;
 
@@ -24,18 +23,16 @@ public class PossesedEnemy2 : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sr;
     public Color possessedColor;
-    public Color normalColor;
     public CinemachineVirtualCamera vCamera;
     public Light2D light;
-    GameObject player;
     public Grenade grenade;
+    private bool dead;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sr = GetComponentInChildren<SpriteRenderer>();
-        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void OnEnable()
@@ -50,7 +47,6 @@ public class PossesedEnemy2 : MonoBehaviour
 
     private void OnDisable()
     {
-        Player2DControll.Instance.lookingRight = !lookingRight;
         light.enabled = false;
     }
 
@@ -71,14 +67,7 @@ public class PossesedEnemy2 : MonoBehaviour
 
         if (Input.GetButtonDown("Fire2"))
         {
-            Player2DControll.Instance.gameObject.SetActive(true);
-            Player2DControll.Instance.transform.parent = null;
-            vCamera.m_Follow = Player2DControll.Instance.transform;
-            //sr.color = normalColor;
-            enabled = false;
-            GetComponent<Enemy2Script>().enabled = true;
-            Die();
-
+            Dispossess();
         }
 
         if (Input.GetButtonDown("Fire1") && isGrounded && canMove)
@@ -90,6 +79,7 @@ public class PossesedEnemy2 : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (dead) return;
         Move(horizontalMove * Time.fixedDeltaTime, canJump);
         canJump = false;
     }
@@ -100,14 +90,10 @@ public class PossesedEnemy2 : MonoBehaviour
         var velocity = rb.velocity;
         var targetVelocity = new Vector2(move * 7f, velocity.y);
         if (canMove)
-        {
             rb.velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-        }
         else
-        {
             rb.velocity = Vector2.zero;
-        }
-
+        
         if (move > 0 && lookingRight)
             Flip();
         else if (move < 0 && !lookingRight)
@@ -121,6 +107,7 @@ public class PossesedEnemy2 : MonoBehaviour
 
     private void Flip()
     {
+        if (!canMove) return;
         lookingRight = !lookingRight;
         transform.Rotate(0f, 180f, 0f);
     }
@@ -146,10 +133,25 @@ public class PossesedEnemy2 : MonoBehaviour
             ammo.throwByPlayer = true;
         }
     }
+    
+    private void Dispossess()
+    {
+        Player2DControll.Instance.gameObject.SetActive(true);
+        var transform1 = Player2DControll.Instance.transform;
+        transform1.parent = null;
+        vCamera.m_Follow = transform1;
+        sr.color = Color.Lerp(sr.color, Color.white, 1f);
+        Player2DControll.Instance.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+        Player2DControll.Instance.lookingRight = false;
+        Die();
+    }
 
     public void Die()
     {
-        anim.SetTrigger("Dead");
+        rb.velocity = Vector2.zero;
+        rb.isKinematic = true;
+        anim.SetBool("Dead", true);
+        dead = true;
     }
 
     public void DieEvent()

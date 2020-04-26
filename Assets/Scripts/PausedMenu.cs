@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class PausedMenu : MonoBehaviour
 {
@@ -13,12 +10,7 @@ public class PausedMenu : MonoBehaviour
     private bool primeraVegada;
     private bool startTime = false;
     private bool started = false;
-
-    void Awake()
-    {
-        
-    }
-
+    
     private void Start()
     {
         playerControll = Player.GetComponent<Player2DControll>();
@@ -28,7 +20,7 @@ public class PausedMenu : MonoBehaviour
         DesactivarMenu();
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -52,9 +44,9 @@ public class PausedMenu : MonoBehaviour
             pauseMenu.SetActive(true);
             primeraVegada = false;
         }
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Confined;
-        Screen.lockCursor = false;
+        //Cursor.visible = true;
+        //Cursor.lockState = CursorLockMode.Confined;
+        //Screen.lockCursor = false;
     }
     public void DesactivarMenu()
     {
@@ -62,8 +54,8 @@ public class PausedMenu : MonoBehaviour
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
         primeraVegada = true;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
     public void CambiarPausa() 
     {

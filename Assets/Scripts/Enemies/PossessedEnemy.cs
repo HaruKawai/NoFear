@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Cinemachine;
 using UnityEngine.Experimental.Rendering.LWRP;
 
@@ -22,10 +21,10 @@ public class PossessedEnemy : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sr;
     public Color possessedColor;
-    public Color normalColor;
     public CinemachineVirtualCamera vCamera;
     public Light2D light;
     public EnemyBullet bullet;
+    private bool dead;
 
     private void Awake()
     {
@@ -46,7 +45,6 @@ public class PossessedEnemy : MonoBehaviour
 
     private void OnDisable()
     {
-        Player2DControll.Instance.lookingRight = !lookingRight;
         light.enabled = false;
     }
 
@@ -68,13 +66,7 @@ public class PossessedEnemy : MonoBehaviour
 
         if (Input.GetButtonDown("Fire2"))
         {
-            Player2DControll.Instance.gameObject.SetActive(true);
-            Player2DControll.Instance.transform.parent = null;
-            vCamera.m_Follow = Player2DControll.Instance.transform;
-            //sr.color = normalColor;
-            enabled = false;
-            GetComponent<EnemyScript>().enabled = true;
-            Die();
+            Dispossess();
         }
 
         if (Input.GetButtonDown("Fire1") && isGrounded && canMove)
@@ -86,24 +78,19 @@ public class PossessedEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (dead) return;
         Move(horizontalMove * Time.fixedDeltaTime, canJump);
         canJump = false;
     }
 
     private  void Move(float move, bool jump)
     {
-
         var velocity = rb.velocity;
         var targetVelocity = new Vector2(move * 7f, velocity.y);
         if (canMove)
-        {
             rb.velocity = Vector3.SmoothDamp(velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-        }
         else
-        {
             rb.velocity = Vector2.zero;
-        }
-        
         if (move > 0 && lookingRight)
             Flip();
         else if (move < 0 && !lookingRight) 
@@ -117,8 +104,23 @@ public class PossessedEnemy : MonoBehaviour
     
     private void Flip()
     {
+        if (!canMove) return;
         lookingRight = !lookingRight;
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    private void Dispossess()
+    {
+        Player2DControll.Instance.gameObject.SetActive(true);
+        var transform1 = Player2DControll.Instance.transform;
+        transform1.parent = null;
+        vCamera.m_Follow = transform1;
+        sr.color = Color.Lerp(sr.color, Color.white, 1f);
+        Player2DControll.Instance.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+        Player2DControll.Instance.lookingRight = false;
+        rb.velocity = Vector2.zero;
+        rb.isKinematic = true;
+        Die();
     }
 
     public void EndShootEvent()
@@ -128,19 +130,18 @@ public class PossessedEnemy : MonoBehaviour
 
     public void FireEvent()
     {
-        if (isActiveAndEnabled)
-        {
-            EnemyBullet ammo = Instantiate<EnemyBullet>(bullet);
-            ammo.gameObject.SetActive(true);
-            ammo.transform.position = transform.position + transform.right * 2.6f + transform.up * 0.9f;
-            ammo.direction = (transform.position + transform.right * 3f + transform.up * 0.9f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
-            ammo.shootByPlayer = true;
-        }        
+        if (!isActiveAndEnabled) return;
+        EnemyBullet ammo = Instantiate<EnemyBullet>(bullet);
+        ammo.gameObject.SetActive(true);
+        ammo.transform.position = transform.position + transform.right * 2.6f + transform.up * 0.9f;
+        ammo.direction = (transform.position + transform.right * 3f + transform.up * 0.9f) - (transform.position + transform.right * 2.6f + transform.up * 0.9f);
+        ammo.shootByPlayer = true;
     }
 
     public void Die()
     {
-        anim.SetTrigger("Dead");
+        anim.SetBool("Dead", true);
+        dead = true;
     }
 
     public void DieEvent()

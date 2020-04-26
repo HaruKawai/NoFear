@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\André\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\André\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_NoFear.-92283515.00" t="ExcludeRecursive" />
-    <e p="D:\Program Files (x86)\Unity Projects\NoFear" t="IncludeRecursive">
+    <e p="C:\UnityProjects\NoFear" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="2d-extras-master" t="Include">
@@ -103,18 +101,20 @@
             </e>
           </e>
         </e>
-        <e p="bullet.cs" t="Include" />
-        <e p="EnemyBullet.cs" t="Include" />
-        <e p="EnemyScript.cs" t="Include" />
         <e p="PlayerStats.cs" t="Include" />
-        <e p="PossessedEnemy.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="BloodScreenController.cs" t="Include" />
           <e p="bullet.cs" t="Include" />
+          <e p="CambioDeNivel.cs" t="Include" />
           <e p="controladorTiempo.cs" t="Include" />
           <e p="DestroyOnExit.cs" t="Include" />
           <e p="Enemies" t="Include">
-            <e p="Basic.cs" t="Include" />
+            <e p="Enemy2Script.cs" t="Include" />
+            <e p="EnemyBullet.cs" t="Include" />
+            <e p="EnemyScript.cs" t="Include" />
+            <e p="Grenade.cs" t="Include" />
+            <e p="PossesedEnemy2.cs" t="Include" />
+            <e p="PossessedEnemy.cs" t="Include" />
           </e>
           <e p="Enemy.cs" t="Include" />
           <e p="GoodItem.cs" t="Include" />
@@ -178,5 +178,7 @@
       <e p="Unity.2D.Tilemap.Extras.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.2D.Tilemap.Extras.Placeholder.EditorTests.csproj" t="IncludeRecursive" />
     </e>
+    <e p="C:\Users\André\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\André\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_NoFear.851563140.00" t="ExcludeRecursive" />
   </component>
 </project>

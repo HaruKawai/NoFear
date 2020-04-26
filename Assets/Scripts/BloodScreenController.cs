@@ -30,13 +30,13 @@ public class BloodScreenController : MonoBehaviour
     public IEnumerator DamagedCoroutine() 
     {
         Screen.sprite = BloodSprite4;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.375f);
         Screen.sprite = BloodSprite3;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.375f);
         Screen.sprite = BloodSprite2;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.375f);
         Screen.sprite = BloodSprite1;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.375f);
         Screen.sprite = transp;
     }
 }
