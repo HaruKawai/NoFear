@@ -48,6 +48,7 @@
      <Compile Include="Assets\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\BloodScreenController.cs" />
      <Compile Include="Assets\Scripts\bullet.cs" />
+     <Compile Include="Assets\Scripts\CambioDeNivel.cs" />
      <Compile Include="Assets\Scripts\controladorTiempo.cs" />
      <Compile Include="Assets\Scripts\DestroyOnExit.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy2Script.cs" />
