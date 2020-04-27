@@ -23,6 +23,7 @@ public class Grenade : MonoBehaviour
 
     private void Start()
     {
+        playerPos = playerPos.normalized;
         if (lookingRight)
         {
             direction = new Vector2(-playerPos.x*grenadeX, -playerPos.y*grenadeY);
@@ -33,7 +34,7 @@ public class Grenade : MonoBehaviour
         }
        
         //Debug.Log(playerPos);
-        rb.AddForce(direction.normalized * force);
+        rb.AddForce(direction * force);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
